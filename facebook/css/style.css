@@ -1,0 +1,270 @@
+/* CSS Document */
+
+
+::selection{
+    color:white;
+    background:orange;
+}
+
+.group:before, .group:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.group:after { clear: both; }  
+.group { zoom: 1; }  
+
+body {
+    font: normal 100% "微軟正黑體","lucida grande",tahoma,verdana,arial,sans-serif;
+    margin:0;
+    box-sizing:border-box;
+}
+
+p {
+    font-size: .8em;
+}
+
+aside {
+    width: 30%;
+    float: right;
+    background:#FFFFFF;
+    padding:15px;
+    overflow:auto;
+    box-sizing:border-box;
+    margin:0 0;
+    padding-left:30px;
+    min-height:129px; 
+    margin-top:50px;
+    margin-bottom:10px;
+}
+
+aside a{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    max-width:50px;
+    display:inline-block; /*fix box model problem*/
+}
+
+aside img{
+    width:100%;
+    opacity:.5;
+    -webkit-transition:all 1s linear .1s; /* For Safari 3.1 to 6.0 */
+    transition: all 1s linear .1s;
+}
+
+aside img:hover{
+    opacity:1;
+}
+
+.fb_iframe_widget{/*fix facebook logout */
+    top:5px;
+}
+
+.fwb{
+    content: "thisd";
+}
+
+#main {
+    width: 70%;
+    float: left;
+    /*padding:10px;*/
+    background:#9FCAFF；
+        box-sizing:border-box;
+
+}
+
+#mymessage{
+    font-size:12px;
+    font-variant: small-caps;
+    color:steelblue;
+    padding:10px;
+    margin-top:30px;
+}
+
+#content{
+    margin:0 auto;
+}
+
+hr{
+    color:#4CAEEB;
+    border:solid;
+    margin-bottom:20px;
+}
+
+#welcome,h1{
+    font-size:28px;
+    font-variant: small-caps;
+    color:rgb(76, 147, 235);
+}
+
+#user{
+
+    padding:20px;
+}
+
+#user img{
+    max-width:50%;
+    max-height:50%;
+}
+
+
+#searcharea,#searcharea h1{
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    font-size:1.65em;
+    background:rgb(76, 147, 235);
+    color:white;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-bottom-left-radius:1.2em;
+}
+
+#searcharea{
+    margin-top:50px;
+}
+
+#friendscontent{
+    text-align:left;
+    color:lavenderblush;
+    font-size:.3em;
+    padding-left:20px;
+}
+
+.para{
+    font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size:16px;
+    color:#d9534f;
+}
+
+.selected { 
+    border: #FFFF00 3px solid;
+    box-sizing:border-box;
+}
+#searcharea #search{
+    width:30%;
+    margin:0 auto;
+}
+
+h4 small{
+    color:white;
+    font-weight:200;
+}
+
+.para_fix{
+    padding-left:20px;
+}
+
+#recentAct ul li{
+    list-style-type:hiragana-iroha;
+}
+
+.welcome_fix{
+    font-weight:bolder;
+    color:#006;
+    font-size:18px;
+}
+
+header .navbar{
+    margin-bottom:0;
+    border-radius:0;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+
+/*Knockout.js Style*/
+#searcharea p{
+    width:500px;
+    margin:0 auto;
+}
+
+.fixed{
+    width:100%;
+
+}
+
+.pad_fix{
+    padding:10px;
+}
+
+.li-fixed{
+    width:20%;
+    float:left;
+    height:185px;
+}
+
+.img-thumbnail{
+    display:block;
+    margin:auto;
+}
+
+.btn_fixed{
+    width:85px;
+    margin:0 auto;
+    padding-top:200px;
+}
+
+.btn_fixed button{
+    margin:0;
+    margin-bottom:50px;
+    margin-top:20px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display:block;
+}
+
+
+
+
+
+/*tooltips style*/
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+}
+.ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+.arrow.top {
+    top: -16px;
+    bottom: auto;
+}
+.arrow.left {
+    left: 20%;
+}
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+}
+.arrow.top:after {
+    bottom: -20px;
+    top: auto;
+}

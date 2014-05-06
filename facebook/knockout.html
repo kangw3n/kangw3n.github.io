@@ -1,0 +1,173 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Facebook API with Knockout.Js / NCCU Web Programming" >
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="https://dl.dropboxusercontent.com/s/1y1j92xp8x9fzdf/index.html?" >
+    <meta property="og:image" content="https://dl.dropboxusercontent.com/s/m7a8cr782afgctr/bigphoto.jpg" >
+    <meta property="og:description" content="Facebook Open Graph Test. Facebook API with Knockout.Js / NCCU Web Programming" >
+    <meta property="og:site_name" content=" " >
+
+    <title>Facebook API with Knockout.Js / NCCU Web Programming</title>
+    
+    <link rel="icon" type="image/png" href="https://dl.dropboxusercontent.com/s/p8cbmtnoedyp8kv/icon.png" >
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://dl.dropboxusercontent.com/s/3tsxsk51y23uvm2/style.css" rel="stylesheet" >
+    <link href="https://dl.dropboxusercontent.com/s/e287s7bpsaen9p2/alertify.core.css" rel="stylesheet" />
+    <link href="https://dl.dropboxusercontent.com/s/2n9rlr3o6b6ohgc/alertify.default.css" rel="stylesheet" />
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://dl.dropboxusercontent.com/s/qasm3crszw1kmq8/jquery.tmpl.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script src="https://dl.dropboxusercontent.com/s/apndxcbetporzas/script.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.11/alertify.min.js"></script>
+
+</head>
+<body style="background: white;">
+	<div id="fb-root"></div>
+ 	<header>
+ 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Facebook API Demo</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="https://dl.dropboxusercontent.com/s/1y1j92xp8x9fzdf/index.html">Facebook Friends Search</a></li>
+                    <li class="active"><a href="https://dl.dropboxusercontent.com/s/odibps7dgdp855b/knockout.html">Knockdown.Js / Picture </a></li>
+                    <li><a href="https://dl.dropboxusercontent.com/s/3zvsrw2sa4krcdy/Hammer.html">Hammer.Js / Social Plugin </a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://visualizer.json2html.com/">JSON visualizer</a></li>
+                        <li><a href="http://json.bloople.net/">JSON to Table</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://knockoutjs.com/">Knockout.JS</a></li>
+                        <li><a href="http://eightmedia.github.io/hammer.js/#">Hammer.JS</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+              
+                  
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+ 				<section id="searcharea">
+                    <label for="search"> <h1><strong>Knockout.Js </strong></h1></label>
+                    <p>Knockout is a <em>JavaScript library</em> that helps you to <span style="color:#f0ad4e;">create rich, responsive display and editor user interfaces with a clean underlying data model</span>. Any time you have sections of UI that update dynamically (e.g., changing depending on the user's actions or when an external data source changes), KO can help you implement it <span style="color:#d9534f;">more simply and maintainably</span></p>
+			  </section>
+     </header>         
+
+	<div id="resultPane" style="display: none">
+		<img id="resultImage" />
+		<button class="btn btn-primary footer" onclick="location.reload()">Refresh</button>
+	</div>
+	<div id="container">
+    	<div class="pad_fix">
+		<div id="title" class="fixed">
+			<h2>Photos of <span class="name" data-bind="text: userName"></span></h2>
+			<select class="form-control" data-bind="options: albums, optionsCaption: 'Tagged Photos', optionsText: 'name',  value: currentAlbum"></select>
+		</div>
+		<div id="body" style="height:300px;">
+			<div data-bind="visible: photos().length === 0">There are no photos in this album</div>
+			
+            <ul class="list-group" data-bind="template: {name: 'photosTemplate', foreach: photos, templateOptions: { viewModel: _self }}">
+			</ul>
+           
+			<div data-bind="visible: loadingPhotos">Loading...</div>
+            <div class="btn_fixed" style="display:block">
+			<button class="btn btn-primary" data-bind="click: function() { currentPage(currentPage()-1); }, enable: currentPage() > 0">&lt;</button>
+			<button class="btn btn-primary" data-bind="click: function() { currentPage(currentPage()+1); }, enable: nextPage">&gt;</button>
+            </div>
+		</div>
+        </div>
+		<button class="btn btn-primary btn-lg btn-block footer" data-bind="click: submitImage, enable: currentPhoto">Submit</button>
+	</div> 
+	<p data-bind="text: photoTitle"></p>
+	
+	<script type="text/html" id="photosTemplate">
+		<li class="list-group-item li-fixed" data-bind="click: function() { $item.viewModel.selectPhoto($data); }"><img class="img-thumbnail" data-bind="css: { selected: $item.viewModel.currentPhoto() === $data }" src="${picture}" title="${name}"/ >  </li>
+	</script>
+	
+	<script type="text/javascript">
+
+	
+	function initApp(user){ 	
+	
+		var viewModel = {
+			userId: user.id,
+			userName: user.name,
+			//photoTitle:ko.observableArray(),
+			loadingPhotos: ko.observable(true),
+			albums: ko.observableArray(),
+			photos: ko.observableArray(),
+			currentPage: ko.observable(0),
+			nextPage: ko.observable(false),
+			currentPhoto: ko.observable(undefined),
+			currentAlbum: ko.observable(undefined),
+			
+			selectPhoto: function(photo) {
+				viewModel.currentPhoto(photo);
+			},
+			
+			submitImage: function() {
+				if (viewModel.currentPhoto()) {
+					$('#resultPane').show();
+					$('#resultImage').attr('src', viewModel.currentPhoto().source);
+					$('#container').hide();
+				}
+			},
+		};
+		
+		viewModel._self = viewModel; //Hack for template foreach
+		
+		ko.dependentObservable(function() {
+			var id = 'me';
+			
+			if (viewModel.currentAlbum()) {
+				id = viewModel.currentAlbum().id;
+			}
+			
+			viewModel.loadingPhotos(true);
+			FB.api(id + '/photos', {limit: 11, offset: viewModel.currentPage() * 10}, function(response) {
+				var truncatedResponse = response.data;
+			
+				if (truncatedResponse.length > 10) {
+					truncatedResponse.pop(); //remove the excess item
+					viewModel.nextPage(true);
+				} else {
+					viewModel.nextPage(false);
+				}
+				viewModel.photos(response.data); // the photo taken out in 10 list
+				viewModel.loadingPhotos(false);
+			});
+			
+		}, viewModel);
+		
+		ko.dependentObservable(function() {
+			viewModel.currentAlbum(); //on currentalbum changed
+			viewModel.currentPage(0);
+		}, viewModel);
+		
+		FB.api('me/albums', function(response) {
+			viewModel.albums(response.data);
+		});
+		
+		ko.applyBindings(viewModel, $('#container')[0]);
+	}
+	</script>
+
+
+</body>
+</html>
