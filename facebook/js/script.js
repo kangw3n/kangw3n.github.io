@@ -389,9 +389,9 @@ function captureImage(){
     html2canvas($('#main'), {
         proxy:"http://140.119.169.167/temp/html2canvasproxy.php",
         onrendered: function(canvas) {
-            var uridata = canvas.toDataURL("image/png");
-            window.open(uridata);
-            //document.body.appendChild(canvas);
+            //var uridata = canvas.toDataURL("image/png");
+            //window.open(uridata);
+            document.body.appendChild(canvas);
         }
     });
 };
