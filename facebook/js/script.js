@@ -384,7 +384,7 @@ function requestClick2(){
 }
 
 //HTML2CANVAS
-function captureImage(){
+function captureI2mage(){
     var canvas;
     html2canvas($('#main'), {
         proxy:"http://140.119.169.167/temp/html2canvasproxy.php",
@@ -394,6 +394,28 @@ function captureImage(){
             document.body.appendChild(canvas);
         }
     });
+};
+
+
+function captureImage(){
+    html2canvas(document.body, {
+                    "logging": true, //Enable log (use Web Console for get Errors and Warings)
+                    "proxy":"http://140.119.169.167/temp/html2canvasproxy.php",
+                    "onrendered": function(canvas) {
+                        var img = new Image();
+                        img.onload = function() {
+                            document.body.appendChild(img);
+                        };
+                        img.error = function() {
+                            if(window.console.log) {
+                                window.console.log("Not loaded image from canvas.toDataURL");
+                            } else {
+                                alert("Not loaded image from canvas.toDataURL");
+                            }
+                        };
+                        img.src = canvas.toDataURL("image/png");
+                    }
+                });
 };
 
 
@@ -413,25 +435,3 @@ $('#fblogout').click(function(){
 });
 
 
-(function() {
-            window.onload = function(){
-                html2canvas(document.body, {
-                    "logging": true, //Enable log (use Web Console for get Errors and Warings)
-                    "proxy":"http://140.119.169.167/temp/html2canvasproxy.php",
-                    "onrendered": function(canvas) {
-                        var img = new Image();
-                        img.onload = function() {
-                            document.body.appendChild(img);
-                        };
-                        img.error = function() {
-                            if(window.console.log) {
-                                window.console.log("Not loaded image from canvas.toDataURL");
-                            } else {
-                                alert("Not loaded image from canvas.toDataURL");
-                            }
-                        };
-                        img.src = canvas.toDataURL("image/png");
-                    }
-                });
-            };
-        })();
