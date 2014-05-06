@@ -384,25 +384,16 @@ function requestClick2(){
 }
 
 //HTML2CANVAS
-function captureI2mage(){
+function captureImage(){
     var canvas;
     html2canvas($('#main'), {
-        proxy:"http://140.119.169.167/temp/html2canvasproxy.php",
-        onrendered: function(canvas) {
+		"logging": true, //Enable log (use Web Console for get Errors and Warings)
+        "proxy":"http://140.119.169.167/temp/html2canvasproxy.php",
+        "onrendered": function(canvas) {
             //var uridata = canvas.toDataURL("image/png");
-            //window.open(uridata);
-            document.body.appendChild(canvas);
-        }
-    });
-};
-
-
-function captureImage(){
-    html2canvas(document.body, {
-                    "logging": true, //Enable log (use Web Console for get Errors and Warings)
-                    "proxy":"http://140.119.169.167/temp/html2canvasproxy.php",
-                    "onrendered": function(canvas) {
-                        var img = new Image();
+            
+            
+			var img = new Image();
                         img.onload = function() {
                             document.body.appendChild(img);
                         };
@@ -414,9 +405,11 @@ function captureImage(){
                             }
                         };
                         img.src = canvas.toDataURL("image/png");
-                    }
-                });
+						window.open(img.src);
+        }
+    });
 };
+
 
 
 //FB.logout
