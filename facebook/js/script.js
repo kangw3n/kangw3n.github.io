@@ -387,7 +387,7 @@ function requestClick2(){
 function captureImage(){
     var canvas;
     html2canvas($('#main'), {
-        proxy:"https://dl.dropboxusercontent.com/s/oayv7qqyjwpl0sz/html2canvasproxy.php",
+        proxy:"http://140.119.169.167/temp/html2canvasproxy.php",
         onrendered: function(canvas) {
             var uridata = canvas.toDataURL("image/png");
             window.open(uridata);
