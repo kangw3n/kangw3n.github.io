@@ -10,7 +10,7 @@
         FB.init({
           appId      : '651747278207955',
           xfbml      : true,
-          //version    : 'v2.0'
+          version    : 'v2.0'
         });
 	
     FB.getLoginStatus(function(response) {
@@ -23,7 +23,7 @@
 				console.log(response);
             });
 
-            FB.api('me/friends', { fields: 'id, name, first_name ,picture'},function(response){
+            FB.api('me/friends',function(response){
                 console.log(response);
             });
 

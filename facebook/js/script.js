@@ -48,7 +48,7 @@ window.fbAsyncInit = function() {
             $('#clear').show("slow");
             //Get Friend lists
             FB.api('me/friends', { fields: 'id, name, first_name ,picture'},function(response){
-                //console.log(response);
+                console.log(response);
                 //loop fren list img and append into fren id
                 for (var i=0; i<response.data.length; i++) { 
                     friendimg = response.data[i].picture.data.url;
