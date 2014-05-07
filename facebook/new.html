@@ -13,9 +13,24 @@
           version    : 'v2.0'
         });
 	
-	FB.api('/me', {fields: 'last_name'}, function(response) {
- 		 console.log(response);
-	});
+	FB.Event.subscribe('auth.authResponseChange', function(response) {
+                    if (response.status === 'connected') {
+                        var UserID = response.authResponse.userID;
+                        var AccessToken = response.authResponse.accessToken;
+                        var logging = "Your user ID is : " + UserID  + "\nAnd your access token is :" + AccessToken; 
+                        console.log(logging);
+							FB.api('/new.chen1', function(response) {
+							 console.log(response);
+						});
+                        
+                    } else if (response.status === 'not_authorized')  {
+                        console.log("Failed to Connect");//FAILED
+                        FB.login();
+                    } else {
+                        console.log("Logged Out");//UNKNOWN ERROR
+                    }
+                });	
+	
 
 		
 		
