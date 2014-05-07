@@ -13,23 +13,44 @@
           version    : 'v2.0'
         });
 	
-	FB.Event.subscribe('auth.authResponseChange', function(response) {
-                    if (response.status === 'connected') {
-                        var UserID = response.authResponse.userID;
-                        var AccessToken = response.authResponse.accessToken;
-                        var logging = "Your user ID is : " + UserID  + "\nAnd your access token is :" + AccessToken; 
-                        console.log(logging);
-							FB.api('/new.chen1', function(response) {
-							 console.log(response);
-						});
-                        
-                    } else if (response.status === 'not_authorized')  {
-                        console.log("Failed to Connect");//FAILED
-                        FB.login();
-                    } else {
-                        console.log("Logged Out");//UNKNOWN ERROR
-                    }
-                });	
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+            console.log("user is logged in and has authenticated your app");
+            var uid = response.authResponse.userID;
+            var accessToken = response.authResponse.accessToken;
+
+            FB.api('/me/albums', function (response) {
+				console.log(response);
+            });
+
+            FB.api('me/friends', { fields: 'id, name, first_name ,picture'},function(response){
+                console.log(response);
+            });
+
+            FB.api(uid, function(info) {
+                console.log(info); 
+             });
+
+
+        } else if (response.status === 'not_authorized') { 
+            console.log("this user is not authorizied your apps");
+            FB.login(function(response) {
+                if (response.authResponse) { 
+                    window.location.reload();
+                };
+            }, {scope: 'user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes'});	
+       
+	    } else {
+            console.log("this isn't logged in to Facebook.");
+            FB.login(function(response) {
+                if (response.authResponse) {
+                    window.location.reload();
+                } else {
+                    console.log('An Error has Occurs,Please Reload your Pages');
+                }
+            });
+        }
+    });
 	
 
 		
@@ -47,7 +68,7 @@
     
     
     
-
+Ths is a test pages
 
 
 	
