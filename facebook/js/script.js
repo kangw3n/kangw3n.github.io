@@ -72,7 +72,7 @@ window.fbAsyncInit = function() {
             });
 
             //Find newest post
-            FB.api('me/posts',function(response){
+            FB.api('orangeying1024/posts',function(response){
                 //console.log(response);
                 var createDIV = document.createElement("div");
                 createDIV.setAttribute("style", "font-size:8px;");
@@ -114,7 +114,7 @@ window.fbAsyncInit = function() {
             // Permission granted for use who login 	
 
         } else {
-            // the user isn't logged in to Facebook.
+            // the user isn't logged in to Facebook. status == unknown
             console.log("this isn't logged in to Facebook.");
             FB.login(function(response) {
                 if (response.authResponse) {
