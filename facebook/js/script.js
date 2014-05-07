@@ -72,7 +72,7 @@ window.fbAsyncInit = function() {
             });
 
             //Find newest post
-            FB.api('orangeying1024/posts',function(response){
+            FB.api('lovius.tey/posts',function(response){
                 //console.log(response);
                 var createDIV = document.createElement("div");
                 createDIV.setAttribute("style", "font-size:8px;");
