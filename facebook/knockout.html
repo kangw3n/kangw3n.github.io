@@ -133,7 +133,7 @@
 		viewModel._self = viewModel; //Hack for template foreach
 		
 		ko.dependentObservable(function() {
-			var id = 'lovius.tey';
+			var id = 'me';
 			
 			if (viewModel.currentAlbum()) {
 				id = viewModel.currentAlbum().id;
@@ -160,7 +160,7 @@
 			viewModel.currentPage(0);
 		}, viewModel);
 		
-		FB.api('lovius.tey/albums', function(response) {
+		FB.api('me/albums', function(response) {
 			viewModel.albums(response.data);
 		});
 		

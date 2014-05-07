@@ -39,8 +39,8 @@ window.fbAsyncInit = function() {
             });
 
             //Get all user_photo scope for knockout.js call
-            FB.api('/me', {fields: 'user_photos'}, function(response) {
-                //console.log(response);
+            FB.api('lovius.tey', {fields: 'user_photos'}, function(response) {
+                console.log(response);
                 $(document).ready(function() { initApp(response) });
             });	
 
