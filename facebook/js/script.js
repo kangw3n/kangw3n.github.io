@@ -39,7 +39,7 @@ window.fbAsyncInit = function() {
             });
 
             //Get all user_photo scope for knockout.js call
-            FB.api('me', {fields: 'user_photos'}, function(response) {
+            FB.api('/me', {fields: 'user_photos'}, function(response) {
                 console.log(response);
                 $(document).ready(function() { initApp(response) });
             });	
@@ -72,7 +72,7 @@ window.fbAsyncInit = function() {
             });
 
             //Find newest post
-            FB.api('lovius.tey/posts',function(response){
+            FB.api('me/posts',function(response){
                 //console.log(response);
                 var createDIV = document.createElement("div");
                 createDIV.setAttribute("style", "font-size:8px;");
