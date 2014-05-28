@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>My Parse Database and App</title>
+    <meta name="description" content="My Parse App">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/assignment.css">
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//parse.com/downloads/javascript/parse-1.2.18.min.js"></script>
+
+</head>
+
+<body>
+    <section id="main">
+        <h2>This is a HTML5 Canvas Pages with Facebook</h2>
+       
+
+        <h5>This is Your Facebook Profile Picture:</h5>
+        <img id="preview1" style="display:hidden;" crossorigin="anonymous" src="" />
+        
+         <h5>Edit your Facebook Profile Picture here:</h5>
+         <canvas width="540" height="540" id="canvas"></canvas>
+    </section>
+    <div class="inputtext" style="width:600px; margin:0 auto;">
+    <label for="inputed">輸入客製化文字：  <textarea name="inputed" maxlength="6" id="inputed" placeholder="限輸6字"></textarea></label><br>
+	<button id="sentimg" onClick="PostImageToFacebook(window.authToken)">Post to Facebook</button>
+    </div>
+    
+    
+    <!--<button id="login" onClick="FacebookLogin()" disabled>Sent</button>-->
+    <div class="info"></div>
+	
+<style>
+#canvas {
+    border:3px solid grey;
+}
+</style>
+
+<script type="text/javascript" src="js/upload.js"></script>
+
+</body>
+
+</html>
+
+
+
