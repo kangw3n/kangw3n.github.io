@@ -2,12 +2,11 @@
     margin:0 auto;
     border:2px dotted grey;
     padding:10px;
-    width:500px;
 }
 
 
 .fbwidget{
-    background: url("https://dl.dropboxusercontent.com/s/ynypouk10xg50pe/facebook.jpg") no-repeat scroll left center transparent !important; 
+    background: url("https://dl.dropboxusercontent.com/s/ynypouk10xg50pe/facebook.jpg") no-repeat scroll left center transparent !important;
     float: right;
     height: 270px;
     padding: 0 5px 0 46px;
@@ -17,15 +16,15 @@
     right:-250px;
     top:23%;
 
-} 
+}
 
 .fbwidget div{
-    padding: 5px; 
-    margin-right:-8px; 
-    border:4px solid  #3b5998; 
+    padding: 5px;
+    margin-right:-8px;
+    border:4px solid  #3b5998;
     background:#fafafa;
     height: 280px;
-} 
+}
 
 /*
 Colorbox Core Style:
@@ -48,4 +47,4 @@ The following CSS is consistent between example themes and should not be altered
 #colorbox{outline:0;}
 .cboxIframe{background:#fff;}
 #cboxLoadedContent{border:5px solid #000; background:#fff;}
-/* 
+/*
