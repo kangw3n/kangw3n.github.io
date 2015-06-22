@@ -15,21 +15,35 @@
     var standalone = window.navigator.standalone,
       userAgent = window.navigator.userAgent.toLowerCase(),
       safari = /safari/.test(userAgent),
-      ios = /iphone|ipod|ipad/.test(userAgent);
+      ios = /iphone|ipod|ipad/.test(userAgent),
+      ua = window.userAgent;
 
-      $('h2').html(userAgent);
+    $('h2').html(userAgent);
 
-    if (ios) {
-      if (!standalone && safari) {
-          $('#text').html('browser')
-      } else if (standalone && !safari) {
-          $('#text').html('standalone')
-      } else if (!standalone && !safari) {
-        $('#text').html('uiwebview')
-      };
+    // if (ios) {
+    //   if (!standalone && safari) {
+    //     $('#text').html('browser')
+    //   } else if (standalone && !safari) {
+    //     $('#text').html('standalone')
+    //   } else if (!standalone && !safari) {
+    //     $('#text').html('uiwebview')
+    //   };
+    // } else {
+    //   $('#text').html('not ios')
+    // };
+
+
+    if (ua.indexOf("FBAN") > -1) {
+      if (ua.includes("mac os x")) {
+        $('#text').html('This is iOS Facebook');
+      }
+
+      if (ua.includes("linux")) {
+        $('#text').html('This is Andriod Facebook');
+      }
     } else {
-      $('#text').html('not ios')
-    };
+        $('#text').html('This is not inside Facebook');
+    }
   </script>
 </body>
 
