@@ -9,12 +9,15 @@
 <body>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius modi neque, odio ipsum molestiae fuga sint quasi exercitationem eligendi accusantium in enim recusandae, quia excepturi! Cum totam adipisci tempore quis.</p>
   <div id="text"></div>
+  <h2></h2>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script type="text/javascript">
     var standalone = window.navigator.standalone,
       userAgent = window.navigator.userAgent.toLowerCase(),
       safari = /safari/.test(userAgent),
       ios = /iphone|ipod|ipad/.test(userAgent);
+
+      $('h2').html(userAgent);
 
     if (ios) {
       if (!standalone && safari) {
