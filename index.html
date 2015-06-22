@@ -72,7 +72,7 @@
       }, {
         scope: 'email,user_photos,user_videos'
       });
-    }; 
+    };
 
     function getUserInfo() {
       FB.api('/me', function(response) {
@@ -148,6 +148,18 @@
         link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
       });
     }
+
+    if (Request.UserAgent.IndexOf("FBAN") > -1) {
+      if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
+        alert('This is IOS Facebook');
+      }
+
+      if (Request.UserAgent.Contains("Chrome")) {
+        alert('This is andriod facebook');
+      }
+    } else {
+      //You are not in Facebook App.
+    }
   </script>
 
   <div class="container">
@@ -184,7 +196,6 @@ Your current display resolution is <span id="detect"> </span></p>
         width: 100%;
       }
     }
-
     /*.facebook {
       width: 60%;
     }*/
