@@ -11,6 +11,9 @@
   <div id="text"></div>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script type="text/javascript">
+  var is_safari_or_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent);
+    $("#text").prepend(is_safari_or_uiwebview);
+
     if (Request.UserAgent.IndexOf("FBAN") > -1) {
       console.log('YES!');
       if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
