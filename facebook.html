@@ -19,7 +19,7 @@
     // var ios = /iphone|ipod|ipad/.test(userAgent);
     var ua = window.navigator.userAgent.toLowerCase();
     var macos = ua.indexOf('mac os x') > -1;
-    var linux = ua.indexOf('linux') > -1;
+    var linux = ua.indexOf('android') > -1;
     var fbWebui = ua.indexOf("fban") > -1 || ua.indexOf('fb_iab');
 
     $('h2').html( ua );
