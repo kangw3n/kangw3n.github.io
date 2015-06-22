@@ -12,13 +12,21 @@
   <h2></h2>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script type="text/javascript">
-    var standalone = window.navigator.standalone,
-      userAgent = window.navigator.userAgent.toLowerCase(),
-      safari = /safari/.test(userAgent),
-      ios = /iphone|ipod|ipad/.test(userAgent),
-      ua = window.userAgent;
+    // var standalone = window.navigator.standalone;
+    // var userAgent = window.navigator.userAgent.toLowerCase();
+    // var safari = /safari/.test(userAgent);
+    // var ios = /iphone|ipod|ipad/.test(userAgent);
+    var ua = window.userAgent;
+    var macos = ua.includes('mac os x') || ua.indexOf('mac os x') > -1;
+    var linux = ua.includes('linux') || ua.indexOf('linux') > -1;
+    var fbWebui = ua.includes('fban') || ua.indexOf("fban") > -1
 
     $('h2').html( ua );
+    $('#text').html(
+      macos + '<br/>' +
+      linux + '<br/>' +
+      fbWebui
+    );
 
     // if (ios) {
     //   if (!standalone && safari) {
@@ -33,18 +41,18 @@
     // };
 
 
-    if (ua.indexOf("fban") > -1) {
-      if (ua.includes('mac os x') || ua.indexOf('mac os x') > -1) {
-        alert ('true');
-        $('#text').html('This is iOS Facebook');
-      }
-
-      if (ua.includes('linux') || ua.indexOf('linux') > -1) {
-        $('#text').html('This is Andriod Facebook');
-      }
-    } else {
-        $('#text').html('This is not inside Facebook');
-    }
+    // if (fbWebui) {
+    //   if (macos) {
+    //     alert ('true');
+    //     $('#text').html('This is iOS Facebook');
+    //   }
+    //
+    //   if (linux) {
+    //     $('#text').html('This is Andriod Facebook');
+    //   }
+    // } else {
+    //     $('#text').html('This is not inside Facebook');
+    // }
   </script>
 </body>
 
