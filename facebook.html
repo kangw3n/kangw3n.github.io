@@ -11,24 +11,22 @@
   <div id="text"></div>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script type="text/javascript">
-  var is_safari_or_uiwebview = /(iPhone|iPod|iPad).*AppleWebKit/i.test(navigator.userAgent);
-    $("#text").prepend(is_safari_or_uiwebview);
+    var standalone = window.navigator.standalone,
+      userAgent = window.navigator.userAgent.toLowerCase(),
+      safari = /safari/.test(userAgent),
+      ios = /iphone|ipod|ipad/.test(userAgent);
 
-    if (Request.UserAgent.IndexOf("FBAN") > -1) {
-      console.log('YES!');
-      if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
-        alert(' This is IOS Facebook');
-        $("#text").prepend("<p style='color:red;'> This is IOS Facebook</p>");
-      }
-
-      if (Request.UserAgent.Contains("Chrome")) {
-        alert('This is andriod facebook');
-        $("#text").prepend("<p style='color:red;'> This is andriod facebook</p>");
-      }
+    if (ios) {
+      if (!standalone && safari) {
+          $('#text').html('browser')
+      } else if (standalone && !safari) {
+          $('#text').html('standalone')
+      } else if (!standalone && !safari) {
+        $('#text').html('uiwebview')
+      };
     } else {
-      console.log('no!!');
-      $("#text").prepend("<p style='color:red;'> This is andriod facebook</p>");
-    }
+      $('#text').html('not ios')
+    };
   </script>
 </body>
 
