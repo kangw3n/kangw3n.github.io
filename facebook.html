@@ -18,16 +18,11 @@
     // var safari = /safari/.test(userAgent);
     // var ios = /iphone|ipod|ipad/.test(userAgent);
     var ua = window.navigator.userAgent.toLowerCase();
-    var macos = ua.includes('mac os x') || ua.indexOf('mac os x') > -1;
-    var linux = ua.includes('linux') || ua.indexOf('linux') > -1;
-    var fbWebui = ua.includes('fban') || ua.indexOf("fban") > -1
+    var macos = ua.indexOf('mac os x') > -1;
+    var linux = ua.indexOf('linux') > -1;
+    var fbWebui = ua.indexOf("fban") > -1
 
     $('h2').html( ua );
-    $('#text').html(
-      macos + '<br/>' +
-      linux + '<br/>' +
-      fbWebui
-    );
 
     // if (ios) {
     //   if (!standalone && safari) {
@@ -42,18 +37,17 @@
     // };
 
 
-    // if (fbWebui) {
-    //   if (macos) {
-    //     alert ('true');
-    //     $('#text').html('This is iOS Facebook');
-    //   }
-    //
-    //   if (linux) {
-    //     $('#text').html('This is Andriod Facebook');
-    //   }
-    // } else {
-    //     $('#text').html('This is not inside Facebook');
-    // }
+    if (fbWebui) {
+      if (macos) {
+        $('#text').html('This is iOS Facebook');
+      }
+
+      if (linux) {
+        $('#text').html('This is Andriod Facebook');
+      }
+    } else {
+        $('#text').html('This is not inside Facebook');
+    }
   </script>
 </body>
 
