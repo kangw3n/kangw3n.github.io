@@ -18,7 +18,7 @@
       ios = /iphone|ipod|ipad/.test(userAgent),
       ua = window.userAgent;
 
-    $('h2').html(ua.indexOf('fban') + " <br/> " + ua );
+    $('h2').html( ua );
 
     // if (ios) {
     //   if (!standalone && safari) {
@@ -34,12 +34,12 @@
 
 
     if (ua.indexOf("fban") > -1) {
-      if (ua.indexOf('mac os x') > -1) {
+      if (ua.includes('mac os x') || ua.indexOf('mac os x') > -1) {
         alert ('true');
         $('#text').html('This is iOS Facebook');
       }
 
-      if (ua.indexOf('linux') > -1) {
+      if (ua.includes('linux') || ua.indexOf('linux') > -1) {
         $('#text').html('This is Andriod Facebook');
       }
     } else {
