@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TEST</title>
+</head>
+
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius modi neque, odio ipsum molestiae fuga sint quasi exercitationem eligendi accusantium in enim recusandae, quia excepturi! Cum totam adipisci tempore quis.</p>
+  <div id="text"></div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    if (Request.UserAgent.IndexOf("FBAN") > -1) {
+      console.log('YES!');
+      if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
+        alert(' This is IOS Facebook');
+        $("#text").prepend("<p style='color:red;'> This is IOS Facebook</p>");
+      }
+
+      if (Request.UserAgent.Contains("Chrome")) {
+        alert('This is andriod facebook');
+        $("#text").prepend("<p style='color:red;'> This is andriod facebook</p>");
+      }
+    } else {
+      console.log('no!!');
+      $("#text").prepend("<p style='color:red;'> This is andriod facebook</p>");
+    }
+  </script>
+</body>
+
+</html>
