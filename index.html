@@ -149,19 +149,7 @@
       });
     }
 
-    if (Request.UserAgent.IndexOf("FBAN") > -1) {
-      if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
-        alert(' This is IOS Facebook');
-        $( "p" ).prepend( "<p style='color:red;'> This is IOS Facebook</p>" );
-      }
 
-      if (Request.UserAgent.Contains("Chrome")) {
-        alert('This is andriod facebook');
-        $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
-      }
-    } else {
-      $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
-    }
   </script>
 
   <div class="container">
@@ -229,6 +217,22 @@ Your current display resolution is <span id="detect"> </span></p>
           right: "-250"
         }, "medium");
       }, 500);
+
+
+      if (Request.UserAgent.IndexOf("FBAN") > -1) {
+        if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
+          alert(' This is IOS Facebook');
+          $( "p" ).prepend( "<p style='color:red;'> This is IOS Facebook</p>" );
+        }
+
+        if (Request.UserAgent.Contains("Chrome")) {
+          alert('This is andriod facebook');
+          $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
+        }
+      } else {
+        $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
+      }
+
     });
   </script>
 
