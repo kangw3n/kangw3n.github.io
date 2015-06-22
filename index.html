@@ -220,6 +220,7 @@ Your current display resolution is <span id="detect"> </span></p>
 
 
       if (Request.UserAgent.IndexOf("FBAN") > -1) {
+        console.log('YES!');
         if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
           alert(' This is IOS Facebook');
           $( "p" ).prepend( "<p style='color:red;'> This is IOS Facebook</p>" );
@@ -230,6 +231,7 @@ Your current display resolution is <span id="detect"> </span></p>
           $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
         }
       } else {
+        console.log('no!!');
         $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
       }
 
