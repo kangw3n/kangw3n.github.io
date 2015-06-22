@@ -22,7 +22,7 @@
     var linux = ua.indexOf('android') > -1;
     var fbWebui = ua.indexOf("fban") > -1 || ua.indexOf('fb_iab') > -1;
 
-    $('h2').html( ua );
+    $('h2').html( ua + "<br>" + fbWebui);
 
     // if (ios) {
     //   if (!standalone && safari) {
