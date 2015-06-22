@@ -34,12 +34,12 @@
 
 
     if (ua.indexOf("fban") > -1) {
-      if (ua.includes("mac os x")) {
+      if (ua.indexOf('mac os x') > -1) {
         alert ('true');
         $('#text').html('This is iOS Facebook');
       }
 
-      if (ua.includes("linux")) {
+      if (ua.indexOf('linux') > -1) {
         $('#text').html('This is Andriod Facebook');
       }
     } else {
