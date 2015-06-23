@@ -6723,38 +6723,38 @@ $(function() {
   $(".discuss").find("a").attr("href", ogUrl + "#discuss");
 });
 
-function resizeFacebookComments(f) {
-  var srcStr = $('.fb-comments iframe').attr('src') + "";
-  var src = srcStr.split('width=');
-  if ($(document).width() > 749) {
-    var width = parseInt($('.fb-comments').parent().parent().width()) - parseInt(65);
-  } else {
-    var width = parseInt($('.fb-comments').parent().parent().width()) - parseInt(25);
-  }
-  $('.fb-comments iframe').attr('src', src[0] + 'width=' + width);
-  $('.fb-comments iframe').css({
-    width: width
-  });
-  $('.fb-comments span').css({
-    width: width
-  });
-  $('div.fb-comments').css({
-    left: '0px'
-  });
-}
-
-function fbCommentsWorkaround() {
-  $(window).on('load resize', function() {
-    resizeFacebookComments('load & resize');
-  });
-}
+// function resizeFacebookComments(f) {
+//   var srcStr = $('.fb-comments iframe').attr('src') + "";
+//   var src = srcStr.split('width=');
+//   if ($(document).width() > 749) {
+//     var width = parseInt($('.fb-comments').parent().parent().width()) - parseInt(65);
+//   } else {
+//     var width = parseInt($('.fb-comments').parent().parent().width()) - parseInt(25);
+//   }
+//   $('.fb-comments iframe').attr('src', src[0] + 'width=' + width);
+//   $('.fb-comments iframe').css({
+//     width: width
+//   });
+//   $('.fb-comments span').css({
+//     width: width
+//   });
+//   $('div.fb-comments').css({
+//     left: '0px'
+//   });
+// }
+//
+// function fbCommentsWorkaround() {
+//   $(window).on('load resize', function() {
+//     resizeFacebookComments('load & resize');
+//   });
+// }
 window.fbAsyncInit = function() {
   FB.init({
     appId: "350231215126101",
     xfbml: true,
     version: 'v2.3'
   });
-  fbCommentsWorkaround();
+  // fbCommentsWorkaround();
 };
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
