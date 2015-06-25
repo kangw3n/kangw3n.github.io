@@ -1,0 +1,2432 @@
+@charset "utf-8";
+/*
+**************************************************************************************************************************************
+橫向瀏覽框架
+**************************************************************************************************************************************
+*/
+
+/* all mobile */
+@media only screen and (orientation:landscape) and (min-device-width: 480px) {
+	.album_list dt ,
+	#interest_body dt
+	{
+		width: 24%;
+		margin: 0 0.5% 40px;
+	}
+	.album_list a img {
+		width: 95px;
+	}
+	.album_list dt a {
+		width: 125px !important;
+	}
+	.album_list .icon_type_1 ,
+	.album_list .icon_type_2
+	{
+		top: 97px !important;
+	}
+
+	#photo_list_grid .album_list dt {
+		width: 19%;
+		margin: 0 0.5%;
+	}
+
+}
+
+/* iPhone only */
+@media only screen and (orientation:landscape) and (max-device-width: 480px) {
+	.album_list dt ,
+	#interest_body dt
+	{
+		width: 32%;
+		margin: 0 0.66% 40px;
+	}
+
+	#photo_list_grid .album_list dt {
+		width: 24%;
+		margin: 0 0.5%;
+	}
+}
+
+/* 橫向瀏覽框架 - 結束 */
+
+
+
+
+
+
+
+/*
+**************************************************************************************************************************************
+縱向瀏覽框架
+**************************************************************************************************************************************
+*/
+
+/* all mobile + iPhone */
+@media only screen and (orientation:portrait) {
+	.album_list dt ,
+	#interest_body dt
+	{
+		width: 48%;
+		margin: 0 1% 40px;
+	}
+	#photo_list_grid .album_list dt {
+		width: 32%;
+		margin: 0 0.66%;
+	}
+
+}
+
+/* 縱向瀏覽框架 - 結束 */
+
+
+
+
+
+/*
+**************************************************************************************************************************************
+全域共用 class
+**************************************************************************************************************************************
+*/
+p {
+margin: 0px;
+padding: 5px 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+form, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+table {
+	border-collapse:separate;
+	empty-cells: show;
+}
+div {
+	font: 13px/180% arial, "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", Geneva, sans-serif;
+	color: #444;
+}
+a {
+	color: #1c388c;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+/* 去除連結需線框 */
+a {
+	outline: none; /* for Firefox */
+ hlbr:expression(this.onFocus=this.blur()); /* for IE */
+}
+#article_list .article_tags ,
+.article_tags ,
+.article_content ,
+.article_list_more ,
+.article_content_labels ,
+.article_count_comm ,
+.article_count_like ,
+#also #also_all ,
+.rpp ,
+.ss ,
+.head span ,
+#article_list_body #structure dt ,
+#info .ctrl ,
+#article_show	#tools ,
+#tools .recommend dl ,
+#tools .quote dl ,
+#tools ,
+#search .article_tags ,
+.search_more ,
+#index .album_title ,
+#index .album_count ,
+#photo_list_grid_body .album_title ,
+#photo_list_grid_body .album_count ,
+#article_show .article_count div.article_count_quote ,
+#album_description
+{
+	display: none;
+}
+
+/* 單元標頭 */
+.head {
+	padding: 20px 0px 5px;
+	font: bold 16px/180% "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	text-decoration: none;
+	color: #000;
+	overflow: hidden;
+}
+.head a {
+	color: #000;
+	float: left;
+}
+
+.head span:hover {
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+.foot {
+	padding: 0px 0px 30px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#article_list img ,
+#article_show img ,
+.rp5 img ,
+.rp img ,
+.album_list img ,
+#photo img ,
+#photo_list_grid_body img
+{
+	height: auto !important;
+/*	max-height: 100%;*/
+	max-width: 100%;
+}
+
+
+
+
+#nav {
+	padding: 5px 6px;
+}
+
+#wrapper {
+	background: #ffffff;
+	clear: both;
+	overflow: hidden;
+}
+
+
+
+
+/* 山頭 */
+#mobile_head {
+	width: 100%;
+	height: 40px;
+	position: relative;
+	float: left;
+}
+
+
+#mobile_head_logo {
+	height:28px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 96px;
+	padding-top: 6px;
+	padding-left: 6px;
+}
+
+#mobile_head_logo img {
+	width:100%;
+	height:100%;
+}
+
+
+
+#mobile_head_search {
+	height:31px;
+	position: absolute;
+	top: 4px;
+	width: 41px;
+	right: 6px;
+}
+
+#mobile_head_search img {
+	width:100%;
+	height:100%;
+}
+
+/* 山頭結束 */
+
+
+
+
+
+
+/* 部落格名稱 */
+
+#mobile_blog_name {
+	width: 100%;
+	position: relative;
+	float: left;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 40px;
+	text-decoration: none;
+	text-indent: 6;
+	display: block;
+}
+
+/* 部落格名稱結束 */
+
+
+
+
+
+
+/* 作者 */
+
+#mobile_author {
+	width: 100%;
+	position: relative;
+	float: left;
+}
+
+#mobile_author_img {
+	float: left;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#mobile_author_img img {
+	width:60px;
+	height:60px;
+}
+
+
+
+#mobile_author_mainbox {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin: 0px;
+	padding: 5px 0px;
+}
+
+/* 延伸框架 */
+
+
+#mobile_author_mainbox_content {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#mobile_author_mainbox_content {
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 15px 0px;
+	margin: 0px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+#mobile_author_mainbox_content_arrow {
+	position: absolute;
+	top: 28px;
+	left: 65px;
+	width: 15px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+#mobile_author_mainbox_content_name {
+	float: left;
+	position: relative;
+	display: block;
+	margin: 0px;
+	padding: 0px 10px;
+	font: 18px/30px "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+}
+
+
+/* 延伸框架結束 */
+
+#mobile_author button {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 40px;
+	text-align:center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 20px;
+	line-height: 38px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	z-index: 999;
+}
+
+#mobile_author a {
+	text-decoration: none;
+}
+
+/*主選單 常態*/
+#mobile_author button {
+	text-shadow:none;
+}
+
+/*主選單 當下目標*/
+#mobile_author button.active {
+}
+
+/* 作者結束 */
+
+
+
+
+
+/* 文章列表連結 */
+
+#mobile_category_box {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+#mobile_category_box_link {
+	height: 40px;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 18px;
+	line-height: 40px;
+	text-decoration: none;
+	margin-left: 6px;
+}
+
+#mobile_category_box_link a {text-decoration: none;}
+
+#mobile_category_box_img {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	height: 31px;
+	width: 41px;
+}
+
+#category {
+	padding: 0px;
+}
+
+#category_body ul ,
+#category_body li
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#category_body a {
+	line-height: 250%;
+	font-size: 16px;
+}
+
+#category_body ul {
+	list-style: none;
+}
+
+#category_body ul ul {
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+	padding-left: 0;
+}
+
+#category_body ul a {
+	display: block;
+	line-height: 150%;
+	padding-top: 6px;
+	padding-right: 0;
+	padding-bottom: 6px;
+	padding-left: 0px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#category_body ul ul a {
+	padding-top: 5px;
+	padding-right: 0;
+	padding-bottom: 5px;
+
+}
+
+#category_body li > a ,
+#category_body .handle > a
+{
+	text-decoration: none;
+	display: block;
+	padding-right: 35px;
+	font-size: 12px;
+	text-indent: 5px;
+	font-weight: normal;
+}
+
+#category_body li > a {}
+
+
+#category_body .handle > a ,
+#category_body .handle > a:hover
+{
+}
+
+#category_body .active .handle > a {
+}
+
+#category_body a:hover ,
+#category_body .handle > a:hover
+{
+}
+
+#category_body ul ul {
+}
+
+#category_body ul ul li a {
+	padding-right: 35px;
+}
+
+#mobile_category_box_list { display: none; }
+#category_head { display: none;	}
+#category_foot { display: none; }
+
+/* 文章列表連結結束 */
+
+
+/* 相片列表連結 */
+
+#albumfolder_body dt > a ,
+#albumfolder_body .list > a
+{
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 15px;
+	line-height: 150%;
+	text-decoration: none;
+	font-weight: bold;
+	text-indent: 5px;
+	display: block;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 35px;
+
+}
+
+#albumfolder_head { display: none; }
+#albumfolder_foot { display: none; }
+
+/* 相片列表連結結束 */
+
+
+/* 精選相片 showimg */
+
+#showimg {
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	display: block;
+}
+
+#showimg_slides {
+	float: left;
+	position: relative;
+	width: 100%;
+	z-index:100;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+#showimg_slides dl {
+	position:relative;
+	width: 100%;
+	padding: 10px 0px 0px;
+	margin: 0px;
+
+}
+
+#showimg_slides dl dd {
+	position: relative;
+	width:100%;
+	padding:0px;
+	margin: 0px;
+}
+
+#showimg_slides .prev,
+#showimg_slides .next {
+	position:absolute;
+	width:80px;
+	height: 120px;
+	display:block;
+	z-index:101;
+}
+
+#showimg_slides .prev {
+	left: 0px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/slides_prev_white.png) no-repeat center center;
+}
+
+#showimg_slides .next {
+	right: 0px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/slides_next_white.png) no-repeat center center;
+}
+
+.showimg_slides_img {
+	text-align: center;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+.showimg_slides_img a {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.showimg_slides_txt {
+	position: absolute;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	left: 50%;
+	bottom: 0px;
+
+	font: 13px/30px arial, "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", Geneva, sans-serif;
+	color: #fff;
+	text-align: center;
+
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.showimg_slides_txt span {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+
+#showimg_slides .pagination {
+	height: 25px;
+	margin: 0px auto;
+	text-align: center;
+	display: table;
+	padding: 5px 0px 8px;
+}
+
+#showimg_slides .pagination li {
+	float:left;
+	margin:0 2px;
+	padding: 0px;
+	list-style:none;
+}
+
+#showimg_slides .pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(http://g.udn.com.tw/community/img/ugc_2011/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+#showimg_slides .pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*
+**************************************************************************************************************************************
+橫向瀏覽框架
+**************************************************************************************************************************************
+*/
+
+/* all mobile */
+@media only screen and (orientation:landscape) and (min-device-width: 480px) {
+
+#showimg_slides dl,
+#showimg_slides dl dd {
+	height: 363px;
+}
+
+.showimg_slides_img,
+.showimg_slides_img a {
+	width: 500px;
+	height: 333px;
+}
+
+#showimg_slides dl dd img {
+	max-width:500px;
+	max-height:333px;
+	height:expression((this.height>333)?333:this.height);
+}
+
+#showimg_slides .prev,
+#showimg_slides .next {
+	top:110px;
+}
+
+.showimg_slides_txt {
+	width: 500px;
+	margin-left: -250px;
+}
+
+}
+
+/* iPhone only */
+@media only screen and (orientation:landscape) and (max-device-width: 480px) {
+
+#showimg_slides dl,
+#showimg_slides dl dd {
+	height: 350px;
+}
+
+.showimg_slides_img,
+.showimg_slides_img a {
+	width: 480px;
+	height: 320px;
+}
+
+#showimg_slides dl dd img {
+	max-width:480px;
+	max-height:320px;
+	height:expression((this.height>320)?320:this.height);
+}
+
+#showimg_slides .prev,
+#showimg_slides .next {
+	top:105px;
+}
+
+.showimg_slides_txt {
+	width: 480px;
+	margin-left: -240px;
+}
+
+}
+
+/* 橫向瀏覽框架 - 結束 */
+
+
+/*
+**************************************************************************************************************************************
+縱向瀏覽框架
+**************************************************************************************************************************************
+*/
+
+/* all mobile + iPhone */
+@media only screen and (orientation:portrait) {
+
+#showimg_slides dl,
+#showimg_slides dl dd {
+	height: 243px;
+}
+
+.showimg_slides_img,
+.showimg_slides_img a {
+	width: 320px;
+	height: 213px;
+}
+
+#showimg_slides dl dd img {
+	max-width:320px;
+	max-height:213px;
+	height:expression((this.height>213)?213:this.height);
+}
+
+#showimg_slides .prev,
+#showimg_slides .next {
+	top:50px;
+}
+
+.showimg_slides_txt {
+	width: 320px;
+	margin-left: -160px;
+}
+
+}
+
+/* 縱向瀏覽框架 - 結束 */
+
+/* 精選相片 showimg 結束 */
+
+
+
+/* Button 觀看更多 */
+#mobile_pagebutton {
+	line-height: 40px;
+	float: left;
+	position: relative;
+	text-align: center;
+	background-color: #FFF;
+	margin: 0px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#mobile_pagebutton a {
+	text-decoration: none;
+}
+
+#mobile_pagebutton button {
+	position: relative;
+	float: left;
+	width: 48%;
+	height: 40px;
+	text-align: center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 3px;
+	font: 20px/38px "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	background:#ddd;
+	border: 1px solid #999;
+	background:-webkit-gradient(linear, 50% 17%, 50% 0%, from(#ddd), to(#fff));
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
+	margin-right: 1%;
+	margin-left: 1%;
+}
+
+#mobile_pagebutton button.null {
+	background:#ececec;
+	border: 1px solid #dcdcdc;
+	background:-webkit-gradient(linear, 50% 17%, 50% 0%, from(#ececec), to(#fff));
+	color: #9f9f9f;
+}
+
+/*  */
+#mobile_pagebutton_center {
+	line-height: 40px;
+	float: center;
+	position: relative;
+	text-align: center;
+	background-color: #FFF;
+	margin: 0px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+#mobile_pagebutton_center a {
+	text-decoration: none;
+}
+#mobile_pagebutton_center button {
+	position: center;
+	float: center;
+	width: 48%;
+	height: 40px;
+	text-align:center;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 3px;
+	font: 20px/38px "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	background:#ddd;
+	border: 1px solid #999;
+	background:-webkit-gradient(linear, 50% 17%, 50% 0%, from(#ddd), to(#fff));
+	color: #333;
+	text-shadow: 1px 1px 1px #fff;
+	margin-right: 1%;
+	margin-left: 1%;
+}
+.mobile_pagebutton_center button {
+	float: none!important;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* Button 觀看更多結束 */
+
+
+
+
+
+/* footer */
+
+#mobile_footer {
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 85px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	bottom: 0px;
+}
+
+#mobile_footer p {
+	font-size: 17px;
+	line-height: 180%;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+#mobile_footer a {
+	text-decoration: none;
+}
+
+#mobile_footer p.mobile_footer_copy {
+	font-size: 10px;
+	line-height: 110%;
+	font-family: arial;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+/* footer */
+
+
+
+
+
+/* 頻道關閉 */
+
+#mobile_article_list_off_box {}
+
+#mobile_off {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 250px;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#mobile_off span {
+	position: absolute;
+	width: 260px;
+	height: 50px;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	display: block;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -130px;
+}
+
+/* 頻道關閉結束 */
+
+
+
+/* 搜尋 */
+
+#mobile_search {
+	float: left;
+	position: relative;
+	width: 100%;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+
+#mobile_search_main {
+	position: relative;
+	float: left;
+	width: 76%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-right: 12%;
+	margin-left: 12%;
+}
+
+#mobile_search_main textarea {
+	position: relative;
+	float: left;
+	width: 98%;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	line-height: 30px;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 26px;
+	margin: 1%;
+	padding: 0px;
+}
+
+#mobile_search_button {padding-bottom: 30px;}
+
+#mobile_search_button button {
+	width: 80%;
+	height: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align:center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+/* 搜尋結束 */
+
+
+
+
+
+
+
+
+/* 相片內頁 */
+
+#mobile_photo_bottom_bar {
+	width: 100%;
+	height: 42px;
+	position: fixed;
+	z-index: 999;
+	bottom: 0px;
+}
+#mobile_photo_bottom_bar {
+	background-color: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.2);
+}
+
+#mobile_photo_bottom_page {
+	position: absolute;
+	width: 160px;
+	height: 40px;
+	margin-left: -80px;
+	left: 50%;
+	top: 2px;
+	letter-spacing: 2px;
+	color: #FFF;
+	font-family: arial;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+#mobile_photo_bottom_home a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#mobile_photo_bottom_home {
+	position: absolute;
+	width: 45px;
+	height: 42px;
+	left: 6px;
+	bottom: 0px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/mobile_photo_bottom.png) no-repeat 0px -42px;
+}
+
+#mobile_photo_bottom_prev a {
+	width: 50%;
+	height: 42px;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#mobile_photo_bottom_next a {
+	width: 50%;
+	height: 42px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#mobile_photo_bottom {
+	position: absolute;
+	width: 83px;
+	height: 42px;
+	right: 6px;
+	bottom: 0px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/mobile_photo_bottom.png) no-repeat 0px -84px;
+}
+
+
+
+
+
+
+
+
+/*	max-width:100%;*/
+/*	max-height:100%;*/
+
+/*	min-width:100%;*/
+/*	min-height:100%; */
+
+
+/* 相片內頁結束 */
+
+
+
+
+/* loading */
+
+#qLoverlay {
+	position: absolute;
+	width:160px;
+	height:60px;
+	left:50%;
+	top:50%;
+	margin-top:-40px;
+	margin-left: -120px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-image: url(http://g.udn.com.tw/community/img/ugc_2011/loading.gif);
+	background-repeat: no-repeat;
+	background-position: 170px 15px;
+	background-color: #282828;
+	text-align: right;
+	padding-top: 20px;
+	padding-right: 80px;
+	z-index: 99999999999999999999999999999;
+}
+
+#qLbar {
+	top: 60px;
+	left: 10%;
+	background-color: #999;
+	width: 80px;
+}
+
+/* loading 結束 */
+
+
+
+
+
+
+
+
+
+
+
+/* 滑動頁面 */
+
+.ui-mobile [data-role=page],.ui-mobile [data-role=dialog],.ui-page{top:0;left:0;width:100%;min-height:100%;position:absolute;display:none;border: none 0;}
+.ui-mobile .ui-page-active{display:block;overflow:visible}
+.ui-loader{display:none;}
+.in,.out{-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:350ms}
+.slide.in{-webkit-transform:translateX(0);-webkit-animation-name:slideinfromright;z-index: 99999999999999999999999999999999999;}
+.slide.out.reverse{-webkit-transform:translateX(100%);-webkit-animation-name:slideouttoright}
+.slide.in.reverse{-webkit-transform:translateX(0);-webkit-animation-name:slideinfromleft}
+@-webkit-keyframes slideinfromright{from{-webkit-transform:translateX(100%)}to{-webkit-transform:translateX(0)}}
+@-webkit-keyframes slideinfromleft{from{-webkit-transform:translateX(-100%)}to{-webkit-transform:translateX(0)}}
+@-webkit-keyframes slideouttoleft{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(-100%)}}
+@-webkit-keyframes slideouttoright{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(100%)}}
+@-webkit-keyframes slideinfromtop{from{-webkit-transform:translateY(-100%)}to{-webkit-transform:translateY(0)}}
+@-webkit-keyframes slideinfrombottom{from{-webkit-transform:translateY(100%)}to{-webkit-transform:translateY(0)}}
+@-webkit-keyframes slideouttobottom{from{-webkit-transform:translateY(0)}to{-webkit-transform:translateY(100%)}}
+@-webkit-keyframes slideouttotop{from{-webkit-transform:translateY(0)}to{-webkit-transform:translateY(-100%)}}
+@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}
+@-webkit-keyframes fadeout{from{opacity:1}to{opacity:0}}
+
+/* 滑動頁面 結束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 文章列表 */
+#article_list {
+	display: block;
+	background: #FFF;
+}
+#article_list_body dl dt {
+	border-top: 1px solid #CCC;
+	padding: 10px 6px;
+	position: relative;
+	overflow: hidden;
+	background: #FFF url("http://g.udn.com.tw/community/img/ugc_2011/common_blogs_list_box_bg.png") repeat-x left top;
+	display: block;
+}
+
+/* 文章 */
+.article_topic ,
+.search_user
+{
+	position: relative;
+	color: #000;
+	font: bold 18px/150% "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	overflow: hidden;
+}
+.article_topic a {
+}
+.article_title {
+	padding: 20px 0px 0px 0px;
+	display: block;
+}
+.search_blog_name {
+	display: block;
+}
+.search_blog_nick {
+	display: block;
+	font-weight: normal;
+	color: #333;
+}
+.article_topic_photo ,
+.search_user_photo
+{
+	height: 60px;
+	width: 60px;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	margin: 0px 10px 0px 0px;
+	float: left;
+}
+.search_user_photo
+{
+	width: 60px;
+	height: 60px;
+}
+.article_topic_photo img {
+	width: 60px;
+}
+.search_user_photo img {
+	width: 60px;
+}
+
+.article_count_comm div {
+	padding: 0px 20px 0px 0px;
+	position: relative;
+	font-size: 13px;
+	float: left;
+}
+.article_count span {
+	float: left;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 18px;
+}
+.article_count_view span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -332px;
+}
+#article_list .article_datatime {
+	position: absolute;
+	left: 78px;
+	top: 5px;
+}
+#article_list .article_count {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+
+/* 單一文章頁 */
+#article_show .article_topic {
+	color: #000;
+	font: bold 28px/150% "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	padding: 15px 0px;
+}
+
+#article_show_body .article_count {
+	float: right;
+}
+#article_show .article_count div {
+	display: inline-block;
+	padding: 0 0 0 20px;
+	position: relative;
+	font-size: 13px;
+	float: left;
+}
+#article_show .article_count_view span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -332px;
+}
+#article_show .article_count_comm span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -274px;
+}
+#article_show .article_count_like > span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -304px;
+	height: 22px;
+}
+#article_show .article_count_quote > span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -414px;
+}
+div.article_count_quote {
+	padding: 0px;
+}
+
+
+/* 標籤 */
+/*
+.article_tags {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -574px;
+	padding: 5px 0px 5px 18px;
+	display: block;
+	overflow: hidden;
+	margin: 0px 10px;
+}
+.article_tags a {
+     display: inline-block;
+		 margin: 0 20px 0 0;
+}
+*/
+
+/* 解決使用float 的div高度超出父div之外 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+#info {
+	padding: 20px 0px 0px;
+}
+#info dt {
+	padding: 5px 6px;
+	background: #fffceb;
+	margin: 0px 0px 3px;
+	border-top: 1px solid #f2e8b6;
+	border-bottom: 1px solid #f2e8b6;
+	float: none;
+	overflow: hidden;
+}
+#info span {
+	float: left;
+	color: #333;
+}
+#info dt:hover .ctrl {
+	display: block;
+}
+#article_show {
+	text-align:justify;
+	text-justify:inter-ideograph;
+	padding: 20px 6px 10px;
+}
+#article_show_content {
+	font-size: 15px;
+	color: #000;
+	padding: 30px 0px;
+	clear: both;
+}
+
+#cc {
+	float: left;
+}
+
+#also {
+	border-top: 1px solid #eee;
+	padding: 30px 10px 10px;
+}
+#also span {
+	color: #CCC;
+}
+#also #also_all {
+	float: left;
+}
+
+#tools_body {
+	font-size: 16px;
+	float: right;
+}
+#tools_body a {
+	display: inline-block;
+/*	overflow: hidden;*/
+	margin: 0px 0px 0px 20px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -302px;
+	float: left;
+	padding: 0px 0px 0px 18px;
+}
+#tools .recommend {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+#tools .recommend a {
+	background-position: left -302px;
+}
+#tools .recommend:hover dl {
+	display: block;
+}
+#tools .recommend dt a {
+	margin: 0px;
+	white-space: nowrap;
+	background: #FFF;
+	padding: 2px 10px;
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	float: none;
+	clear: both;
+}
+#tools .recommend dt a:hover {
+	background: #f2f2f2;
+	color: #000;
+}
+#tools .quote {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+#tools .quote a {
+	background-position: left -414px;
+}
+#tools .quote:hover dl {
+	display: block;
+}
+#tools .quote dt a {
+	margin: 0px;
+	white-space: nowrap;
+	background: #FFF;
+	padding: 2px 10px;
+	border-bottom: 1px solid #ccc;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	float: none;
+	clear: both;
+}
+#tools .quote dt a:hover {
+	background: #f2f2f2;
+	color: #000;
+}
+#tools .forward {
+	background-position: left -444px;
+}
+#tools .print {
+	background-position: left -515px;
+}
+#tools .favorite {
+	background-position: left -545px;
+}
+
+
+
+/* 你可能會有興趣的文章 */
+#interest_body dt {
+	float: left;
+}
+#interest_body dt a {
+	width: 120px;
+	height: 160px;
+	display: block;
+	position: relative;
+	margin: auto;
+	text-align: left;
+	line-height: 150%;
+}
+
+#interest {
+	overflow: hidden;
+	padding: 20px 10px 30px;
+}
+#interest_head {
+	padding: 10px 0px 5px;
+	font: 16px/180% "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	font-weight: bold;
+	color: #000;
+}
+#interest_body  {
+	padding: 0px 0px 30px;
+	overflow: hidden;
+}
+#interest_body.only_title dt {
+	margin: 0 20px 0 0;
+	height: auto;
+	float: none;
+	width: auto;
+}
+#interest_body.only_title a {
+	border-bottom: 1px dotted #eee;
+	padding: 10px 0px 5px;
+	text-decoration: none;
+	height: auto;
+	width: auto;
+}
+#interest_body.only_title a:hover {
+	background: #F5F5F5;
+}
+#interest_body img {
+	width: 113px;
+}
+#interest_body span {
+	width: 113px;
+	display: block;
+	height: 113px;
+	overflow: hidden;
+	background: #FFF;
+	clear: both;
+	margin: 0px 0px 5px;
+}
+
+
+
+
+
+
+
+/* 迴響 */
+#response {
+	overflow: hidden;
+	padding: 40px 10px 0px;
+}
+#response_head {
+	position: relative;
+}
+.manage {
+	position: absolute;
+	top: 30px;
+	right: 6px;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -480px;
+	display: none;
+	float: right;
+	height: 24px;
+	width: 24px;
+	overflow: hidden;
+	text-indent: -999;
+}
+.manage:hover {
+	background-position: left -235px;
+}
+#response dt {
+	padding: 20px 0;
+	border-top: 1px dotted #ccc;
+	/* 針對特殊內容，必要時出現捲軸 */
+	overflow: auto;
+	position: relative;
+}
+.rp1 {
+	float: left;
+	width: 68px;
+	clear: left;
+}
+.rp1 img {
+	width: 57px;
+}
+.rp1 a {
+	width: 57px;
+	display: block;
+	height: 57px;
+	overflow: hidden;
+}
+.rp2 {
+	font-weight: bold;
+	color: #1C388C;
+	font-size: 16px;
+	line-height: 160%;
+	padding: 6px 0px;
+}
+.rp2 span {
+	font-size: 18px;
+	color: #1C388C;
+	font-weight: bold;
+}
+.rp4 {
+	color: #999999;
+	font-size: 12px;
+	float: left;
+}
+.rp5 {
+	text-align:justify;
+	text-justify:inter-ideograph;
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 20px 0px;
+}
+.rp6 {
+	clear: left;
+	float: left;
+	width: 100%;
+	padding: 10px 0px 10px 0px;
+}
+
+
+.rp {
+	text-align:justify;
+	text-justify:inter-ideograph;
+	background: #f2f2f2;
+	padding: 10px 25px;
+	margin: 5px 0px 5px 10px;
+	clear: both;
+	color: #000;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+}
+.rp .icon {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -840px;
+	display: block;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	left: -10px;
+	top: 0px;
+	overflow: hidden;
+}
+.pmsg .rp {
+	background: #fcf6d4;
+	border-top: 1px solid #F2E8B6;
+	border-bottom: 1px solid #F2E8B6;
+}
+.pmsg .rp .icon {
+	background-position: left -870px
+}
+
+#response dt.pmsg {
+	border-top: 5px solid #f2e8b6;
+	padding: 20px;
+}
+dt.pmsg {
+	background: #fffceb;
+}
+.pmsg_icon {
+	font-size: 12px;
+	background: #f2e8b6;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 0 5px;
+}
+.rp .pmsg_icon {
+	background: #EFE497;
+	right: 0px;
+}
+
+
+
+.prt {
+	font-size: 12px;
+	color: #999;
+	display: block;
+}
+.prt a {
+	color: #999;
+}
+.prt a:hover {
+	text-decoration: underline;
+}
+
+.pmsg .prt ,
+.pmsg .prt a
+{
+	color: #a69c6c;
+}
+
+
+/* 相簿首頁 */
+#album_index_slideshow {
+	background: #F2F2F2;
+	height: 188px;
+	width: 320px;
+	margin: 10px auto 30px;
+}
+
+.float_alugn_center {
+	position:relative;
+	float:right;
+	left:-50%;
+}
+
+.album_list {
+	padding: 6px;
+	overflow: hidden;
+	position:relative;
+	left:50%;
+}
+
+.album_list dt {
+	float:left;
+	text-align: center;
+}
+.album_list dt a {
+	width: 150px;
+	height: 225px;
+	display: block;
+	text-decoration: none;
+	color: #333;
+	position: relative;
+	margin: auto;
+	text-align: left;
+}
+.album_list a img {
+	padding: 10px;
+	border: 5px solid #E5E5E5;
+	background: #FFF;
+}
+.album_list .album_title {
+	padding: 0 5px;
+	display: block;
+	line-height: 150%;
+}
+.album_list .icon_type_1 ,
+.album_list .icon_type_2
+{
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -1450px;
+	display: block;
+	height: 28px;
+	width: 28px;
+	overflow: hidden;
+	position: absolute;
+	top: 122px;
+	right: 0px;
+}
+.album_list .icon_type_2 {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -1572px;
+}
+.album_count {
+	padding: 0 5px;
+	display: block;
+	color: #666;
+	overflow: hidden;
+}
+.album_count span {
+    width: 65px;
+    float: left;
+}
+.album_count span span {
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 18px;
+}
+.album_count .album_count_view span {
+    background: url("http://g.udn.com.tw/community/img/ugc_2011/icons.png") no-repeat scroll left -332px;
+}
+.album_count .album_count_photo span {
+    background: url("http://g.udn.com.tw/community/img/ugc_2011/icons.png") no-repeat scroll left -1416px;
+}
+.album_list .album_count .album_folder_num span {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat left -1646px;
+}
+
+span.recommendation {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/recommendation.png) no-repeat left top;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	height: 39px;
+	width: 124px;
+	left: -2px;
+	top: -2px;
+}
+
+
+
+
+/* 相片列表 */
+#photo_list_grid {
+	padding: 0 6px;
+}
+#photo_list_grid_head
+{
+	position: relative;
+}
+#album_description {
+	padding: 0px 0px 30px;
+}
+#album_count_num {
+	position: absolute;
+	top: 25px;
+	right: 6px;
+	display: inline;
+}
+#album_photo_num {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat scroll left -1414px;
+	padding: 0 0 10px 18px;
+	float: right;
+}
+#album_view_num {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/icons.png) no-repeat scroll left -332px;
+	padding: 0 0 10px 18px;
+	float: right;
+	margin: 0px 20px 0px 0px;
+}
+#photo_list_grid_body .album_list {
+	padding: 0;
+}
+#photo_list_grid_body .album_list a {
+	margin: 0 auto 10px;
+	width: 99px;
+	height: 99px;
+}
+#photo_list_grid_body .album_list a img {
+	width: 99px;
+	padding: 0px;
+	border-style: none;
+}
+
+
+.video_photo {
+	display: inline-block;
+	position: relative;
+}
+.video_play {
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/video_play.png) no-repeat center center;
+	display: block;
+	overflow: hidden;
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /*IE8*/
+	filter:alpha(opacity=60);  /*IE5!BIE5.5!BIE6!BIE7*/
+	opacity: .6;  /*Opera9.0+!BFirefox1.5+!BSafari!BChrome*/
+}
+#photo_list_grid_body .video_play {
+	height: 99px;
+	width: 99px;
+	left: 0px;
+	top: 0px;
+}
+
+
+
+
+
+/* 單一相片 */
+/* 相片內頁 */
+.mobile_photo_img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0px;
+	padding: 0px;
+	background: #282828;
+}
+
+.mobile_photo_img img {
+	max-width: 100%;
+}
+
+#outer { height: 100%; width: 100%;}
+#outer[id] {display: table; position: static;}
+#middle[id] {display: table-cell; vertical-align: middle; position: static;}
+
+/* 相片內頁結束 */
+
+
+
+/* 搜尋結果 */
+#search_body #structure dt {
+	padding: 5px 6px;
+}
+#search {
+	display: block;
+	background: #FFF;
+}
+#search_body dl dt {
+	border-top: 1px solid #eee;
+	padding: 10px 6px;
+	position: relative;
+	overflow: hidden;
+}
+#search .article_datatime {
+	position: absolute;
+	left: 78px;
+	top: 5px;
+}
+#search .article_count {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.meet {
+	color: #1C388C;
+}
+.kw {
+	color: #c00;
+}
+
+
+
+
+
+
+/* mobile 版 總首頁 */
+
+#common_blogs_list_head,
+#mobile_albums_list_head {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	background: #282828;
+}
+
+#common_blogs_list_head strong,
+#mobile_albums_list_head strong {
+	padding-left: 10px;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+}
+
+/* 最新消息框 */
+#news {
+	float: left;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: block;
+}
+
+#news_slides {
+	float: left;
+	position: relative;
+	width: 100%;
+	z-index:100;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+
+	background: #f0f0f0;
+	background:-webkit-gradient(linear, 50% 35%, 50% 0%, from(#f0f0f0), to(#cacaca));
+}
+
+/* 增添新版jquery 和 CSS 配搭 */
+#news_slides img {
+	width: 100%;
+}
+
+
+#news_slides a {
+	text-decoration: none;
+}
+
+#news_slides .text {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: relative;
+	top: -40px;
+	color: white;
+	text-align: center;
+	padding: 5px 0;
+}
+
+a.slidesjs-navigation {
+	position: absolute;
+	float: left;
+	top: 40%;
+	background-color: #f0f0f0;
+	padding: 1% 1.8%;
+	text-decoration: none;
+	z-index: 999999;
+}
+
+
+#news_slides .slidesjs-previous {
+	left: 0;
+}
+
+#news_slides .slidesjs-next {
+	right: 0;
+}
+
+.slidesjs-pagination {
+	display: inline-block;
+	margin: 5px 0;
+	list-style: none;
+	-webkit-padding-start: 0;
+	text-align: center;
+}
+
+.slidesjs-pagination li {
+	float: left;
+	margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+	display: inline-block;
+	width: 13px;
+	height: 0;
+	padding-top: 13px;
+	background-image: url(http://g.udn.com.tw/community/img/ugc_2011/pagination.png);
+	background-position: 0 0;
+	overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+	background-position: 0 -12px
+}
+
+.slidesjs-pagination li a:hover {
+	background-position: 0 -12px
+}
+
+#news_slides a:link,
+#news_slides a:visited {
+	color: #333
+}
+
+#news_slides a:hover,
+#news_slides a:active {
+	color: #9e2020
+}
+
+
+/* 最新消息框結束 */
+
+
+/* 部落格推薦框 */
+
+.mobile_blogs_list {
+/*	float: left;*/
+	position:relative;
+	width: 100%;
+	margin: 0px;
+	paddingt: 0px;
+
+}
+
+.mobile_blogs_list dl dt {
+	/*	float: left;*/
+	position: relative;
+	width: 100%;
+	height: 71px;
+	overflow: hidden;
+	border-bottom: 1px solid #CCC;
+	background: #FFF url("http://g.udn.com.tw/community/img/ugc_2011/common_blogs_list_box_bg.png") repeat-x left top;
+	display: block;
+}
+
+.mobile_blogs_list dl dt  span {
+	height: 60px;
+	font: bold 18px/30px "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif;
+	text-align: left;
+	padding: 5px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.mobile_blogs_list dl dt a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+
+.mobile_blogs_list dl dt a > span.blogs_list_photo {
+float: left;
+position:relative;
+height: 70px;
+width: 70px;
+margin: 0px;
+text-align: center;
+display: block;
+padding: 5px 0 5px 5px;
+}
+
+.mobile_blogs_list dl dt img {
+	max-width:60px;
+	width:expression((this.width>60)?60:this.width);
+	max-height:60px;
+	height:expression((this.height>60)?60:this.height);
+}
+
+/* 部落格推薦框結束 */
+
+
+/* 相簿推薦框 */
+#mobile_albums_list_box {
+	float: left;
+	width: 100%;
+}
+
+#common_blogs_list_box {
+	width: 100%;
+	overflow: hidden;
+}
+.mobile_album_list {
+	position: relative;
+	overflow: hidden;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding-top: 20px;
+	display: block;
+}
+
+.mobile_album_list dl {
+	float: left;
+	position: relative;
+	height: 204px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.mobile_album_list dl dd,
+.mobile_album_list dl dd.big {
+	float: left;
+	position: relative;
+	margin: 0px;
+	padding: 3px;
+}
+
+
+
+/*
+**************************************************************************************************************************************
+縱向瀏覽框架
+**************************************************************************************************************************************
+*/
+@media only screen and (orientation:portrait) {
+
+
+/*個別單位的列表顯示*/
+.mobile_album_list {
+	width: 306px;
+}
+
+.mobile_album_list dl {
+	width: 306px;
+}
+
+.mobile_album_list dl dd,
+.mobile_album_list dl dd.big {
+	width: 96px;
+	height: 96px;
+}
+
+.mobile_album_list dl dd.big a {
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+
+.mobile_album_list dl dd img,
+.mobile_album_list dl dd.big img {
+	max-width:96px;
+	width:expression((this.width>96)?96:this.width);
+	max-height:96px;
+	height:expression((this.height>96)?96:this.height);
+}
+
+}
+
+
+
+/*
+**************************************************************************************************************************************
+橫向瀏覽框架
+**************************************************************************************************************************************
+/* iPhone only */
+@media only screen and (orientation:landscape) and (max-device-width: 480px) {
+
+
+/*個別單位的列表顯示*/
+.mobile_album_list {
+	width: 408px;
+}
+
+.mobile_album_list dl {
+	width: 408px;
+}
+
+.mobile_album_list dl dd {
+	width: 96px;
+	height: 96px;
+}
+
+.mobile_album_list dl dd.big {
+	width: 198px;
+	height: 198px;
+}
+
+.mobile_album_list dl dd.big a {
+	width: 198px;
+	height: 198px;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.mobile_album_list dl dd img {
+	max-width:96px;
+	width:expression((this.width>96)?96:this.width);
+	max-height:96px;
+	height:expression((this.height>96)?96:this.height);
+}
+
+.mobile_album_list dl dd.big img {
+	max-width:198px;
+	width:expression((this.width>198)?198:this.width);
+	max-height:198px;
+	height:expression((this.height>198)?198:this.height);
+}
+
+}
+
+
+
+/* all mobile */
+@media only screen and (orientation:landscape) and (min-device-width: 480px) {
+
+
+/*個別單位的列表顯示*/
+.mobile_album_list {
+	width: 510px;
+}
+
+.mobile_album_list dl {
+	width: 510px;
+}
+
+.mobile_album_list dl dd {
+	width: 96px;
+	height: 96px;
+}
+
+.mobile_album_list dl dd.big {
+	width: 198px;
+	height: 198px;
+}
+
+.mobile_album_list dl dd.big a {
+	width: 198px;
+	height: 198px;
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.mobile_album_list dl dd img {
+	max-width:96px;
+	width:expression((this.width>96)?96:this.width);
+	max-height:96px;
+	height:expression((this.height>96)?96:this.height);
+}
+
+.mobile_album_list dl dd.big img {
+	max-width:198px;
+	width:expression((this.width>198)?198:this.width);
+	max-height:198px;
+	height:expression((this.height>198)?198:this.height);
+}
+
+}
+
+/* 相簿推薦框 結束 */
+
+/* mobile 版 總首頁結束 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 訊息頁 */
+#msg {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	margin: 0px;
+}
+#msg_txt {
+	color: #000;
+	font: bold 16px/200% "微軟正黑體","Microsoft JhengHei","微软雅黑体","Microsoft YaHei","新細明體",PMingLiU,"新宋体",NSimSun,"Apple LiGothic Medium",arial,Geneva,sans-serif;
+	padding: 10px 10px 10px 85px;
+	background: #f5f5f5 url(http://g.udn.com.tw/community/img/ugc_2011/msg_s.gif) no-repeat 0px 0px;
+	display: block;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+	/* IE FF 最小高度 */
+	height:auto!important;
+	height:140px;
+	min-height:140px;
+	zoom: 75%;
+}
+#msg_links {
+	display: block;
+	background: #FFF;
+	text-align: center;
+}
+#msg_link_back {
+	display: inline-block;
+	height: 65px;
+	width: 150px;
+	text-indent: -999px;
+	overflow: hidden;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/msg.gif) no-repeat 10px -5px;
+}
+#msg_link_home {
+	display: inline-block;
+	height: 65px;
+	width: 160px;
+	text-indent: -999px;
+	overflow: hidden;
+	background: url(http://g.udn.com.tw/community/img/ugc_2011/msg.gif) no-repeat -154px -5px;
+}
+
+
+
+
+
+
+/*頂端社群分享*/
+ul#mobiletop_share { height:40px; display: block; list-style-type: none; padding: 0 10px; margin: 20px 0; }
+ul#mobiletop_share li a { position:relative; display: block; text-decoration: none; color: #333; }
+ul#mobiletop_share li { display: inline-block; padding: 0; margin: 0 20px 0 0; vertical-align: middle; text-align: center; }
+ul#mobiletop_share li a.share_btn i { display: inline-block; width: 20px; height: 20px; padding: 0; background-image: url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size: cover; background-position: 0 0; vertical-align: middle; margin: 0px 5px 0px 0px; }
+ul#mobiletop_share li a.share_btn span { font-size: 16px; vertical-align: bottom; }
+
+
+/*社群分享對齊微調*/
+ul#mobiletop_share li:nth-child(1) { }
+ul#mobiletop_share li:nth-child(2) { width:65px; margin-top:10px; }
+ul#mobiletop_share li:nth-child(3) { }
+
+
+/* ColorBox popup 視窗*/
+#share_popup { background-color:#fff; padding:10px; }
+#share_popup dl { position: relative; margin: 0; padding: 0; text-align: center; }
+#share_popup dl dd { display:inline-block; width:30%; margin:0; padding:10px 0; }
+#share_popup dl dd a { display:block; margin:0; padding:0; }
+#share_popup dl dd i { display:block; width:60px; height:60px; text-indent: -9999px; margin:0 auto; padding:0; background-image:url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size:cover; }
+#share_popup dl dd:nth-child(1) i { background-position:0 -100%; }
+#share_popup dl dd:nth-child(2) i { background-position:0 -200%; }
+#share_popup dl dd:nth-child(3) i { background-position:0 -300%; }
+#share_popup dl dd:nth-child(4) i { background-position:0 -400%; }
+#share_popup dl dd:nth-child(5) i { background-position:0 -500%; }
+#share_popup dl dd:nth-child(6) i { background-position:0 -600%; }
+
+/*
+ColorBox Core Style:
+The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; }
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+
+/*
+User Style:
+Change the following styles to modify the appearance of ColorBox.  They are
+ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#333;}
+#colorbox{}
+#cboxContent{margin-top:32px; overflow:visible;}
+#cboxError{padding:50px; border:1px solid #ccc;}
+#cboxLoadedContent{ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: 2px 2px 10px #000000; -moz-box-shadow: 2px 2px 10px #000000; box-shadow: 2px 2px 10px #000000; border: 5px solid #EBEBEB; }
+#cboxLoadingGraphic{}/*loading.gif*/
+#cboxLoadingOverlay{ background: #fff; }
+#cboxTitle{position:absolute; top:-22px; left:0; color:#000;}
+#cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
+#cboxSlideshow, #cboxPrevious, #cboxNext, #cboxClose{text-indent:-9999px; width:20px; height:20px; position:absolute; top:5px; background:url(http://g.udn.com.tw/community/img/ugc_2011/controls.svg) no-repeat 0 0;}
+#cboxPrevious{background-position:0px 0px; right:44px;}
+#cboxPrevious.hover{background-position:0px -25px;}
+#cboxNext{background-position:-25px 0px; right:22px;}
+#cboxNext.hover{background-position:-25px -25px;}
+#cboxClose{background-position:-50px 0px; right:5px;}
+#cboxClose.hover{background-position:-50px -25px;}
+.cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious{right:66px;}
+.cboxSlideshow_on #cboxSlideshow{background-position:-75px -25px; right:44px;}
+.cboxSlideshow_on #cboxSlideshow.hover{background-position:-100px -25px;}
+.cboxSlideshow_off #cboxSlideshow{background-position:-100px 0px; right:44px;}
+.cboxSlideshow_off #cboxSlideshow.hover{background-position:-75px -25px;}
+
+
+/*文末社群分享*/
+div#mobileback_share { position:relative; padding:0; margin:0 8px; }
+div#mobileback_share ul { display: block; list-style-type: none; padding: 0; margin:20px 0; overflow: hidden; white-space: nowrap; }
+div#mobileback_share ul li { display: inline-block; width: 20%; float:left; padding:0; margin:0; }
+div#mobileback_share ul li a { display: block; height: 36px; padding: 0; margin: 2px; text-align: center; vertical-align: middle; text-indent: -9999px; background-image: url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-repeat:no-repeat; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+div#mobileback_share ul li:nth-child(1) a { background-color:#505ba3; background-position: center -407px; }
+div#mobileback_share ul li:nth-child(2) a { background-color:#cc1c32; background-position: center -457px; }
+div#mobileback_share ul li:nth-child(3) a { background-color:#4cb4e0; background-position: center -507px; }
+div#mobileback_share ul li:nth-child(4) a { background-color:#c84737; background-position: center -557px; }
+div#mobileback_share ul li:nth-child(5) a { background-color:#d2d2d2; background-position: center -607px; }
+div#mobileback_share ul#no-push li { width: 25%; }
+div#mobileback_share ul#no-push li:nth-child(5) { display:none; }
+
+
+/*「你可能有興趣的文章」圖文列表*/
+#interest_body dt a p { margin:0; padding:0; }
+#interest_body.figureword dt { width: auto; height: 60px; float: none; margin: 0 20px 0 0; padding:0; overflow: hidden; border-bottom: 1px dotted #eee; }
+#interest_body.figureword dt:hover {	background: #F5F5F5; }
+#interest_body.figureword dt a { width: auto; height: 60px; padding-left:75px; text-decoration: none; vertical-align: middle; overflow: hidden; display:table-cell; }
+#interest_body.figureword dt span { position:absolute; top:0; left:5px; width:60px; height:60px; overflow:hidden; }
+#interest_body.figureword dt a:hover span { background-color:#F5F5F5; }
+#interest_body.figureword dt span img { width:60px; height:60px; display:block; }
+#interest_body.figureword dt p { max-height: 40px; margin:10px 0;  line-height: 20px; overflow: hidden; display: block; }
+
+
+/*照片分享*/
+.mbimg { position: relative; overflow: hidden; margin:10px 0; }
+.mbimg i.mbimg_push { position:absolute; top:5px; left:10px; display:block; width:30px; height:30px; text-indent: -9999px; margin:0; padding:0; background-image:url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size:cover; background-position:0 -1400%; z-index:100; }
+.mbimg .full { position:absolute; top:-40px; left:0; background-color: #fff; width: 100%; height: 30px; z-index:99; display:block; padding:5px 5px 5px 55px; overflow:hidden; background-color: rgba(255, 255, 255, 0.3); }
+.mbimg dd { display:inline-block; margin-right:10px; }
+.mbimg dd a { display:block; width:30px; height:30px; text-indent: -9999px; margin:0; padding:0; background-image:url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size:cover; }
+.mbimg dd:nth-child(1) a { background-position:0 -100%; }
+.mbimg dd:nth-child(2) a { background-position:0 -200%; }
+.mbimg dd:nth-child(3) a { background-position:0 -300%; }
+.mbimg dd:nth-child(4) a { background-position:0 -400%; }
+.mbimg dd:nth-child(5) a { background-position:0 -500%; }
+.mbimg img { position: relative; display:block; min-width:100%;  max-width:100%; }
+
+
+a#gotop { background-image: url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size: cover; background-position: 0 -350px; text-indent: -999px; display: block; overflow: hidden; height: 50px; width: 50px; display: none; position: fixed; bottom: 50px; right: 10px; z-index: 99999; }
+a.react_btn { display: block; text-align: center; margin:10px; padding: 10px; background-color:#375036; color:#fff; font-size:18px; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+a.react_btn i { width: 20px; height: 20px; display: inline-block; background-image: url(http://g.udn.com.tw/community/img/ugc_2011/share_icons.svg); background-size: cover; background-position: 0 -1300%; vertical-align: middle; margin-right:10px; }
