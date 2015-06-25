@@ -27,6 +27,7 @@
       if (window.location.hash) {
         startSlide = window.location.hash.replace('#', '');
       }
+      // new version for slidesjs
       $('#news_slides').slidesjs({
         width: 940,
         height: 630,
@@ -67,9 +68,6 @@
 </head>
 
 <body>
-  <style media="screen">
-
-  </style>
   <div id="mobile_head_box">
     <div id="mobile_head">
       <div id="mobile_head_logo">
@@ -89,6 +87,15 @@
       <div id="common_news_list_openside">
         <div id="news">
           <div id="news_slides">
+
+            <!--
+                image content start -
+                more simpler HTML structure, all image content inside news_slides
+                          <a href="#">
+                            <img src="#" alt="">
+                            <div class="text"></div>
+                          </a>
+            -->
             <a href="http://blog.udn.com/weng123/22676238">
               <img src="http://g.udn.com.tw/upfiles/B_ED/EDITOR_RECOMM/PSN_PHOTO/1121/f_RECOMM_4616.jpg">
               <div class="text">不知道這裡是否也有一千零一夜的故事</div>
@@ -110,167 +117,168 @@
               <div class="text">老街場凸顯文化種族融合的歷史背景</div>
             </a>
 
+            <!-- image content end  -->
 
+            <!-- navigation icon -->
             <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="fa fa-chevron-left fa-lg"></i></a>
             <a href="#" class="slidesjs-next slidesjs-navigation"><i class="fa fa-chevron-right fa-lg"></i></a>
           </div>
         </div>
       </div>
-          <div id="common_blogs_list_head" style="text-align:center;">
-            <strong>主題部落格精選</strong>
-          </div>
-          <div id="common_blogs_list_box" class="lazyload_fadeIn">
-            <div class="mobile_blogs_list">
-              <dl>
-                <dt>
-                  <a href="/mobile/nelly0916/24836383">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/upfiles/B_NE/nelly0916/PSN_MAIN/f_nelly0916_2.jpg?20140709151740" border="0">
-                    </span>
-                    <span>傷痕</span>
-                  </a>
-                </dt>
-                <dt>
-                  <a href="/mobile/dutchlifestyle/24823921">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/upfiles/B_DU/dutchlifestyle/S_PSN_PHOTO/742/f_12375742_1.JPG">
-                    </span>
-                    <span>媽媽，我的紙飛機好了嗎?</span>
-                  </a>
-                </dt>
-                <dt>
-                  <a href="/mobile/babyremy08/24817564">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_babyremy08_2.gif" border="0">
-                    </span>
-                    <span>小小米的粉紅毛線背心</span>
-                  </a>
-                </dt>
-                <dt>
-                  <a href="/mobile/021400/24787374">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/upfiles/B_02/021400/S_PSN_PHOTO/312/f_12372312_1.JPG">
-                    </span>
-                    <span>父親節早餐</span>
-                  </a>
-                </dt>
-                <dt>
-                  <a href="/mobile/h28712623/24773468">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_h28712623_2.JPG" border="0">
-                    </span>
-                    <span>驚喜和幸福是自己可以創造的 </span>
-                  </a>
-                </dt>
-                <dt>
-                  <a href="/mobile/bokunogo/24733797">
-                    <span class="blogs_list_photo">
-                      <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_bokunogo_2.jpg" border="0">
-                    </span>
-                    <span>上半年「恋風草」在忙什麼？</span>
-                  </a>
-                </dt>
-              </dl>
-            </div>
-          </div>
-          <div id="mobile_albums_list_head">
-            <strong>推薦相片</strong>
-          </div>
-          <div id="mobile_albums_list_box" class="lazyload_fadeIn">
-            <div class="mobile_album_list">
-              <dl>
-                <dd class="big">
-                  <a href="http://album.udn.com/mobile/accelerator28/468572">
-                    <img src="http://g.udn.com.tw/upfiles/B_ED/EDITOR_PHOTO_GROUP/f_Provence.jpg?20150615162854" border="0">
-                  </a>
-                </dd>
-                <!--dd class="big" 設為大圖  -->
-                <dd>
-                  <a href="http://album.udn.com/mobile/verolee/22214">
-                    <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/verolee/f_220898_1.jpg" border="0">
-                  </a>
-                </dd>
-                <dd>
-                  <a href="http://album.udn.com/mobile/rickchien/31801">
-                    <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/rickchien/f_353613_1.JPG" border="0">
-                  </a>
-                </dd>
-                <dd>
-                  <a href="http://album.udn.com/mobile/kuopaiyen/381400">
-                    <img src="http://g.udn.com.tw/upfiles/B_KU/kuopaiyen/S_PSN_PHOTO/480/f_8481480_1.jpg" border="0">
-                  </a>
-                </dd>
-                <dd>
-                  <a href="http://album.udn.com/mobile/formosa2010/444556">
-                    <img src="http://g.udn.com.tw/upfiles/B_FO/formosa2010/S_PSN_PHOTO/592/f_11148592_1.jpg" border="0">
-                  </a>
-                </dd>
-                <dd>
-                  <a href="http://album.udn.com/mobile/c0928877070/324749">
-                    <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/c0928877070/f_6511972_1.JPG" border="0">
-                  </a>
-                </dd>
-                <dd>
-                  <a href="http://album.udn.com/mobile/jjtwins/246570">
-                    <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/jjtwins/f_4658210_1.jpg" border="0">
-                  </a>
-                </dd>
-              </dl>
-            </div>
-          </div>
-          <!-- /#mobile_albums_list_box -->
-        </div>
-        <!-- /#wrapper -->
+      <div id="common_blogs_list_head" style="text-align:center;">
+        <strong>主題部落格精選</strong>
       </div>
-      <script type="text/javascript">
-        var pages = 0;
-        var total_pages = 0;
-        var extra = "";
+      <div id="common_blogs_list_box" class="lazyload_fadeIn">
+        <div class="mobile_blogs_list">
+          <dl>
+            <dt>
+              <a href="/mobile/nelly0916/24836383">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/upfiles/B_NE/nelly0916/PSN_MAIN/f_nelly0916_2.jpg?20140709151740" border="0">
+                </span>
+                <span>傷痕</span>
+              </a>
+            </dt>
+            <dt>
+              <a href="/mobile/dutchlifestyle/24823921">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/upfiles/B_DU/dutchlifestyle/S_PSN_PHOTO/742/f_12375742_1.JPG">
+                </span>
+                <span>媽媽，我的紙飛機好了嗎?</span>
+              </a>
+            </dt>
+            <dt>
+              <a href="/mobile/babyremy08/24817564">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_babyremy08_2.gif" border="0">
+                </span>
+                <span>小小米的粉紅毛線背心</span>
+              </a>
+            </dt>
+            <dt>
+              <a href="/mobile/021400/24787374">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/upfiles/B_02/021400/S_PSN_PHOTO/312/f_12372312_1.JPG">
+                </span>
+                <span>父親節早餐</span>
+              </a>
+            </dt>
+            <dt>
+              <a href="/mobile/h28712623/24773468">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_h28712623_2.JPG" border="0">
+                </span>
+                <span>驚喜和幸福是自己可以創造的 </span>
+              </a>
+            </dt>
+            <dt>
+              <a href="/mobile/bokunogo/24733797">
+                <span class="blogs_list_photo">
+                  <img src="http://g.udn.com.tw/community/img/PSN_MAIN/f_bokunogo_2.jpg" border="0">
+                </span>
+                <span>上半年「恋風草」在忙什麼？</span>
+              </a>
+            </dt>
+          </dl>
+        </div>
+      </div>
+      <div id="mobile_albums_list_head">
+        <strong>推薦相片</strong>
+      </div>
+      <div id="mobile_albums_list_box" class="lazyload_fadeIn">
+        <div class="mobile_album_list">
+          <dl>
+            <dd class="big">
+              <a href="http://album.udn.com/mobile/accelerator28/468572">
+                <img src="http://g.udn.com.tw/upfiles/B_ED/EDITOR_PHOTO_GROUP/f_Provence.jpg?20150615162854" border="0">
+              </a>
+            </dd>
+            <!--dd class="big" 設為大圖  -->
+            <dd>
+              <a href="http://album.udn.com/mobile/verolee/22214">
+                <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/verolee/f_220898_1.jpg" border="0">
+              </a>
+            </dd>
+            <dd>
+              <a href="http://album.udn.com/mobile/rickchien/31801">
+                <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/rickchien/f_353613_1.JPG" border="0">
+              </a>
+            </dd>
+            <dd>
+              <a href="http://album.udn.com/mobile/kuopaiyen/381400">
+                <img src="http://g.udn.com.tw/upfiles/B_KU/kuopaiyen/S_PSN_PHOTO/480/f_8481480_1.jpg" border="0">
+              </a>
+            </dd>
+            <dd>
+              <a href="http://album.udn.com/mobile/formosa2010/444556">
+                <img src="http://g.udn.com.tw/upfiles/B_FO/formosa2010/S_PSN_PHOTO/592/f_11148592_1.jpg" border="0">
+              </a>
+            </dd>
+            <dd>
+              <a href="http://album.udn.com/mobile/c0928877070/324749">
+                <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/c0928877070/f_6511972_1.JPG" border="0">
+              </a>
+            </dd>
+            <dd>
+              <a href="http://album.udn.com/mobile/jjtwins/246570">
+                <img src="http://g.udn.com.tw/community/img/S_PSN_PHOTO/jjtwins/f_4658210_1.jpg" border="0">
+              </a>
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <!-- /#mobile_albums_list_box -->
+    </div>
+    <!-- /#wrapper -->
+  </div>
+  <script type="text/javascript">
+    var pages = 0;
+    var total_pages = 0;
+    var extra = "";
 
-        function getMore(dir) {
-          pages = pages + dir;
-          if (pages > total_pages - 1) pages = total_pages - 1;
-          else {
-            if (pages < 0) pages = 0;
-            else {
-              var myUrl = "/blog/m_album_book_list_ajax.jsp?" + "uid=" + "" + "&pno=" + pages;
-              if (extra.length > 1) {
-                var extrb = "";
+    function getMore(dir) {
+      pages = pages + dir;
+      if (pages > total_pages - 1) pages = total_pages - 1;
+      else {
+        if (pages < 0) pages = 0;
+        else {
+          var myUrl = "/blog/m_album_book_list_ajax.jsp?" + "uid=" + "" + "&pno=" + pages;
+          if (extra.length > 1) {
+            var extrb = "";
 
-                myUrl = myUrl + "&" + extra + encodeURIComponent(extrb);
-                //		 alert(myUrl);
-              }
-              jQuery.ajax({
-                type: "get",
-                url: myUrl,
-                cache: false,
-                success: function(msg) {
-                  document.getElementById('mobile_article_list_box').innerHTML = msg;
-                  scrollTo(0, findPos(document.getElementById('mobile_article_list_box')));
-                }
-              });
+            myUrl = myUrl + "&" + extra + encodeURIComponent(extrb);
+            //		 alert(myUrl);
+          }
+          jQuery.ajax({
+            type: "get",
+            url: myUrl,
+            cache: false,
+            success: function(msg) {
+              document.getElementById('mobile_article_list_box').innerHTML = msg;
+              scrollTo(0, findPos(document.getElementById('mobile_article_list_box')));
             }
-          }
+          });
         }
+      }
+    }
 
-        function findPos(obj) {
-          var curtop = 0;
-          if (obj.offsetParent) {
-            do {
-              curtop += obj.offsetTop;
-            } while (obj = obj.offsetParent);
-            return [curtop];
-          }
-        }
-
-      </script>
-      <div id="mobile_footer_box">
-        <div id="mobile_footer">
-          <p>瀏覽：
-            <span>行動版</span>　|　<a href="http://blog.udn.com?f_UA=pc" <span>傳統版</span></a></p>
-          <p class="mobile_footer_copy">udn.com &copy; 2012</p>
-        </div>
-      </div>
+    function findPos(obj) {
+      var curtop = 0;
+      if (obj.offsetParent) {
+        do {
+          curtop += obj.offsetTop;
+        } while (obj = obj.offsetParent);
+        return [curtop];
+      }
+    }
+  </script>
+  <div id="mobile_footer_box">
+    <div id="mobile_footer">
+      <p>瀏覽：
+        <span>行動版</span>　|　<a href="http://blog.udn.com?f_UA=pc" <span>傳統版</span></a></p>
+      <p class="mobile_footer_copy">udn.com &copy; 2012</p>
+    </div>
+  </div>
 </body>
 
 </html>
