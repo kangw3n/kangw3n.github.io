@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#idmap {
+  display: block;
+}
+.control {
+  position: absolute;
+  left: 900px;
+  top: 300px;
+}
+
+.sorts {
+  display: block;
+  width: 100%;
+  margin: 10px;
+}
