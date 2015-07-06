@@ -374,9 +374,9 @@
             }
           </style>
           <script>
-            window.onload = function() {
-              document.getElementById('comments_head').focus();
-            }
+          $('html, body').animate({
+                  scrollTop: $('#fb_comments').offset().top
+              }, 'slow');
           </script>
           <a name="fb_comments"></a>
           <div id="comments_head">
