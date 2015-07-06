@@ -100,7 +100,8 @@ function ajaxCall(arg) {
       .duration(1000)
       .style('fill-opacity', 0.8)
       .style('fill', color[Math.floor(Math.random() * 14)])
-      .style('stroke', color[Math.floor(Math.random() * 14)]);
+      .style('stroke', 'rgba(255, 255, 255, .9)')
+      .style('stroke-width', '5');
 
     node.append('text')
       .style('text-anchor', 'middle')
