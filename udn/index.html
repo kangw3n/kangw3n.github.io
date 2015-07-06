@@ -372,18 +372,64 @@
               min-width: 100% !important;
               width: 100% !important;
             }
-
-
             /*ignore these few lines css */
+
             @keyframes blink {
               50% {
-                border-color: #0054a6;\
+                border-color: #0054a6;
               }
             }
 
             #comments_head {
+              position: relative;
               border: 3px inset;
               animation: blink .5s step-end infinite alternate;
+            }
+
+            .arrow_box {
+              position: absolute;
+              right: -500px;
+              background: #88b7d5;
+              border: 4px solid #0054a6;
+              z-index: 10000000;
+              height: 420px;
+              width: 100%;
+              max-width: 450px;
+              color: black;
+              border-radius: 30px;
+              margin-top: -150px;
+              opacity: .9;
+            }
+
+            .arrow_box:after,
+            .arrow_box:before {
+              right: 100%;
+              top: 50%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+            }
+
+            .arrow_box:after {
+              border-color: rgba(136, 183, 213, 0);
+              border-right-color: #88b7d5;
+              border-width: 30px;
+              margin-top: -30px;
+            }
+
+            .arrow_box:before {
+              border-color: rgba(0, 84, 166, 0);
+              border-right-color: #0054a6;
+              border-width: 36px;
+              margin-top: -36px;
+            }
+
+            xmp {
+              margin-top: -10px;
+              margin-left: -60px;
             }
           </style>
           <script>
@@ -395,6 +441,28 @@
             });
           </script>
           <a name="fb_comments"></a>
+          <section class="arrow_box">
+            <xmp>
+              <style>
+                #comments_head {
+                  padding: 28px 32px 32px;
+                }
+
+                .fb-comments.fb_iframe_widget,
+                .fb-comments.fb_iframe_widget span,
+                .fb-comments.fb_iframe_widget span iframe[style] {
+                  min-width: 100% !important;
+                  width: 100% !important;
+                }
+              </style>
+
+              <div class="fb-comments"
+                    data-href="#" data-numposts="5"
+                    data-width="100%">
+              </div>
+            </xmp>
+
+          </section>
           <div id="comments_head">
             <div id="fb-root"></div>
             <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/#" data-numposts="5" data-width="100%"></div>
