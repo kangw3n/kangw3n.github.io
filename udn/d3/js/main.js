@@ -11,11 +11,11 @@ var aspect = svgCanvas.width() / svgCanvas.height();
 var container = svgCanvas.parent();
 
 //resize for responsive svg
-// $(window).on('resize load', function() {
-//   var targetWidth = container.width();
-//   svgCanvas.attr('width', targetWidth);
-//   svgCanvas.attr('height', Math.round(targetWidth / aspect));
-// }).trigger('resize');
+$(window).on('resize load', function() {
+  var targetWidth = container.width();
+  svgCanvas.attr('width', targetWidth);
+  svgCanvas.attr('height', Math.round(targetWidth / aspect));
+}).trigger('resize');
 
 $(document).ready(function() {
 
