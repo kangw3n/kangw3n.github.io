@@ -2,9 +2,6 @@ var svg;
 var width = '800';
 var height = '800';
 var force; //dragging force layout
-var sumSize = [];
-var total = 0;
-var rmax = 85;
 var color = ['#0092C7', '#9FE0F6', '#F3E59A', '#F3B59B', '#F29C9C', '#7BA3A8', '#F4F3DE', '#BEAD92', '#F35A4A', '#6abf9c', '#7CC699', '#F3E4C2', '#F37A5A', '#EF4926']; //color hex for circle
 var svgCanvas = $('#idmap');
 var aspect = svgCanvas.width() / svgCanvas.height();
@@ -18,7 +15,6 @@ $(window).on('resize load', function() {
 }).trigger('resize');
 
 $(document).ready(function() {
-
   svg = d3.select('#idmap').attr('width', width).attr('height', height);
 
   var calculate = {
@@ -53,7 +49,6 @@ $('.sorts').on('click', function() {
   var current = $(this).html(); // get the query value
 
   $('#idmap').empty();
-  sumSize.length = 0; // remove size of nodes
   total = 0; //remove total size of nodes
 
   ajaxCall(current);
@@ -65,7 +60,7 @@ function ajaxCall(arg) {
     var all = data(root, arg);
     if (error) throw error;
     var node = svg.selectAll('.node')
-      .data(all)
+      .data(all.item)
       .enter().append('a')
       .attr('xlink:href', function(d) {
         return d.link;
@@ -76,13 +71,13 @@ function ajaxCall(arg) {
 
     //dynamic set the size of circle's radius
     var rScale = d3.scale.linear()
-      .domain([d3.min(sumSize, function(d) {
+      .domain([d3.min(all.sumSize, function(d) {
         if (width <= 200) {
           return d / 1.5;
         } else {
           return d;
         }
-      }), d3.max(sumSize, function(d) {
+      }), d3.max(all.sumSize, function(d) {
         if (width <= 200) {
           return d / 1.5;
         } else {
@@ -114,7 +109,7 @@ function ajaxCall(arg) {
         return d.className;
       });
 
-    force.nodes(all)
+    force.nodes(all.item)
       .on('tick', dragging)
       .start();
 
@@ -128,6 +123,7 @@ function ajaxCall(arg) {
   // Returns a flattened hierarchy containing all leaf nodes under the root.
   function data(root, arg) {
     var item = [];
+    var sumSize = [];
     if (arg === undefined || arg === 'all') {
       for (var i in root.children) {
         for (var u in root.children[i].children) {
@@ -155,12 +151,10 @@ function ajaxCall(arg) {
       }
     }
 
-    $.each(sumSize, function() {
-      total += parseFloat(this) || 0;
-      return total;
-    }); //get total size of the nodes
-
-    return item;
+    return {
+      item: item,
+      sumSize: sumSize
+    };
   }
 
 }
