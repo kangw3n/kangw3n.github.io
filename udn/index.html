@@ -372,14 +372,27 @@
               min-width: 100% !important;
               width: 100% !important;
             }
+
+
+            /*ignore these few lines css */
+            @keyframes blink {
+              50% {
+                border-color: #0054a6;
+              }
+            }
+
+            #comments_head {
+              /*or other element you want*/
+              animation: blink .5s step-end infinite alternate;
+            }
           </style>
           <script>
-          $(document).ready(function () {
+            $(document).ready(function() {
               // Handler for .ready() called.
               $('html, body').animate({
-                  scrollTop: $('#comments_head').offset().top - 20
+                scrollTop: $('#comments_head').offset().top - 20
               }, 'slow');
-          });
+            });
           </script>
           <a name="fb_comments"></a>
           <div id="comments_head">
