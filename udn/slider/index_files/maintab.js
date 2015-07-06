@@ -50,7 +50,7 @@ $(document).ready(function() {
     wipeRight: function() {
       autoPrevTab();
     },
-    wipeDown: function() { console.log('down'); }
+    preventDefaultEvents: false
   });
   $("#tabs dl").css("left", "0px");
   $("#tabs dl").css("width", total_group * tab_width * tab_group_pn + "px");
