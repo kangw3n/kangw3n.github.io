@@ -95,11 +95,11 @@ function ajaxCall(arg) {
       .attr('r', function(d) {
         return rScale(d.value);
       })
-      // .style('fill', color[Math.floor(Math.random() * 14)])
-      // .transition()
-      // .duration(1000)
+      .style('fill', color[Math.floor(Math.random() * 14)])
+      .transition()
+      .duration(1000)
       .style('fill-opacity', 0.8)
-      // .style('fill', color[Math.floor(Math.random() * 14)])
+      .style('fill', color[Math.floor(Math.random() * 14)])
       .style('stroke', color[Math.floor(Math.random() * 14)]);
 
     node.append('text')
