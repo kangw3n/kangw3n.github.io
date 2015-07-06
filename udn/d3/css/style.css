@@ -23,3 +23,11 @@
   background-color: #fff;
   padding: 10px;
 }
+
+circle {
+  fill: #ccc;
+}
+
+.node:hover circle {
+  fill: orange;
+}
