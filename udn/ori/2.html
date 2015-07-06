@@ -30,8 +30,11 @@
         };
       }
       document.addEventListener("touchmove", ScrollStart, false);
+      document.addEventListener("touch", Touch, false);
       document.addEventListener("scroll", Scroll, false);
-
+      function Touch() {
+        console.log('touch');
+      }
       function ScrollStart() {}
       console.log('test');
       function Scroll() {
