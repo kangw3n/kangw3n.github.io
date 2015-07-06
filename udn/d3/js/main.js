@@ -100,6 +100,7 @@ function ajaxCall(arg) {
       .style('font-size', function(d) {
         return Math.floor(rScale(d.value) / 2) + 'px';
       })
+      .attr('dy', '.35em')
       .text(function(d) {
         return d.className;
       });
