@@ -374,9 +374,12 @@
             }
           </style>
           <script>
-          $('html, body').animate({
+          $(document).ready(function () {
+              // Handler for .ready() called.
+              $('html, body').animate({
                   scrollTop: $('#comments_head').offset().top
               }, 'slow');
+          });
           </script>
           <a name="fb_comments"></a>
           <div id="comments_head">
