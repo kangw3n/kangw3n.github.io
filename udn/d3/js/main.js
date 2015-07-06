@@ -124,7 +124,7 @@ function ajaxCall(arg) {
   function data(root, arg) {
     var item = [];
     var sumSize = [];
-    if (arg === undefined || arg === 'all') {
+    if (arg === undefined || arg === 'ALL') {
       for (var i in root.children) {
         for (var u in root.children[i].children) {
           item.push({
