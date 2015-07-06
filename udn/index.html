@@ -359,28 +359,35 @@
         <!-- /#story-->
         <div id="comments" class="area">
 
-	<h3>
-		<span><i></i>留言</span>
-	</h3>
-<style media="screen">
-  #comments_head {
-    padding: 28px 32px 32px;
-  }
+          <h3>
+            <span><i></i>留言</span>
+          </h3>
+          <style media="screen">
+            #comments_head {
+              padding: 28px 32px 32px;
+            }
 
-  .fb-comments.fb_iframe_widget,
-  .fb-comments.fb_iframe_widget span,
-  .fb-comments.fb_iframe_widget span iframe[style] {
-    min-width: 100% !important;
-    width: 100% !important;
-  }
-</style>
-<a name="fb_comments"></a>
-        <div id="comments_head"><div id="fb-root"></div>
-              <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/#" data-numposts="5" data-width="100%"></div>
-        </div><!-- /#comments_head -->
+            .fb-comments.fb_iframe_widget,
+            .fb-comments.fb_iframe_widget span,
+            .fb-comments.fb_iframe_widget span iframe[style] {
+              min-width: 100% !important;
+              width: 100% !important;
+            }
+          </style>
+          <script>
+            window.onload = function()
+              document.getElementById('comments_head').focus();
+            }
+          </script>
+          <a name="fb_comments"></a>
+          <div id="comments_head">
+            <div id="fb-root"></div>
+            <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/#" data-numposts="5" data-width="100%"></div>
+          </div>
+          <!-- /#comments_head -->
 
-         <!-- /#comments_body -->
-</div>
+          <!-- /#comments_body -->
+        </div>
       </div>
       <!-- /#mainbar -->
 
