@@ -4,28 +4,43 @@ var height = '800';
 var force; //dragging force layout
 var sumSize = [];
 var total = 0;
-var color = ['#0092C7', '#9FE0F6', '#F3E59A', '#F3B59B', '#F29C9C', '#7BA3A8', '#F4F3DE', '#BEAD92', '#F35A4A', '#5B4947', '#7CC699', '#F3E4C2', '#F37A5A', '#EF4926']; //color hex for circle
+var rmax = 85;
+var color = ['#0092C7', '#9FE0F6', '#F3E59A', '#F3B59B', '#F29C9C', '#7BA3A8', '#F4F3DE', '#BEAD92', '#F35A4A', '#6abf9c', '#7CC699', '#F3E4C2', '#F37A5A', '#EF4926']; //color hex for circle
 
 $(document).ready(function() {
 
   svg = d3.select('#idmap').attr('width', width).attr('height', height);
 
+  var calculate = {
+    charge: function(d) {
+      if (d >= 400) {
+        return -(d / 2);
+      } else {
+        return -(d / 4);
+      }
+    },
+
+    gravity: function(d) {
+      if (d >= 600) {
+        return 0.1;
+      } else {
+        return 0.15;
+      }
+    }
+  }; //seperate different size of svg
+
   force = d3.layout.force()
-    .charge(-400)
-    .linkDistance(20)
+    .charge(calculate.charge(width))
+    .chargeDistance(width)
+    .gravity(calculate.gravity(width))
     .size([width, height]);
 
   ajaxCall(); // data get tru ajax json
 });
 
-//get random number incase of size too big
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 //click event
 $('.sorts').on('click', function() {
-  var current = $(this).html();
+  var current = $(this).html(); // get the query value
 
   $('#idmap').empty();
   sumSize.length = 0; // remove size of nodes
@@ -34,18 +49,6 @@ $('.sorts').on('click', function() {
   ajaxCall(current);
 
 });
-
-//math calculation depends on total size
-function roundUp(d) {
-  var median = total / sumSize.length;
-  var largest = Math.max.apply(Math, sumSize);
-  var min = Math.min.apply(null, sumSize);
-
-  // var calculate = d * 100 / total;
-  var calculate = Math.floor(d * 50 / median);
-
-  return calculate;
-}
 
 function ajaxCall(arg) {
   d3.json('data/newdata.json', function(error, root) {
@@ -61,21 +64,42 @@ function ajaxCall(arg) {
       .attr('class', 'node')
       .call(force.drag);
 
+    //dynamic set the size of circle's radius
+    var rScale = d3.scale.linear()
+      .domain([d3.min(sumSize, function(d) {
+        if (width <= 200) {
+          console.log('true' + d);
+          return d / 1.5;
+        } else {
+          console.log('false' + d);
+          return d;
+        }
+      }), d3.max(sumSize, function(d) {
+        if (width <= 200) {
+          return d / 1.5;
+        } else {
+          return d;
+        }
+      })])
+      .range([width / 40, width / 10]); //set the sizeRange base of the size of svg
+
     node.append('circle')
       .attr('r', function(d) {
-        var recalculation = roundUp(d.value);
-        return recalculation;
+        return rScale(d.value);
       })
-      .style('fill', color[Math.floor(Math.random() * 14) + 1])
+      .style('fill', color[Math.floor(Math.random() * 14)])
       .transition()
       .duration(1000)
       .style('fill-opacity', 0.8)
-      .style('fill', color[Math.floor(Math.random() * 14) + 1])
-      .style('stroke', color[Math.floor(Math.random() * 14) + 1]);
+      .style('fill', color[Math.floor(Math.random() * 14)])
+      .style('stroke', color[Math.floor(Math.random() * 14)]);
 
     node.append('text')
       .style('text-anchor', 'middle')
       .style('fill', 'black')
+      .style('font-size', function(d) {
+        return Math.floor(rScale(d.value) / 2) + 'px';
+      })
       .text(function(d) {
         return d.className;
       });
