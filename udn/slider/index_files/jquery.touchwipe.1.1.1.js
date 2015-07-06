@@ -16,7 +16,7 @@
  			wipeRight: function() { },
  			wipeUp: function() { },
  			wipeDown: function() { },
-			preventDefaultEvents: true
+			preventDefaultEvents: false
 	 };
 
      if (settings) $.extend(config, settings);
