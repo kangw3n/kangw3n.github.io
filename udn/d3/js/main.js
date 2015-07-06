@@ -6,6 +6,16 @@ var sumSize = [];
 var total = 0;
 var rmax = 85;
 var color = ['#0092C7', '#9FE0F6', '#F3E59A', '#F3B59B', '#F29C9C', '#7BA3A8', '#F4F3DE', '#BEAD92', '#F35A4A', '#6abf9c', '#7CC699', '#F3E4C2', '#F37A5A', '#EF4926']; //color hex for circle
+var svgCanvas = $('#idmap');
+var aspect = svgCanvas.width() / svgCanvas.height();
+var container = svgCanvas.parent();
+
+//resize for responsive svg
+$(window).on('resize load', function() {
+  var targetWidth = container.width();
+  svgCanvas.attr('width', targetWidth);
+  svgCanvas.attr('height', Math.round(targetWidth / aspect));
+}).trigger('resize');
 
 $(document).ready(function() {
 
@@ -68,10 +78,8 @@ function ajaxCall(arg) {
     var rScale = d3.scale.linear()
       .domain([d3.min(sumSize, function(d) {
         if (width <= 200) {
-          console.log('true' + d);
           return d / 1.5;
         } else {
-          console.log('false' + d);
           return d;
         }
       }), d3.max(sumSize, function(d) {

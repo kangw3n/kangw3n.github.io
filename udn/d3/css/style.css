@@ -1,20 +1,25 @@
-.container {
+.main-container {
   position: relative;
-  width: 1000px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 #idmap {
   display: block;
+  background-color: white;
 }
+
 .control {
-  position: absolute;
-  left: 900px;
-  top: 300px;
+  margin: 0 auto;
+  width: 420px;
+  padding: 10px 10px 50px 10px
 }
 
 .sorts {
-  display: block;
-  width: 100%;
-  margin: 10px;
+  display: inline-block;
+  width: 65px;
+  border: 0;
+  background-color: #fff;
+  padding: 10px;
 }
