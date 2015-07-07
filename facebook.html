@@ -11,31 +11,13 @@
   <div id="text"></div>
   <h2></h2>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
-  <script src="http://jsconsole.com/remote.js?AAF9103B-9B83-4FB1-B5EF-F5D9C5AEC4D6"></script>
   <script type="text/javascript">
-    // var standalone = window.navigator.standalone;
-    // var userAgent = window.navigator.userAgent.toLowerCase();
-    // var safari = /safari/.test(userAgent);
-    // var ios = /iphone|ipod|ipad/.test(userAgent);
     var ua = window.navigator.userAgent.toLowerCase();
     var macos = ua.indexOf('mac os x') > -1;
     var linux = ua.indexOf('android') > -1;
     var fbWebui = ua.indexOf("fban") > -1 || ua.indexOf('fb_iab') > -1;
 
     $('h2').html( ua );
-
-    // if (ios) {
-    //   if (!standalone && safari) {
-    //     $('#text').html('browser')
-    //   } else if (standalone && !safari) {
-    //     $('#text').html('standalone')
-    //   } else if (!standalone && !safari) {
-    //     $('#text').html('uiwebview')
-    //   };
-    // } else {
-    //   $('#text').html('not ios')
-    // };
-
 
     if (fbWebui) {
       if (macos) {

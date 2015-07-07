@@ -12,13 +12,13 @@
 
 .control {
   margin: 0 auto;
-  width: 420px;
-  padding: 10px 10px 50px 10px
+  width: 100%;
+  padding: 10px 0 50px 0;
 }
 
 .sorts {
   display: inline-block;
-  width: 65px;
+  width: 16%;
   border: 0;
   background-color: #fff;
   padding: 10px;
