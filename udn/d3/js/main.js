@@ -49,7 +49,6 @@ $('.sorts').on('click', function() {
   var current = $(this).html(); // get the query value
 
   $('#idmap').empty();
-  total = 0; //remove total size of nodes
 
   ajaxCall(current);
 
@@ -66,8 +65,10 @@ function ajaxCall(arg) {
         return d.link;
       })
       .append('g')
-      .attr('class', 'node')
+      .classed('node', true)
       .call(force.drag);
+
+    var d3color = d3.scale.category20c();
 
     //dynamic set the size of circle's radius
     var rScale = d3.scale.linear()
@@ -93,16 +94,22 @@ function ajaxCall(arg) {
       .style('fill', color[Math.floor(Math.random() * 14)])
       .transition()
       .duration(1000)
-      .style('fill-opacity', 0.8)
-      .style('fill', color[Math.floor(Math.random() * 14)])
-      .style('stroke', 'rgba(255, 255, 255, .9)')
-      .style('stroke-width', '5');
+      .style({
+        'fill-opacity': 0.8,
+        stroke: 'rgba(255, 255, 255, .9)',
+        'stroke-width': 5,
+        fill: function(d) {
+          return d3color(d.className);
+        }
+      });
 
     node.append('text')
-      .style('text-anchor', 'middle')
-      .style('fill', 'black')
-      .style('font-size', function(d) {
-        return Math.floor(rScale(d.value) / 2) + 'px';
+      .style({
+        'text-anchor': 'middle',
+        fill: 'black',
+        'font-size': function(d) {
+          return Math.floor(rScale(d.value) / 2) + 'px';
+        }
       })
       .attr('dy', '.35em')
       .text(function(d) {
@@ -146,8 +153,8 @@ function ajaxCall(arg) {
               link: root.children[j].children[k].a
             });
             sumSize.push(root.children[j].children[k].size);
-          }
-        }
+          } //for loops
+        } //check if the passing arg is same as data
       }
     }
 

@@ -83,16 +83,13 @@
         str += "<strong>Email:</strong> " + response.email + "<br>";
         str += "<input type='button' id='photo' value='Get Photo' onclick='getPhoto();'>";
         str += "<input type='button' value='Logout' onclick='logout();'>";
-        //str +="<br>" + response.videos.length;
         document.getElementById("status").innerHTML = str;
       });
     };
 
     function getPhoto() {
       FB.api('/me/videos', function(response) {
-        //console.log(response);
-        //var str = response.data[1].embed_html;
-        //document.getElementById("status").innerHTML+=str;
+
       });
       FB.api('/me/picture?type=normal', function(response) { // http://api-portal.anypoint.mulesoft.com/facebook/api/facebook-graph-api/docs/reference/pictures
         var str = "<img src=" + response.data.url + ">";
@@ -106,23 +103,10 @@
       FB.logout();
     };
 
-    /*window.onload = function () {
-        $('#now, #detect').append($( window ).width());
-        document.getElementsByTagName('input')[0].removeAttribute("disabled");
-        document.getElementsByTagName("meter")[0].setAttribute("value",$( window ).width());
-    };*/
-
-    /*$( window ).resize(function() {
-        document.getElementsByTagName("meter")[0].setAttribute("value",$( window ).width());
-        $('#detect').html($( window ).width());
-        //console.log($( window ).width());
-    });*/
-
     var auth_response_change_callback = function(response) {
       if (response.status === "unknown") {
         //window.location.reload();
       }
-      //window.location.reload();
       console.log(response);
     }
 
@@ -158,14 +142,6 @@
     </article>
     <figure id="picture"></figure>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolore porro veritatis eligendi consectetur aliquam minima consequuntur similique sint cupiditate illum, quia nulla. Mollitia necessitatibus, molestiae veritatis in, aspernatur suscipit?</p>
-    <!--<section>
-<p>Better View in 1920 X 1680 Display.<br>
-<meter id="meter" style="width:400px;" value="0" max="1920" low="500" min="0" high="1280" optimum="1290"></meter>
-<br>
-Your display resolution is:<span id="now"> </span> <br>
-Your current display resolution is <span id="detect"> </span></p>
-<div class="fb-like" data-href="http://comm.nccu.edu.tw/" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
-</section>-->
     <p><a class="youtube" href="https://www.youtube.com/embed/kdWQaecFyyo?rel=0&amp;wmode=transparent">Youtube Videos</a></p>
     <input type="button" value="Friend Picker" onclick="picker()">
 
@@ -186,9 +162,6 @@ Your current display resolution is <span id="detect"> </span></p>
         width: 100%;
       }
     }
-    /*.facebook {
-      width: 60%;
-    }*/
   </style>
 
 
