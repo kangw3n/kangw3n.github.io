@@ -95,14 +95,25 @@ function ajaxCall(arg) {
       .transition()
       .duration(1000)
       .style({
-        'fill-opacity': 0.8,
+        'fill-opacity': 0.9,
         stroke: 'rgba(255, 255, 255, .9)',
         'stroke-width': 5,
 
         //fill: color[Math.floor(Math.random() * 14)]
 
         fill: function(d) {
-          return d3color(d.className);
+          var coloring;
+          if (rScale(d.value) >= 70) {
+            coloring = color[1];
+          } else if (rScale(d.value) >= 45 && rScale(d.value) < 70) {
+            coloring = color[2];
+          } else if (rScale(d.value) >= 25 && rScale(d.value) < 45) {
+            coloring = color[3];
+          } else {
+            coloring = color[4];
+          }
+
+          return coloring;
         }
       });
 
