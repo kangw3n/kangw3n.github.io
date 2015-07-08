@@ -98,11 +98,12 @@ function ajaxCall(arg) {
         'fill-opacity': 0.8,
         stroke: 'rgba(255, 255, 255, .9)',
         'stroke-width': 5,
-        fill: color[Math.floor(Math.random() * 14)]
 
-        // fill: function(d) {
-        //   return d3color(d.className);
-        // }
+        //fill: color[Math.floor(Math.random() * 14)]
+
+        fill: function(d) {
+          return d3color(d.className);
+        }
       });
 
     node.append('text')
