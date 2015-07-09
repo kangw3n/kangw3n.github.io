@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden; /*weird overflow*/
+}
 body {
   background: #19bc9c;
   font-family: Meiryo, "微軟正黑體", "Microsoft JhengHei";
