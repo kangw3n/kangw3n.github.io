@@ -18,19 +18,13 @@ $(document).ready(function() {
 
   var calculate = {
     charge: function(d) {
-      if (d >= 400) {
-        return -(d / 2);
-      } else {
-        return -(d / 4);
-      }
+      if (d >= 400) return -(d / 2);
+      else return -(d / 4);
     },
 
     gravity: function(d) {
-      if (d >= 600) {
-        return 0.1;
-      } else {
-        return 0.15;
-      }
+      if (d >= 600) return 0.1;
+      else return 0.15;
     }
   }; //seperate different size of svg
 
@@ -45,22 +39,21 @@ $(document).ready(function() {
 
 //click event
 $('.sorts').on('click', function() {
+  svgCanvas.empty();
   var current = $(this).html(); // get the query value
-
-  $('#idmap').empty();
-
   _dataCall.ajaxCall(current); //get data by a specified query
 
 });
 
+// avoid global in iif
 _dataCall = (function() {
 
   var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-      return '<strong>筆數一 ：</strong> <span class="tooltip-text">' + d.value + '</span> <br>' +
-             '<strong>筆數二 ：</strong> <span class="tooltip-text">' + d.count + '</span> <br>';
+      return '<strong>點閱 ： <span class="tooltip-text">' + d.value + '</span></strong> <br>' +
+             '<strong>熱門 ： <span class="tooltip-text">' + d.count + '</span></strong>';
     }); //tooltips attr
 
   var d3color = d3.scale.category20c();
@@ -112,15 +105,10 @@ _dataCall = (function() {
           'stroke-width': 5,
 
           fill: function(d) {
-            if (rScale(d.value) >= 70) {
-              return color[1];
-            } else if (rScale(d.value) >= 45 && rScale(d.value) < 70) {
-              return color[2];
-            } else if (rScale(d.value) >= 25 && rScale(d.value) < 45) {
-              return color[3];
-            } else {
-              return color[4];
-            }
+            if (rScale(d.value) >= 70) return color[1];
+            else if (rScale(d.value) >= 45 && rScale(d.value) < 70) return color[2];
+            else if (rScale(d.value) >= 25 && rScale(d.value) < 45) return color[3];
+            else return color[4];
           }
         });
 
