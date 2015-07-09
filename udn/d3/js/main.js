@@ -57,6 +57,13 @@ $('.sorts').on('click', function() {
 function ajaxCall(arg) {
   d3.json('data/newdata.json', function(error, root) {
     var all = data(root, arg);
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return '<strong>筆數一 ：</strong> <span class="tooltip-text">' + d.value + '</span> <br>' + '<strong>筆數二 ：</strong> <span class="tooltip-text">' + d.count + '</span> <br>';
+      });
+
     if (error) throw error;
     var node = svg.selectAll('.node')
       .data(all.item)
@@ -66,7 +73,8 @@ function ajaxCall(arg) {
       })
       .append('g')
       .classed('node', true)
-      .call(force.drag);
+      .call(force.drag)
+      .call(tip);
 
     var d3color = d3.scale.category20c();
 
@@ -102,22 +110,21 @@ function ajaxCall(arg) {
         //fill: color[Math.floor(Math.random() * 14)]
 
         fill: function(d) {
-          var coloring;
           if (rScale(d.value) >= 70) {
-            coloring = color[1];
+            return color[1];
           } else if (rScale(d.value) >= 45 && rScale(d.value) < 70) {
-            coloring = color[2];
+            return color[2];
           } else if (rScale(d.value) >= 25 && rScale(d.value) < 45) {
-            coloring = color[3];
+            return color[3];
           } else {
-            coloring = color[4];
+            return color[4];
           }
-
-          return coloring;
         }
       });
 
     node.append('text')
+      .on('mouseover', tip.show)
+      .on('mouseout', tip.hide)
       .style({
         'text-anchor': 'middle',
         fill: 'black',
@@ -151,7 +158,8 @@ function ajaxCall(arg) {
           item.push({
             className: root.children[i].children[u].name,
             value: root.children[i].children[u].size,
-            link: root.children[i].children[u].a
+            link: root.children[i].children[u].link,
+            count: root.children[i].children[u].count
           });
           sumSize.push(root.children[i].children[u].size);
         }
@@ -164,7 +172,8 @@ function ajaxCall(arg) {
             item.push({
               className: root.children[j].children[k].name,
               value: root.children[j].children[k].size,
-              link: root.children[j].children[k].a
+              link: root.children[j].children[k].link,
+              count: root.children[j].children[k].count
             });
             sumSize.push(root.children[j].children[k].size);
           } //for loops
