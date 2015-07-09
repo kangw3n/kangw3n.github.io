@@ -38,7 +38,7 @@ $(document).ready(function() {
 });
 
 //click event
-$('.control li').on('click', function() {
+$('.control li').on('click touch', function() {
   $('.control li').removeClass('on');
   $(this).addClass('on');
   svgCanvas.empty();
