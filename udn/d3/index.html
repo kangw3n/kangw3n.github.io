@@ -28,17 +28,21 @@
 
     <div class="main-container">
       <!-- drawing svg -->
-      <svg id="idmap" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid" width="800" height="800"></svg>
+      <svg id="idmap" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid"></svg>
 
       <!-- controller -->
       <section class="control">
-        <button class="sorts">條件一</button>
-        <button class="sorts">條件二</button>
-        <button class="sorts">條件三</button>
-        <button class="sorts">條件四</button>
-        <button class="sorts">條件五</button>
-        <button class="sorts">ALL</button>
+        <ul>
+          <li class="on">ALL</li>
+          <li>條件一</li>
+          <li>條件二</li>
+          <li>條件三</li>
+          <li>條件四</li>
+          <li>條件五</li>
+        </ul>
       </section>
+
+
     </div>
 
     <footer>
@@ -54,6 +58,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    var x = new Date(document.lastModified);
+    var date = '修改日期\n ' + x.toLocaleDateString() + ' ' + x.toLocaleTimeString();
+    document.getElementById('date').innerHTML = date;
+  </script>
 
 </body>
 

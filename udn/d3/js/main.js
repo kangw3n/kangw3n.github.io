@@ -8,9 +8,9 @@ var container = svgCanvas.parent();
 
 //resize for responsive svg
 $(window).on('resize load', function() {
-  var targetWidth = container.width();
-  svgCanvas.attr('width', targetWidth);
-  svgCanvas.attr('height', Math.round(targetWidth / aspect));
+  var target = container.width();
+  svgCanvas.attr('width', target - 100);
+  svgCanvas.attr('height', target - 100);
 }).trigger('resize');
 
 $(document).ready(function() {
@@ -38,7 +38,9 @@ $(document).ready(function() {
 });
 
 //click event
-$('.sorts').on('click', function() {
+$('.control li').on('click', function() {
+  $('.control li').removeClass('on');
+  $(this).addClass('on');
   svgCanvas.empty();
   var current = $(this).html(); // get the query value
   _dataCall.ajaxCall(current); //get data by a specified query
