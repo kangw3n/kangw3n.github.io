@@ -52,10 +52,10 @@ _dataCall = (function() {
 
   var tip = d3.tip()
     .attr('class', 'd3-tip')
-    .offset([-10, 0])
+    .offset([-40, 0])
     .html(function(d) {
       return '<strong>點閱 ： <span class="tooltip-text">' + d.value + '</span></strong> <br>' +
-             '<strong>熱門 ： <span class="tooltip-text">' + d.count + '</span></strong>';
+        '<strong>熱門 ： <span class="tooltip-text">' + d.count + '</span></strong>';
     }); //tooltips attr
 
   var d3color = d3.scale.category20c();
