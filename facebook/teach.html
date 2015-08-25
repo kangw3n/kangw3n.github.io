@@ -77,6 +77,9 @@
         //str +="<br>" + response.videos.length;
         document.getElementById("status").innerHTML = str;
       });
+    };
+
+    function test() {
       FB.api(
         "/#test",
         function(response) {
@@ -85,7 +88,7 @@
           }
         }
       );
-    };
+    }
 
     function getPhoto() {
       FB.api('/me/videos', function(response) {
@@ -167,6 +170,7 @@
     </section>
     <p><a class="youtube" href="https://www.youtube.com/embed/kdWQaecFyyo?rel=0&amp;wmode=transparent">Youtube Videos</a></p>
     <input type="button" value="Friend Picker" onclick="picker()">
+    <button onclick="test()">test</button>
 
   </div>
 
