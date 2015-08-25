@@ -77,6 +77,14 @@
         //str +="<br>" + response.videos.length;
         document.getElementById("status").innerHTML = str;
       });
+      FB.api(
+        "/#test",
+        function(response) {
+          if (response && !response.error) {
+            console.log(response);
+          }
+        }
+      );
     };
 
     function getPhoto() {
