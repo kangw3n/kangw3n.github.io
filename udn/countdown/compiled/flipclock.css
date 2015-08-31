@@ -200,7 +200,7 @@
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  /*top: -1.5em;*/
   right: -86px;
   color: black;
   text-shadow: none; }

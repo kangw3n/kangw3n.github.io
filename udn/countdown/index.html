@@ -6,6 +6,27 @@
   <title>Timer</title>
   <link rel="stylesheet" href="compiled/flipclock.css">
   <link rel="stylesheet" href="style.css">
+  <style media="screen">
+  /* place resetting */
+  .flip-clock-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6e6e6e;
+  }
+  .flip-clock-divider.days .flip-clock-label {
+    right: -228px;
+  }
+  .flip-clock-dot {
+    display: none;
+  }
+  .flip-clock-divider .flip-clock-label {
+    bottom: 1em;
+  }
+  .flip-clock-divider.hours .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label {
+    right: -158px;
+  }
+  </style>
 </head>
 
 <body>
@@ -30,6 +51,7 @@
       </li>
     </ul>
   </div>
+  <section>距離選舉還有：</section>
   <div class="clock" style="margin:2em;"></div>
 
   <script src="https://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
@@ -47,6 +69,7 @@
         });
     });
   </script>
+  <script src="zh-cn.js"></script>
   <script type="text/javascript">
     var clock;
 
@@ -57,18 +80,26 @@
 
       // Set some date in the future. In this case, it's always Jan 1
       var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+      var dateset = 1452902400;
+      //Sat Jan 16 2016 08:00:00 GMT+0800 (台北標準時間)
 
       // Calculate the difference in seconds between the future and current date
-      var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+      var diff = dateset - currentDate.getTime() / 1000;
+      // var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
 
       // Instantiate a coutdown FlipClock
       clock = $('.clock').FlipClock(diff, {
         clockFace: 'DailyCounter',
-        countdown: true
+        showSeconds: false,
+        countdown: true,
+        language: 'zh',
       });
+
+
     });
   </script>
-  <script src="zh-cn.js" charset="utf-8"></script>
+
 </body>
 
 </html>
