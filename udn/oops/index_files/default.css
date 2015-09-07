@@ -9559,7 +9559,7 @@ nav {
   width: 43px;
   height: 41px;
   border-left: 1px solid #ddd;
-  background: url("..../img/sprite.png") no-repeat -54px -105px;
+  background: url("../img/sprite.png") no-repeat -54px -105px;
 }
 .area h3 a.more:hover {
   background-color: #f2f2f2;
