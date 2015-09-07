@@ -1,104 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 
 <head>
   <meta charset="UTF-8">
   <title>Timer</title>
-  <link rel="stylesheet" href="compiled/flipclock.css">
-  <link rel="stylesheet" href="style.css">
-  <style media="screen">
-  /* place resetting */
-  .flip-clock-label {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #6e6e6e;
-  }
-  .flip-clock-divider.days .flip-clock-label {
-    right: -228px;
-  }
-  .flip-clock-dot {
-    display: none;
-  }
-  .flip-clock-divider .flip-clock-label {
-    bottom: 1em;
-  }
-  .flip-clock-divider.hours .flip-clock-label,
-  .flip-clock-divider.minutes .flip-clock-label {
-    right: -158px;
-  }
-  </style>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/flipclock.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
+  <script src="js/flipclock.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
-  <div class="timer-area">
-    <h1>倒數計時器</h1>
-    <ul id="countdown">
-      <li>
-        <span class="days">00</span>
-        <p class="timeRefDays">天</p>
-      </li>
-      <li>
-        <span class="hours">00</span>
-        <p class="timeRefHours">時</p>
-      </li>
-      <li>
-        <span class="minutes">00</span>
-        <p class="timeRefMinutes">分</p>
-      </li>
-      <li>
-        <span class="seconds">00</span>
-        <p class="timeRefSeconds">秒</p>
-      </li>
-    </ul>
-  </div>
-  <section>距離選舉還有：</section>
-  <div class="clock" style="margin:2em;"></div>
-
-  <script src="https://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
-  <script src="countdown.js" charset="utf-8"></script>
-  <script src="compiled/flipclock.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#countdown").countdown({
-          date: "1 jan 2016 12:00:00",
-          format: "on"
-        },
-
-        function() {
-          // callback function
-        });
-    });
-  </script>
-  <script src="zh-cn.js"></script>
-  <script type="text/javascript">
-    var clock;
-
-    $(document).ready(function() {
-
-      // Grab the current date
-      var currentDate = new Date();
-
-      // Set some date in the future. In this case, it's always Jan 1
-      var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
-      var dateset = 1452902400;
-      //Sat Jan 16 2016 08:00:00 GMT+0800 (台北標準時間)
-
-      // Calculate the difference in seconds between the future and current date
-      var diff = dateset - currentDate.getTime() / 1000;
-      // var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+  <section class="timer-text">距離選舉還有：</section>
+  <div class="clock"></div>
 
 
-      // Instantiate a coutdown FlipClock
-      clock = $('.clock').FlipClock(diff, {
-        clockFace: 'DailyCounter',
-        showSeconds: false,
-        countdown: true,
-        language: 'zh',
-      });
-
-
-    });
-  </script>
 
 </body>
 

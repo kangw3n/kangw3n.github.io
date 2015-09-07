@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/* 框架 frame =======================================================================================================================  */
+
+.vote { position:relative; }
+
+.bbox { display:table; margin:0 auto; }
+.showmore .more a,
+.sendbtn a { cursor: pointer; }
+.showmore .more b,
+.sendbtn b { margin: 0 3px 0 0 !important; }
+
+.vote_body { font-size: 15px; padding-top:20px; padding-bottom:20px; line-height: 1; min-height:inherit; overflow:hidden; }
+.vote_body dl { padding: 20px 0 10px; }
+.vote_body dt { position: relative; padding: 0 0 10px; margin-bottom:10px; line-height: 30px; overflow: hidden; border-bottom: 1px solid #eee; }
+.vote_body b { display: block; margin: 5px 0 15px; }
+.vote_body > b { color: #0054a6; display: block; margin: 5px 0 20px; letter-spacing: 1px; font: bold 16px 微軟正黑體, Arial, Helvetica, sans-serif; }
+.vote_body b.question { color:#222; }
+.vote_body .vote_msg { color: #F00; width: 100%; text-align: center; line-height: 35px; font-weight: bold; }
+.vote_body dt b { margin-left: 18px; display: block; float: left; height: 30px; margin: 0; }
+.vote_body dt b.voteend { margin-left:0; }
+.vote_body .send { display: block; margin: 6px 0; padding: 8px 0; color: #fff; text-align: center; background: #6fb1f0; }
+.vote_body .send:hover { background: #0075c2; }
+.vote_body span { position: absolute; top: 0; right: 0; }
+
+
+/*投票總覽 相關新聞*/
+#wrapper #vote_more { padding:0; margin-bottom:10px; clear: both; }
+#wrapper #mainbar #vote_more > dl { padding:15px 32px 20px; }
+#wrapper #mainbar #vote_more > dl > dt { padding: 0 150px 0 0; position: relative; }
+#wrapper #mainbar #vote_more > dl > dt a { display: block; padding: 0; background: url(/static/img/sprite.png) no-repeat -197px -1060px; font-size:15px; line-height: 2; }
+#wrapper #mainbar #vote_more > dl > dt a b { position: absolute; right: 10px; font-size: 12px; font-weight: 400; color: #999; margin: 0 0 0 15px; }
+
+
+.vote_body label { position:absolute; }
+.vote_body .dondon_item label { position:relative; padding-right:50px; }
+.vote_body input { margin: 0 10px 0 0; }
+.vote_body .vtotal { position: relative; top: auto; right: auto; display:table; float:right; }
+
+#story_body_content .vote_body { padding:20px 0; }
+
+/*總票數*/
+.vtotal { padding: 10px 0; text-align: right; }
+
+
+/*驗證碼*/
+.verifyArea { float:left; display:table; line-height: 40px; vertical-align: middle; }
+.verifyArea a { display:inline-block; }
+.verifyArea .captcha { width: 120px; height:30px; margin: 5px 0 0 5px; padding: 0px 5px; color: rgb(51, 51, 51); font-size: 15px; box-sizing: border-box; border: 1px solid #dedede; line-height: 30px; }
+.verifyArea .captcha_img { width:60px; height:26px; vertical-align: middle; margin: -5px 0 0; }
+
+
+/* 柱狀圖 */
+.vote_item dt b { margin:0 0 0 25px; }
+
+
+/* PK */
+.vote_body .pk { overflow:hidden; position:relative; margin-bottom: 20px; padding-bottom:20px !important; }
+.vote_body .pk dt { float: left; width:48%; margin:0 1% !important; border-width: 0px; border-style: none; padding-bottom:0; }
+.vote_body .pk a { width:auto; cursor: pointer; }
+.vote_body .pk .sendbtn { margin: 10px 0 0; }
+.vote_body .pk .sendbtn b { height: 44px; }
+.vote_body .pk dt > div:first-child { position:relative; background-color: #f5f5f5; display:block; overflow:hidden; }
+.vote_body .pk dt > div:first-child img { position:relative; width: 100% !important; height: auto; margin:0 !important; overflow: hidden; float:right; }
+.vote_body .pk .pk_area { position: relative; }
+.vote_body .pk .pk_area b { position: absolute; left: 0; bottom: 0; display: block; font-size: 12px; width: 30px; text-align: center; }
+.vote_body .pk > dt:first-child img { float:left !important; }
+.vote_body .pk > dt:first-child b { right:0 !important; left:auto; }
+.vote_body .pk > dt .pk_area { padding-left:30px; }
+.vote_body .pk > dt:first-child .pk_area { padding-left:0; padding-right:30px; }
+
+
+/*內容區 #mainbar*/
+#mainbar .vote { margin-bottom:10px; }
+#mainbar #story .area,
+#mainbar #story_body .area { padding: 0; margin: 0; border-width: 0px; border-style: none; }
+#mainbar #story_body .vote h3 { display:none !important; }
+#mainbar #story_body .vote { border-bottom: 0px none; padding:0; }
+#mainbar .vote .pie { float: left;  width: 300px; height: 300px; margin: 0 20px 0 10px; }
+#mainbar .verifyArea { padding-bottom:20px; }
+
+
+/*排行頁嵌*/
+#wrapper #mainbar #vote_list_head { margin: 0 32px 20px; padding: 0; border-bottom: 1px solid #D7D7D7; overflow: hidden; font-size:13px; line-height:1.8; }
+#wrapper #mainbar #vote_list_head a { display: block; float: left; min-width: 28px; margin: 0 10px 0 0; padding: 12px 0 3px; color: #666; border-bottom: 4px solid #fff; text-align: center; }
+#wrapper #mainbar #vote_list_head a:hover { font-weight: normal; }
+#wrapper #mainbar #vote_list_head a.active,
+#wrapper #mainbar #vote_list_head a.active:hover { font-weight: 700; }
+#wrapper #mainbar #vote_list_body { padding: 0 32px; }
+#wrapper #mainbar #vote_list_table .no1 b { color: #fff; font-weight: 700; background: #f60; border: 1px solid #f60; }
+#wrapper #mainbar #ranking_table .striped,
+#wrapper #mainbar #vote_list_table .striped,
+#wrapper #mainbar #weather_index_table .striped { background: #f5f5f5; }
+#wrapper #mainbar #vote_list_table .view_result { position: relative; display: block; width: 60px; height: 26px; margin: auto; padding: 0; text-indent: -999px; background: url(/img/sprite.png) no-repeat -95px -1714px; overflow: hidden; }
+#wrapper #mainbar #vote_list_table a { padding: 0 0 0 20px; color: #000; font-size: 15px; }
+#wrapper #mainbar #vote_list_table b { display: block; width: 23px; height: 23px; margin: auto; font-size: 13px; font-weight: 400; text-align: center; background: #fff; border: 1px solid #f2f2f2; line-height: 25px; }
+#wrapper #mainbar #vote_list_table td { padding: 10px 0; border-bottom: 1px dotted #888; font-size:13px; line-height:1.8; }
+#wrapper #mainbar #vote_list_table th { padding: 10px 5px 10px 0; border-bottom: 3px solid #d7d7d7; white-space: nowrap; font-size:13px; line-height:1.8; font-weight: bold; }
+#wrapper #mainbar #vote_list_table tr:hover td { background: #fff9e5; }
+
+
+
+
+/*側欄 #sidebar*/
+#sidebar .area { position:relative; }
+#sidebar .vote_body b.question { margin:0; }
+#sidebar .vote_body dl { padding-left:0 !important; padding-right:0 !important; }
+#sidebar .vote_body .sendbtn { margin-top:10px; }
+#sidebar .sendbtn a,
+#sidebar a.btn { -webkit-border-radius: 2px !important; -moz-border-radius: 2px !important; border-radius: 2px !important; -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important; border-width: 0px !important; border-style: none !important; }
+#sidebar .sendbtn { margin:0; border-top-width: 0px; border-top-style: none; }
+#sidebar .sendbtn a { width:auto; height:45px; line-height:45px; text-shadow:none; cursor: pointer; text-decoration: none !important; }
+#sidebar .verifyArea { position:relative; left:auto; bottom:auto; display:block; clear: both; float:none; }
+#sidebar .verifyArea input { float:right; }
+#sidebar .dondon_item { padding-top:0 !important; }
+#sidebar .vote_item dt,
+#sidebar .dondon_item dt { border-width: 0px; border-style: none; }
+#sidebar .vote_body .vtotal { position:absolute; top:0; bottom:auto; right:15px; }
+#sidebar .vote_body dt { padding-bottom:0; margin-bottom:5px; }
+
+
+
+/*頁碼*/
+.pagelink1{ padding-top:20px; padding-bottom:40px; font-family: "Microsoft JhengHei","MingLiU",Arial,Helvetica,sans-serif; text-align: center; }
+.pagelink1 span { display:inline-block; }
+.pagelink1 .on, .pagelink1 span{ height: 30px; line-height: 30px; -moz-border-colors: none; margin-right: 5px; padding: 0 15px; border: 1px solid hsl(0, 0%, 90%); }
+.pagelink1 .on{ background: #aaa; }
+.firstpage,
+.pre5page,
+.next5page,
+.lastpage { display: inline-block; -moz-border-colors: none; margin-right: 5px; height: 30px; line-height: 30px; border: 1px solid hsl(0, 0%, 90%); padding: 0 15px; }
+
+
+
+/*投票登錄*/
+#verify_body { margin:0; padding:0; }
+#verify h3 { overflow: hidden; margin: 0; padding: 0 0 0 20px; position: relative; color: #333333; font-size: 16px; font-weight: bold; line-height: 41px; letter-spacing: 1px; border-bottom: 1px solid #d7d7d7; }
+#verify #verifyform { padding:0 20px 20px; }
+#verify #verifyform a { color: #444; text-decoration: none; }
+#verify #verifyform > label,
+#verify #verifyform > label > input { clear: both; float: none; display:block; }
+#verify #verifyform > label { padding-top: 20px; font-size: 13px; line-height: 1.8; color:#444; }
+#verify #verifyform > label > input { border: 1px solid #e5e5e5; box-sizing: border-box; color: #333; font-size: 15px; line-height: 1.5; padding: 5px; width: 100%; }
+#verify #verifyform #captcha { border: 1px solid #e5e5e5; box-sizing: border-box; color: #333; font-size: 15px; line-height: 1.5; padding: 5px; width: 100%; }
+#verify #verify_sendtn { background-color: #f5f5f5; border: 1px solid #eee; color: #333; display: block; font-size: 16px; font-weight: bold; height: 44px; letter-spacing: 1px; line-height: 44px; margin: 20px auto; text-align: center; width: 222px; cursor: pointer; }
+#verify #verify_sendtn:hover { background-color:#444; color:#fff; }
+#verify label.error { margin: 0; padding: 0 0 0 5px; color: #F00; }
+#verify #verifyform > label.error { margin:0; padding:0; color:#F00; }
+
+
+
+
+/* Oops！新鮮事樣式 Style =======================================================================================================================  */
+
+#mainbar .vote { background-color: #fff; border: 1px solid #ddd; }
+#wrapper #vote_more { border: 1px solid #ddd; }
+#wrapper #vote_list { border: 1px solid #ddd; }
+#mainbar .vote_body { padding-left:32px; padding-right:32px; }
+
+#wrapper #mainbar .vote > h3,
+#wrapper #mainbar #vote_more > h3 { height: 40px; padding:0 0 0 32px; margin:0; border-bottom: 1px solid #d7d7d7; background:none; }
+#wrapper #sidebar .vote > h3 { height: 40px; padding:0 14px; margin:0; border-bottom: 1px solid #d7d7d7; background:none; }
+
+#wrapper #mainbar .vote > h3 span,
+#wrapper #mainbar #vote_more > h3 span { display: table;}
+#wrapper #mainbar .vote > h3 span a,
+#wrapper #mainbar #vote_more > h3 span a { text-decoration: none; display:inline-block; }
+
+#wrapper #mainbar .vote > h3 span,
+#wrapper #mainbar .vote > h3 span a,
+#wrapper #mainbar #vote_more > h3 span,
+#wrapper #mainbar #vote_more > h3 span a,
+#wrapper #sidebar .vote > h3 span,
+#wrapper #sidebar .vote > h3 span a { font: bold 16px/40px "微軟正黑體", "Microsoft JhengHei", "微软雅黑体", "Microsoft YaHei", "新細明體", PMingLiU, "新宋体", NSimSun, "Apple LiGothic Medium", arial, Geneva, sans-serif; color: #0054a6; }
+
+#wrapper #mainbar .vote h3 span i,
+#wrapper #mainbar #vote_more h3 span i,
+#wrapper #sidebar .vote h3 span i { display:none; }
+
+
+
+/*排行頁嵌*/
+#wrapper #mainbar #vote_list_head a.active,
+#wrapper #mainbar #vote_list_head a:hover { color: #0054a6; border-bottom: 4px solid #0054a6; }
+
+/*按鈕*/
+#mainbar .showmore .more,
+#mainbar .sendbtn a { color: #666; background-color: #e5e5e5 !important; cursor: pointer; text-shadow: 1px 1px 1px #ddd !important; }
+#mainbar .showmore .more:hover,
+#mainbar .sendbtn a:hover { background-color: #ddd !important; }
+#sidebar .showmore .more,
+#sidebar .sendbtn a { color: #ffe634; background-color: #000 !important; cursor: pointer; text-shadow: 1px 1px 1px #000 !important; }
+#sidebar .showmore .more:hover,
+#sidebar .sendbtn a:hover { color: #fff; background-color: #ff9900 !important; cursor: pointer; text-shadow: 1px 1px 1px #ff9900 !important; }
+
+
+
+/* ======== 滿版 ======== */
+@media screen and (max-width: 766px) {
+#wrapper #mainbar #comments { padding:0 10px!important; }
+#wrapper #mainbar .vote_body { padding-left:10px; padding-right:10px; }
+#wrapper #mainbar #vote_more > dl { padding:10px 10px 15px; }
+#wrapper #mainbar #vote_more > dl > dt { padding: 5px 0; }
+
+/*圓餅圖*/
+#wrapper #mainbar .vote .pie { float: none; width: auto; clear: both; }
+
+/*排行頁嵌 */
+#wrapper #mainbar #vote_list_head { margin: 0 10px 20px; }
+#wrapper #mainbar #vote_list_body { padding: 0 10px; }
+
+/* Oops！新鮮事樣式 Style =======================================================================================================================  */
+#wrapper #mainbar .vote { margin: 0 10px 10px; }
+#wrapper #mainbar .vote h3,
+#wrapper #mainbar #vote_more h3 {  }
+#wrapper #mainbar #comments h3 { }	
+}

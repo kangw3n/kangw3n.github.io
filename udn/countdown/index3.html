@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Timer</title>
+  <link rel="stylesheet" href="compiled/flipclock.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- <div class="timer-area">
+    <h1>倒數計時器</h1>
+    <ul id="countdown">
+      <li>
+        <span class="days">00</span>
+        <p class="timeRefDays">天</p>
+      </li>
+      <li>
+        <span class="hours">00</span>
+        <p class="timeRefHours">時</p>
+      </li>
+      <li>
+        <span class="minutes">00</span>
+        <p class="timeRefMinutes">分</p>
+      </li>
+      <li>
+        <span class="seconds">00</span>
+        <p class="timeRefSeconds">秒</p>
+      </li>
+    </ul>
+  </div> -->
+  <section class="timer-text">距離選舉還有：</section>
+  <div class="clock"></div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
+  <!-- <script src="countdown.js" charset="utf-8"></script> -->
+  <script src="compiled/flipclock.js"></script>
+  <!-- <script>
+    $(document).ready(function() {
+      $("#countdown").countdown({
+          date: "16 jan 2016 18:00:00",
+          format: "on"
+        },
+
+        function() {
+          // callback function
+        });
+    });
+  </script> -->
+  <script src="zh-cn.js"></script>
+  <script type="text/javascript">
+    var clock;
+
+    $(document).ready(function() {
+
+      // Grab the current date
+      var currentDate = new Date();
+      var currentTime = currentDate.getTime() / 1000;
+      // Set some date in the future. In this case, it's always Jan 1
+      // var futureDate = new Date(currentDate.getFullYear() + 1, 0, 1);
+      var voteDate = 1452938400;
+      //var dateset = 1452938400;
+      //Sat Jan 16 2016 08:00:00 GMT+0800 (台北標準時間)
+      var voteOpen = 1452938440;
+
+      // Calculate the difference in seconds between the future and current date
+      var countdown = voteDate - currentTime;
+      var openCountdown = voteOpen - voteDate;
+      // var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+      if (currentTime > voteOpen) {
+        $('.clock, .timer-text').hide();
+      } else {
+        clock = $('.clock').FlipClock(countdown, {
+          clockFace: 'DailyCounter',
+          showSeconds: false,
+          countdown: true,
+          language: 'zh',
+          callbacks: {
+            stop: function() {
+              $('.timer-text').html('距離開票還有：')
+              $('.flip').show();
+              $('.clock').FlipClock(openCountdown, {
+                clockFace: 'HourlyCounter',
+                countdown: true,
+                language: 'zh',
+                callbacks: {
+                  stop: function() {
+                     $('.clock, .timer-text').hide();
+                  }
+                }
+              })
+            }
+          }
+        });
+      }
+
+      // Instantiate a coutdown FlipClock
+
+
+
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+.count-down {
+  width: 370px;
+  float: right;
+  position: relative;
+}
+
+.count-down.ten-col{
+  width: 420px;
+}
+/* place resetting */
+
+.flip-clock-label {
+  font-family: "微軟正黑體", "Microsoft JhengHei";
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #6e6e6e;
+}
+.flip-clock-divider {
+  height: 50px;
+  width: 22px;
+  margin: 5px 0;
+}
+
+.flip-clock-divider .flip-clock-label {
+  bottom: 0;
+  color: white;
+}
+
+.flip-clock-dot {
+  background: transparent;
+  box-shadow: none;
+}
+
+.ten-col .flip-clock-divider.days .flip-clock-label{
+  right: -170px;
+}
+
+
+.flip-clock-divider.days .flip-clock-label,
+.flip-clock-divider.hours .flip-clock-label,
+.flip-clock-divider.minutes .flip-clock-label,
+.flip-clock-divider.seconds .flip-clock-label {
+  right: -120px;
+}
+
+.flip:nth-last-of-type(2),
+.flip:last-of-type {
+  display: block;
+}
+
+.flip-clock-wrapper {
+  margin: 1em auto;
+}
+
+.flip-clock-wrapper::before {
+  content: '距離倒數時間：';
+  color: white;
+}
+
+.vote-start .flip-clock-wrapper::before {
+  content: '距離開票時間：';
+}
+
+.flip-clock-wrapper ul {
+  height: 50px;
+  width: 30px;
+  background: white;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: 40px;
+}
+
+.flip-clock-wrapper ul li {
+  line-height: 1.2;
+}
+
+.flip-clock-wrapper .flip {
+  box-shadow: 0 2px 5px rgba(181, 181, 181, 0.4)
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  background-color: rgb(251, 251, 251);
+  color: #3b3b3b;
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, .1)), color-stop(100%, #c6c6c6));
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, .1)), color-stop(100%, #c6c6c6));
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, .1)), color-stop(100%, #c6c6c6));
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, .1)), color-stop(100%, #c6c6c6));
+}
