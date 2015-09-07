@@ -464,7 +464,7 @@ dl.search_type dl.search_open_close {
 #loadmore {
   display: none;
   z-index: 99;
-  background: url("/img/loadding.gif") no-repeat center 380px;
+  background: url("../img/loadding.gif") no-repeat center 380px;
 }
 @media (max-width: 766px) {
   #loading {
@@ -532,7 +532,7 @@ dl.search_type dl.search_open_close {
   width: 43px;
   height: 41px;
   margin: 0;
-  background: url("/img/sprite.png") no-repeat -3px -155px #c4c4c4;
+  background: url("../img/sprite.png") no-repeat -3px -155px #c4c4c4;
   z-index: 12;
 }
 #menu_sub .close:hover {
@@ -616,7 +616,7 @@ dl.search_type dl.search_open_close {
   float: left;
   width: 40px;
   height: 34px;
-  background: url("/img/sprite.png") no-repeat -53px -61px;
+  background: url("../img/sprite.png") no-repeat -53px -61px;
 }
 .menu #ma {
   color: #fe9;
@@ -625,7 +625,7 @@ dl.search_type dl.search_open_close {
   width: 40px !important;
   padding: 0 10px 0 0;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat -105px -1109px;
+  background: url("../img/sprite.png") no-repeat -105px -1109px;
 }
 .menu dt a#mhome:hover {
   color: #fff;
@@ -706,7 +706,7 @@ dl.search_type dl.search_open_close {
   left: 10px;
   width: 40px;
   height: 40px;
-  background: url("/img/sprite.png") no-repeat -159px -707px;
+  background: url("../img/sprite.png") no-repeat -159px -707px;
   overflow: hidden;
   z-index: 2;
 }
@@ -744,7 +744,7 @@ dl.search_type dl.search_open_close {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url("/img/sprite.png") no-repeat -111px -1261px;
+  background: url("../img/sprite.png") no-repeat -111px -1261px;
   vertical-align: middle;
   position: absolute;
   right: 0;
@@ -754,7 +754,7 @@ dl.search_type dl.search_open_close {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url("/img/sprite.png") no-repeat 8px -212px;
+  background: url("../img/sprite.png") no-repeat 8px -212px;
   vertical-align: middle;
   position: absolute;
   right: 0;
@@ -896,10 +896,10 @@ dl.search_type dl.search_open_close {
   height: 41px;
   margin: 0;
   border-left: 1px solid #ddd;
-  background: url("/img/sprite.png") no-repeat -54px -105px;
+  background: url("../img/sprite.png") no-repeat -54px -105px;
 }
 .sub_head a.more:hover {
-  background: url("/img/sprite.png") no-repeat -54px -105px #f2f2f2;
+  background: url("../img/sprite.png") no-repeat -54px -105px #f2f2f2;
 }
 .sub_head a:hover,
 .sub_head a.sub_active {
@@ -920,7 +920,7 @@ dl.search_type dl.search_open_close {
   margin: 6px 0 0;
   z-index: 12;
   overflow: hidden;
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
 }
 @media (max-width: 1016px) {
@@ -980,7 +980,7 @@ dl.search_type dl.search_open_close {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -411px;
+  background: url("../img/sprite.png") no-repeat 0 -411px;
 }
 #content_body .pv {
   padding: 2px 10px 0;
@@ -991,7 +991,7 @@ dl.search_type dl.search_open_close {
   float: left;
   width: 26px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -365px;
+  background: url("../img/sprite.png") no-repeat 0 -365px;
 }
 #content_body .pv,
 #content_body .fb {
@@ -1025,7 +1025,7 @@ dl.search_type dl.search_open_close {
   float: left;
   width: 24px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -459px;
+  background: url("../img/sprite.png") no-repeat 0 -459px;
 }
 #content_body .share dl {
   position: absolute;
@@ -1045,7 +1045,7 @@ dl.search_type dl.search_open_close {
   height: 31px;
   margin-right: 20px;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat -176px -742px;
+  background: url("../img/sprite.png") no-repeat -176px -742px;
   overflow: hidden;
 }
 #content_body .share dl a:hover {
@@ -1592,7 +1592,7 @@ dl.search_type dl.search_open_close {
   left: 10px;
   width: 40px;
   height: 40px;
-  background: url("/img/sprite.png") no-repeat -159px -707px;
+  background: url("../img/sprite.png") no-repeat -159px -707px;
   overflow: hidden;
 }
 #carousel h1 {
@@ -1714,7 +1714,7 @@ dl.search_type dl.search_open_close {
 }
 .focus_area #focus_arrow_prev b,
 .focus_area #focus_arrow_next b {
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   position: absolute;
   display: block;
@@ -1769,7 +1769,7 @@ dl.search_type dl.search_open_close {
   height: 46px;
   color: #0658aa;
   text-align: center;
-  background: url("/img/sprite.png") no-repeat right -1000px;
+  background: url("../img/sprite.png") no-repeat right -1000px;
   line-height: 47px;
 }
 #focus_tabs a:hover,
@@ -1797,7 +1797,7 @@ dl.search_type dl.search_open_close {
   width: 40px;
   height: 40px;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat -54px -2152px;
+  background: url("../img/sprite.png") no-repeat -54px -2152px;
   overflow: hidden;
 }
 #pager a:hover,
@@ -2057,7 +2057,7 @@ dl.search_type dl.search_open_close {
   overflow: hidden;
   display: block;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat -100px -2650px;
+  background: url("../img/sprite.png") no-repeat -100px -2650px;
 }
 @media (max-width: 1016px) {
   #album_index.focus_area #carousel a.share {
@@ -2294,7 +2294,7 @@ a.color_8,
   width: 40px;
   height: 40px;
   margin: 0 6px 0 0;
-  background: url("/img/sprite.png") no-repeat -4px -804px;
+  background: url("../img/sprite.png") no-repeat -4px -804px;
 }
 #mag_body {
   line-height: 1.9;
@@ -2476,7 +2476,7 @@ a.color_8,
   padding: 0 0 0 27px;
   color: #b0b0b0;
   letter-spacing: 1px;
-  background: url("/img/sprite.png") no-repeat -179px -622px;
+  background: url("../img/sprite.png") no-repeat -179px -622px;
   font-family: "Microsoft YaHei", "微软雅黑体", "Microsoft JhengHei", "微軟正黑體", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -2728,7 +2728,7 @@ a.color_8,
   width: 14px;
   height: 12px;
   margin: 0 0 0 6px;
-  background: url("/img/sprite.png") no-repeat 0 -220px;
+  background: url("../img/sprite.png") no-repeat 0 -220px;
   overflow: hidden;
 }
 .tabs_box_wrapper a.only_1024 {
@@ -3120,14 +3120,14 @@ a#invoice_btn b {
   width: 28px;
   height: 28px;
   padding: 0;
-  background: url("/img/sprite.png") no-repeat -179px -959px;
+  background: url("../img/sprite.png") no-repeat -179px -959px;
 }
 .count .fb b {
   display: inline-block;
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -411px;
+  background: url("../img/sprite.png") no-repeat 0 -411px;
 }
 .count .on,
 .count .facebook:hover {
@@ -3138,7 +3138,7 @@ a#invoice_btn b {
   float: left;
   width: 26px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -365px;
+  background: url("../img/sprite.png") no-repeat 0 -365px;
 }
 .count .pv,
 .count .fb,
@@ -3206,7 +3206,7 @@ a#invoice_btn b {
   float: left;
   width: 24px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 0 -459px;
+  background: url("../img/sprite.png") no-repeat 0 -459px;
 }
 .count .share dl {
   position: absolute;
@@ -3226,7 +3226,7 @@ a#invoice_btn b {
   height: 31px;
   margin-right: 20px;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat -176px -742px;
+  background: url("../img/sprite.png") no-repeat -176px -742px;
   overflow: hidden;
 }
 .count .share dl a:hover {
@@ -3249,7 +3249,7 @@ a#invoice_btn b {
   float: left;
   width: 22px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -116px -1664px;
+  background: url("../img/sprite.png") no-repeat -116px -1664px;
 }
 #author_article_list_head .count .tag {
   margin: 0 12px 0 0;
@@ -3259,7 +3259,7 @@ a#invoice_btn b {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -168px -2462px;
+  background: url("../img/sprite.png") no-repeat -168px -2462px;
 }
 @media (max-width: 766px) {
   .author_article_list .count > img {
@@ -3326,7 +3326,7 @@ a#invoice_btn b {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
 }
 @media (max-width: 1216px) {
   #category_body dl a {
@@ -3406,7 +3406,7 @@ a#invoice_btn b {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
 }
 #category_mags_body dl a.sp {
   color: #0054a6;
@@ -3729,7 +3729,7 @@ a#invoice_btn b {
   width: 28px;
   height: 28px;
   margin: 0 0 0 5px;
-  background: url("/img/sprite.png") no-repeat 5px -1160px;
+  background: url("../img/sprite.png") no-repeat 5px -1160px;
 }
 .category_box .author dl {
   margin: 0 24px 0 0;
@@ -3905,7 +3905,7 @@ a#invoice_btn b {
   font-size: 15px;
   font-size: 1.5rem;
   text-indent: 12px;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
   line-height: 2;
 }
 @media (max-width: 1216px) {
@@ -3977,7 +3977,7 @@ a#invoice_btn b {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -168px -2462px;
+  background: url("../img/sprite.png") no-repeat -168px -2462px;
 }
 .mag .category_box_list .big a.category_box_topic {
   float: left;
@@ -4154,7 +4154,7 @@ a#invoice_btn b {
   width: 28px;
   height: 28px;
   padding: 0;
-  background: url("/img/sprite.png") no-repeat -179px -959px;
+  background: url("../img/sprite.png") no-repeat -179px -959px;
 }
 @media (max-width: 766px) {
   .mag .category_box_list a.category_box_img img {
@@ -4403,7 +4403,7 @@ a.category_box_img {
   padding: 0 0 0 12px;
   font-size: 15px;
   font-size: 1.5rem;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
   line-height: 2;
 }
 .faq #faq_search #search_kw {
@@ -4627,7 +4627,7 @@ a.category_box_img {
   font-size: 46px;
   font-size: 4.6rem;
   text-align: center;
-  background: url("/img/sprite.png") no-repeat 0 -2003px;
+  background: url("../img/sprite.png") no-repeat 0 -2003px;
   line-height: 100px;
 }
 @media (max-width: 1216px) {
@@ -4754,7 +4754,7 @@ a.category_box_img {
   left: 5px;
   width: 18px;
   height: 9px;
-  background: url("/img/sprite.png") no-repeat -168px -2172px;
+  background: url("../img/sprite.png") no-repeat -168px -2172px;
 }
 #mypage_author_list dl dl dt {
   position: relative;
@@ -5298,7 +5298,7 @@ a.category_box_img {
   float: left;
   width: 66px;
   height: 34px;
-  background: url("/img/sprite.png") no-repeat -134px -2359px;
+  background: url("../img/sprite.png") no-repeat -134px -2359px;
 }
 .mypage_save_search_submit:hover {
   background-position: -134px -2409px;
@@ -5312,7 +5312,7 @@ a.category_box_img {
   right: 0;
   width: 30px;
   height: 30px;
-  background: url("/img/sprite.png") no-repeat -178px -350px;
+  background: url("../img/sprite.png") no-repeat -178px -350px;
   border-radius: 2px;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   filter: alpha(opacity=70);
@@ -5367,7 +5367,7 @@ a.category_box_img {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -168px -2462px;
+  background: url("../img/sprite.png") no-repeat -168px -2462px;
 }
 #story_body .track {
   float: left;
@@ -5385,7 +5385,7 @@ a.explanation {
   width: 28px;
   height: 28px;
   padding: 0;
-  background: url("/img/sprite.png") no-repeat -179px -959px;
+  background: url("../img/sprite.png") no-repeat -179px -959px;
 }
 div.del {
   position: absolute;
@@ -5443,7 +5443,7 @@ div.del b {
   width: 16px;
   height: 16px;
   margin: 10px auto 0;
-  background: url("/img/sprite.png") no-repeat -117px -2468px;
+  background: url("../img/sprite.png") no-repeat -117px -2468px;
 }
 #mypage_author_list div.del {
   height: 144px;
@@ -5469,7 +5469,7 @@ b.del {
   width: 16px;
   height: 16px;
   margin: 8px 0 0;
-  background: url("/img/sprite.png") no-repeat -117px -2468px;
+  background: url("../img/sprite.png") no-repeat -117px -2468px;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: alpha(opacity=30);
   opacity: 0.3;
@@ -5734,7 +5734,7 @@ form input.mypage_save_search_input {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url("/img/sprite.png") no-repeat -111px -1261px;
+  background: url("../img/sprite.png") no-repeat -111px -1261px;
   vertical-align: middle;
   position: absolute;
   right: 0;
@@ -5745,7 +5745,7 @@ form input.mypage_save_search_input {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url("/img/sprite.png") no-repeat 8px -212px;
+  background: url("../img/sprite.png") no-repeat 8px -212px;
   vertical-align: middle;
   position: absolute;
   right: 0;
@@ -6003,7 +6003,7 @@ form input.mypage_save_search_input {
   float: left;
   width: 66px;
   height: 34px;
-  background: url("/img/sprite.png") no-repeat -134px -2359px;
+  background: url("../img/sprite.png") no-repeat -134px -2359px;
 }
 .result_search_submit:hover {
   background-position: -134px -2409px;
@@ -6025,7 +6025,7 @@ form input.result_search_input {
   }
 }
 #rss_list .active .close_this b {
-  background: url("/img/sprite.png") no-repeat -15px -2114px;
+  background: url("../img/sprite.png") no-repeat -15px -2114px;
 }
 #rss_list .active .open_this {
   display: none;
@@ -6064,7 +6064,7 @@ form input.result_search_input {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -15px -2114px;
+  background: url("../img/sprite.png") no-repeat -15px -2114px;
 }
 #rss_list .open_this,
 .group_btn .open_this {
@@ -6095,7 +6095,7 @@ form input.result_search_input {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -116px -1614px;
+  background: url("../img/sprite.png") no-repeat -116px -1614px;
 }
 #rss_list .group {
   position: relative;
@@ -6148,7 +6148,7 @@ form input.result_search_input {
   float: left;
   width: 28px;
   height: 24px;
-  background: url("/img/sprite.png") no-repeat -13px -2165px;
+  background: url("../img/sprite.png") no-repeat -13px -2165px;
 }
 #rss_list .ssr dl dt b {
   background-position: -116px -2712px;
@@ -6255,7 +6255,7 @@ form input.result_search_input {
   width: 80px;
   height: 80px;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat 0 -1830px;
+  background: url("../img/sprite.png") no-repeat 0 -1830px;
   margin: 0 10px 0 0;
 }
 #sidebar .tiles dd li > a#login:hover {
@@ -6378,7 +6378,7 @@ form input.result_search_input {
   background: #fff;
 }
 #sitemaps_list .active .close_this b {
-  background: url("/img/sprite.png") no-repeat -15px -2114px;
+  background: url("../img/sprite.png") no-repeat -15px -2114px;
 }
 #sitemaps_list .active dl,
 #sitemaps_list .active .open_this {
@@ -6415,7 +6415,7 @@ form input.result_search_input {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat 115px -1614px;
+  background: url("../img/sprite.png") no-repeat 115px -1614px;
 }
 #sitemaps_list .group {
   position: relative;
@@ -6454,7 +6454,7 @@ form input.result_search_input {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -116px -1614px;
+  background: url("../img/sprite.png") no-repeat -116px -1614px;
 }
 #sitemaps_list .single {
   padding: 0;
@@ -6482,7 +6482,7 @@ form input.result_search_input {
   padding: 0 0 0 12px;
   color: #444;
   text-decoration: none;
-  background: url("/img/sprite.png") no-repeat -197px -1066px;
+  background: url("../img/sprite.png") no-repeat -197px -1066px;
 }
 #sitemaps_list dl dt a:hover {
   color: #0054a6;
@@ -6616,7 +6616,7 @@ form input.result_search_input {
   height: 25px;
   margin: 0 20px 0 0;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat left -2214px;
+  background: url("../img/sprite.png") no-repeat left -2214px;
 }
 #line_udn {
   display: block;
@@ -6624,7 +6624,7 @@ form input.result_search_input {
   width: 90px;
   height: 25px;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat -110px -2214px;
+  background: url("../img/sprite.png") no-repeat -110px -2214px;
 }
 #logo_mag {
   position: absolute;
@@ -6672,7 +6672,7 @@ form input.result_search_input {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -193px -1062px;
+  background: url("../img/sprite.png") no-repeat -193px -1062px;
 }
 @media (max-width: 766px) {
   #story_also a {
@@ -6842,7 +6842,7 @@ form input.result_search_input {
   float: left;
   width: 20px;
   height: 26px;
-  background: url("/img/sprite.png") no-repeat -184px -352px;
+  background: url("../img/sprite.png") no-repeat -184px -352px;
 }
 #story_body a.explanation {
   display: inline-block;
@@ -6850,7 +6850,7 @@ form input.result_search_input {
   width: 28px;
   height: 28px;
   padding: 0;
-  background: url("/img/sprite.png") no-repeat -179px -959px;
+  background: url("../img/sprite.png") no-repeat -179px -959px;
 }
 #story_body h2 {
   color: #222;
@@ -6986,7 +6986,7 @@ form input.result_search_input {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -192px -1060px;
+  background: url("../img/sprite.png") no-repeat -192px -1060px;
 }
 #story_foot a b {
   position: absolute;
@@ -7040,7 +7040,7 @@ form input.result_search_input {
   _margin-top: 0;
   _position: absolute;
   _top: expression(documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight)/2);
-  background: url("/img/sprite.png") no-repeat -62px -1250px;
+  background: url("../img/sprite.png") no-repeat -62px -1250px;
   z-index: 2;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   filter: alpha(opacity=60);
@@ -7070,7 +7070,7 @@ form input.result_search_input {
   padding: 7px 15px 7px 40px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  background: url("/img/sprite.png") no-repeat -165px -345px;
+  background: url("../img/sprite.png") no-repeat -165px -345px;
   border: 1px solid #ccc;
   border-radius: 2px;
   color: #444;
@@ -7078,14 +7078,14 @@ form input.result_search_input {
 }
 #temporary_add:hover {
   color: #fff;
-  background: url("/img/sprite.png") no-repeat -165px -345px #0054a6;
+  background: url("../img/sprite.png") no-repeat -165px -345px #0054a6;
   border: 1px solid #333;
 }
 .dialog_number {
   display: block;
   float: left;
   padding: 0 0 0 11px;
-  background: url("/img/sprite.png") no-repeat -153px -861px;
+  background: url("../img/sprite.png") no-repeat -153px -861px;
   overflow: hidden;
 }
 .dialog_number b {
@@ -7093,7 +7093,7 @@ form input.result_search_input {
   padding: 5px 7px 0 0;
   color: #333;
   font-weight: 400;
-  background: url("/img/sprite.png") no-repeat right -861px;
+  background: url("../img/sprite.png") no-repeat right -861px;
   line-height: 23px;
   overflow: hidden;
 }
@@ -7134,7 +7134,7 @@ form input.result_search_input {
   margin-right: 20px;
 }
 .photo_pop li.pinterest a {
-  background: url("/img/sprite.png") no-repeat -110px -958px;
+  background: url("../img/sprite.png") no-repeat -110px -958px;
 }
 .photo_pop_icon {
   position: absolute;
@@ -7144,7 +7144,7 @@ form input.result_search_input {
   width: 30px;
   height: 30px;
   text-indent: -9999px;
-  background: url("/img/sprite.png") no-repeat 6px -457px #fff;
+  background: url("../img/sprite.png") no-repeat 6px -457px #fff;
   overflow: hidden;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: alpha(opacity=30);
@@ -7198,7 +7198,7 @@ form input.result_search_input {
 }
 .social_bar li.discuss a {
   width: 27px;
-  background: url("/img/sprite.png") no-repeat -176px -793px;
+  background: url("../img/sprite.png") no-repeat -176px -793px;
 }
 .social_bar li.discuss a a {
   width: auto;
@@ -7240,7 +7240,7 @@ form input.result_search_input {
 }
 .social_bar li.print a {
   width: 27px;
-  background: url("/img/sprite.png") no-repeat 0 -656px;
+  background: url("../img/sprite.png") no-repeat 0 -656px;
 }
 .social_bar li.plurk a {
   background-position: -10px -709px;
@@ -7271,7 +7271,7 @@ form input.result_search_input {
 }
 .social_bar li.sendmail a,
 .social_bar li a.sendmail {
-  background: url("/img/sprite.png") no-repeat -176px -742px;
+  background: url("../img/sprite.png") no-repeat -176px -742px;
 }
 .social_bar li.share,
 .social_bar li.like,
@@ -7281,12 +7281,12 @@ form input.result_search_input {
 }
 .social_bar li.facebook a,
 .photo_pop li.facebook a {
-  background: url("/img/sprite.png") no-repeat -60px -1109px;
+  background: url("../img/sprite.png") no-repeat -60px -1109px;
 }
 .social_bar li.twitter a,
 .social_bar li.plurk a,
 .photo_pop li.twitter a {
-  background: url("/img/sprite.png") no-repeat -10px -759px;
+  background: url("../img/sprite.png") no-repeat -10px -759px;
 }
 .social_pop li.print,
 .photo_pop li.pinterest {
@@ -7312,10 +7312,10 @@ form input.result_search_input {
 }
 .social_pop > a {
   width: 57px;
-  background: url("/img/sprite.png") no-repeat 0 -1043px;
+  background: url("../img/sprite.png") no-repeat 0 -1043px;
 }
 .social_pop:hover > a {
-  background: url("/img/sprite.png") no-repeat -100px -1043px;
+  background: url("../img/sprite.png") no-repeat -100px -1043px;
 }
 .social_pop:hover ul,
 .photo:hover ul,
@@ -7376,7 +7376,7 @@ a.post_new:hover {
   left: 10px;
   width: 40px;
   height: 40px;
-  background: url("/img/sprite.png") no-repeat -159px -707px;
+  background: url("../img/sprite.png") no-repeat -159px -707px;
   overflow: hidden;
 }
 .videos_body dt h4 {
@@ -7540,7 +7540,7 @@ a.post_new:hover {
   margin: auto;
   padding: 0;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat -95px -1714px;
+  background: url("../img/sprite.png") no-repeat -95px -1714px;
   overflow: hidden;
 }
 @media (max-width: 766px) {
@@ -7608,7 +7608,7 @@ a.post_new:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
 }
 #vote_more a b {
   margin: 0 0 0 15px;
@@ -8857,7 +8857,7 @@ nav {
   width: 54px;
   height: 54px;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat right -50px;
+  background: url("../img/sprite.png") no-repeat right -50px;
   overflow: hidden;
   z-index: 11;
 }
@@ -8941,7 +8941,7 @@ nav {
   position: relative;
   margin: 0 28px 0 0;
   color: #606060;
-  background: url("/img/sprite.png") no-repeat;
+  background: url("../img/sprite.png") no-repeat;
 }
 @media (max-width: 1016px) {
   #header_head_fun > a {
@@ -9018,7 +9018,7 @@ nav {
   position: relative;
   margin: 0 28px 0 0;
   color: #606060;
-  background: url("/img/sprite.png") no-repeat -184px -158px;
+  background: url("../img/sprite.png") no-repeat -184px -158px;
   padding: 0 0 0 19px;
 }
 #sethome {
@@ -9073,7 +9073,7 @@ nav {
   background-color: #666;
 }
 #sethome div u {
-  background: url("/img/sprite.png") no-repeat right top;
+  background: url("../img/sprite.png") no-repeat right top;
   display: inline-block;
   position: relative;
   width: 32px;
@@ -9095,14 +9095,14 @@ nav {
 }
 #header_head_member a#log {
   padding: 0 0 0 19px;
-  background: url("/img/sprite.png") no-repeat -184px -120px;
+  background: url("../img/sprite.png") no-repeat -184px -120px;
 }
 #header_head_member a {
   display: inline;
   color: #0054a6;
 }
 #header_head_wrapper {
-  background: url("/img/sprite.png") no-repeat -103px -2696px;
+  background: url("../img/sprite.png") no-repeat -103px -2696px;
   height: 122px;
   margin: auto;
   position: relative;
@@ -9149,7 +9149,7 @@ nav {
   left: 0;
   width: 172px;
   height: 47px;
-  background: url("/img/sprite.png") no-repeat left top;
+  background: url("../img/sprite.png") no-repeat left top;
 }
 .mypage_save #logo,
 .mypage_author #logo,
@@ -9274,7 +9274,7 @@ nav {
   height: 33px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  background: #666 url("/img/sprite.png") no-repeat -17px -960px;
+  background: #666 url("../img/sprite.png") no-repeat -17px -960px;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -9344,7 +9344,7 @@ nav {
   width: 53px;
   height: 51px;
   margin: 0;
-  background: #c4c4c4 url("/img/sprite.png") no-repeat scroll 1px -151px;
+  background: #c4c4c4 url("../img/sprite.png") no-repeat scroll 1px -151px;
   z-index: 12;
 }
 #show_box .close:hover {
@@ -9368,7 +9368,7 @@ nav {
   width: 50px;
   height: 50px;
   margin: 0 10px 0 0;
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
 }
 #sidebar_fix {
@@ -9501,7 +9501,7 @@ nav {
   left: 10px;
   width: 40px;
   height: 40px;
-  background: url("/img/sprite.png") no-repeat -159px -707px;
+  background: url("../img/sprite.png") no-repeat -159px -707px;
   overflow: hidden;
 }
 #tv_body dt h4 {
@@ -9559,7 +9559,7 @@ nav {
   width: 43px;
   height: 41px;
   border-left: 1px solid #ddd;
-  background: url("/img/sprite.png") no-repeat -54px -105px;
+  background: url("..../img/sprite.png") no-repeat -54px -105px;
 }
 .area h3 a.more:hover {
   background-color: #f2f2f2;
@@ -9612,7 +9612,7 @@ nav {
   width: 50px;
   height: 47px;
   margin: auto;
-  background: url("/img/sprite.png") no-repeat -101px -200px;
+  background: url("../img/sprite.png") no-repeat -101px -200px;
 }
 .channel a b,
 .channel span.hover {
@@ -9638,7 +9638,7 @@ nav {
   top: 0;
   width: 50px;
   height: 47px;
-  background-image: url("/img/sprite.png");
+  background-image: url("../img/sprite.png");
 }
 #header_channel a b {
   left: 15px;
@@ -9861,7 +9861,7 @@ a.channel_9_btn.active span {
   width: 34px;
   height: 44px;
   margin: 0 0 0 57px;
-  background: url("/img/sprite.png") no-repeat -108px -2155px;
+  background: url("../img/sprite.png") no-repeat -108px -2155px;
 }
 .sendbtn a {
   display: block;
@@ -9912,7 +9912,7 @@ a.channel_9_btn.active span {
   width: 25px;
   height: 44px;
   margin: 0 0 0 57px;
-  background: url("/img/sprite.png") no-repeat -16px -503px;
+  background: url("../img/sprite.png") no-repeat -16px -503px;
 }
 .sidebar_fix {
   position: fixed;
@@ -10109,7 +10109,7 @@ a.channel_9_btn.active span {
   line-height: 1.5;
 }
 #album_photos_body a.share {
-  background: url("/img/sprite.png") no-repeat scroll -100px -2650px;
+  background: url("../img/sprite.png") no-repeat scroll -100px -2650px;
   bottom: 50px;
   display: block;
   height: 50px;
@@ -10275,7 +10275,7 @@ a.channel_9_btn.active span {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: keep-all;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
 }
 #mag_most .area_body a b {
   margin: 0 0 0 15px;
@@ -10368,7 +10368,7 @@ a.channel_9_btn.active span {
   white-space: nowrap;
   word-break: keep-all;
   padding: 0 0 0 12px;
-  background: url("/img/sprite.png") no-repeat -197px -1060px;
+  background: url("../img/sprite.png") no-repeat -197px -1060px;
 }
 .video-wrapper {
   width: 824px;
@@ -10478,7 +10478,7 @@ a.channel_9_btn.active span {
   overflow: visible;
 }
 #mainbar #history h3 > a {
-  background: url("/img/sprite.png") no-repeat -4px -554px;
+  background: url("../img/sprite.png") no-repeat -4px -554px;
 }
 #mainbar #history h3 > a:hover #news_calendar {
   display: block;
@@ -10593,7 +10593,7 @@ a.channel_9_btn.active span {
 #mainbar #vote_more > dl > dt a {
   display: block;
   padding: 0;
-  background: url("/static/img/sprite.png") no-repeat -197px -1060px;
+  background: url("/static../img/sprite.png") no-repeat -197px -1060px;
   font-size: 15px;
   line-height: 2;
 }
@@ -10828,7 +10828,7 @@ a.channel_9_btn.active span {
   margin: auto;
   padding: 0;
   text-indent: -999px;
-  background: url("/img/sprite.png") no-repeat -95px -1714px;
+  background: url("../img/sprite.png") no-repeat -95px -1714px;
   overflow: hidden;
 }
 #mainbar #vote_list_table a {
