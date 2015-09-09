@@ -1,13 +1,295 @@
-.count-down {
-  width: 370px;
-  float: right;
-  position: relative;
+body {
+  font-family: "微軟正黑體", "Microsoft JhengHei";
 }
 
-.count-down.ten-col{
-  width: 420px;
+a:hover {
+  color: #F66E00;
 }
-/* place resetting */
+
+h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+#container {
+  background: #E1DEC4;
+}
+
+#ham {
+  position: absolute;
+  top: 0;
+  left: 5;
+  display: none;
+}
+
+#sidebar {
+  font-family: "微軟正黑體", "Microsoft JhengHei";
+}
+
+#header {
+  height: auto;
+  margin: 0 auto;
+  background: #ACA885;
+}
+
+#header_body_wrapper {
+  height: 80px;
+}
+
+#logo_mag {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+#header.active .menu {
+  box-shadow: none;
+}
+
+#footer {
+  background-color: #4B3F27;
+}
+
+
+/*menu*/
+
+.menu {
+  height: 45px;
+  background: #595242;
+}
+
+.menu > dl {
+  padding-top: 0;
+}
+
+.menu > dl > dt {
+  /*line-height: 1.5;*/
+  display: inline-block;
+}
+
+.menu > dl > dt > a,
+.menu > dl > dt:last-child > a {
+  height: auto;
+  margin: 0;
+  letter-spacing: 0;
+  padding: 7px 15px;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #E1DEC4;
+  text-shadow: none;
+}
+
+.menu > dl > dt > a:hover,
+.menu a.active {
+  background: #9D5407;
+}
+
+.menu a.active {
+  color: white;
+}
+
+@media(max-width:767px) {
+  #ham {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .in-menu #container {
+    position: relative;
+    left: 40%;
+  }
+  .in-menu .menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    height: 270px;
+    background: transparent;
+  }
+  .in-menu .menu > dl > dt {
+    display: block;
+  }
+  .in-menu .menu > dl > dt > a,
+  .in-menu .menu > dl > dt:last-child > a {
+    width: 30%;
+    text-align: left;
+    color: grey;
+  }
+  .in-menu .menu > dl > dt > a:hover {
+    background: transparent;
+    color: #9D5407;
+  }
+  .in-menu .menu > dl > dt > a.active {
+    color: white;
+  }
+  .in-menu .menu > dl > dt > a.active:hover {
+    background: #9D5407;
+  }
+}
+
+@media(max-width:1016px) {
+  .menu > dl > dt > a,
+  .menu > dl > dt:last-child > a {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+
+.count-down {
+  width: 290px;
+  float: right;
+  position: relative;
+  height: 100%;
+}
+
+.count-down.ten-col {
+  width: 340px;
+}
+
+.timer-text {
+  position: relative;
+  height: 0;
+  left: -110px;
+  top: 30;
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+}
+
+.big-img {
+  background-color: transparent;
+  height: 300px;
+  width: 100%;
+  margin: 0 auto 15px;
+  background-image: url('../img/top1.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media(max-width:1216px) {
+  .big-img {
+    background-image: url('http://lorempixel.com/1020/250/abstract/');
+    height: 250px;
+    width: 1020px;
+  }
+}
+
+@media(max-width:1016px) {
+  .big-img {
+    background-image: url('http://lorempixel.com/920/150/abstract/');
+    height: 150px;
+    width: 920px;
+  }
+}
+
+@media(max-width:766px) {
+  .big-img {
+    display: none;
+  }
+}
+
+
+/* area reseting*/
+
+#mainbar .area > h3,
+.area > h3 {
+  background-image: url('../img/voteLOGO.png');
+  height: 41px;
+  background-repeat: no-repeat;
+  background-position: 15px 5px
+}
+
+.area h3 a,
+.area h3 {
+  color: #08958c;
+}
+
+#sidebar .area h3 {
+  padding-left: 55px;
+}
+
+#sidebar .area h3 a.more,
+.area h3 a.more {
+  padding-left: 0;
+}
+
+#mainbar .area > h3,
+.area > h3 {
+  padding-left: 50px;
+}
+
+
+/* category box*/
+
+#mag_most {
+  margin-bottom: 0;
+}
+
+#mag_most .area {
+  margin-bottom: 10px;
+}
+
+.area-main-title {
+  color: #F66E00;
+}
+
+.category_box_topic h3 {
+  padding-top: 0;
+}
+
+.category_box_list a {
+  /*width:400;*/
+}
+
+.max a.category_box_topic h3 {
+  font-size: 16px;
+  color: black;
+}
+
+.max a.category_box_topic h3:hover {
+  color: #F66E00;
+}
+
+a.category_box_ch {
+  color: #08958c;
+}
+
+.category_box .topic dl.max.max-more {
+  padding: 28px;
+  background-color: #F6F6F6;
+}
+
+body.mag .category_box_list .max-more a {
+  text-indent: 12px;
+}
+
+.max-more {
+  border-top: 1px dotted #e2e2e2;
+}
+
+#mainbar .showmore .more,
+#mainbar .sendbtn a {
+  background-color: #9CD3D0 !important;
+  color: white;
+}
+
+#mainbar .showmore .more:hover,
+#mainbar .sendbtn a:hover {
+  background-color: #08958c !important;
+}
+
+@media(max-width: 1216px) {
+  .category_box_list .max-more a {
+    width: auto;
+  }
+}
+
+
+/* flip-clock resetting */
+
+ul.flip {
+  padding-left: 0;
+}
 
 .flip-clock-label {
   font-family: "微軟正黑體", "Microsoft JhengHei";
@@ -15,8 +297,9 @@
   font-weight: bold;
   color: #6e6e6e;
 }
+
 .flip-clock-divider {
-  height: 50px;
+  height: 38px;
   width: 22px;
   margin: 5px 0;
 }
@@ -31,16 +314,15 @@
   box-shadow: none;
 }
 
-.ten-col .flip-clock-divider.days .flip-clock-label{
-  right: -170px;
+.ten-col .flip-clock-divider.days .flip-clock-label {
+  right: -140px;
 }
-
 
 .flip-clock-divider.days .flip-clock-label,
 .flip-clock-divider.hours .flip-clock-label,
 .flip-clock-divider.minutes .flip-clock-label,
 .flip-clock-divider.seconds .flip-clock-label {
-  right: -120px;
+  right: -98px;
 }
 
 .flip:nth-last-of-type(2),
@@ -49,30 +331,35 @@
 }
 
 .flip-clock-wrapper {
-  margin: 1em auto;
+  margin: 1.35em auto;
 }
 
 .flip-clock-wrapper::before {
-  content: '距離倒數時間：';
+  content: '距離選舉還有：';
   color: white;
+  display: none;
+  padding: 0 0 5px 0;
+  text-align: left;
 }
 
 .vote-start .flip-clock-wrapper::before {
-  content: '距離開票時間：';
+  content: '距離開票還有：';
 }
 
 .flip-clock-wrapper ul {
-  height: 50px;
+  height: 38px;
   width: 30px;
   background: white;
-}
-
-.flip-clock-wrapper ul li a div div.inn {
-  font-size: 40px;
+  border-radius: 4px;
 }
 
 .flip-clock-wrapper ul li {
-  line-height: 1.2;
+  line-height: 37px;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: 30px;
+  text-shadow: 0 0 1px #000;
 }
 
 .flip-clock-wrapper .flip {
@@ -98,4 +385,95 @@
 
 .flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, .1)), color-stop(100%, #c6c6c6));
+}
+
+@media(max-width: 766px) {
+  #logo_mag {
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+    background-position: center;
+    top: 0;
+    background-size: 150px;
+    position: relative;
+    left: 0;
+    height: 50px;
+    transform: none;
+  }
+  #header {
+    display: block;
+    top: -10px;
+  }
+  #header_body_wrapper {
+    height: auto;
+  }
+  .count-down {
+    display: block;
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #B62121;
+    position: fixed;
+    bottom: 0;
+  }
+  .count-down.ten-col {
+    width: 100%;
+  }
+  .clock {
+    margin: 0 auto;
+  }
+  .clock-wrapper {
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .ten-col .clock-wrapper {
+    width: 280px;
+  }
+  .flip-clock-label {
+    font-size: 1em;
+  }
+  .flip-clock-wrapper ul li a div div.inn {
+    font-size: 25px;
+  }
+  .flip-clock-wrapper::before {
+    display: block;
+  }
+  .flip-clock-divider {
+    width: 15px;
+    height: 30px;
+  }
+  .flip-clock-divider.days .flip-clock-label,
+  .flip-clock-divider.hours .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label,
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -82px;
+  }
+  .ten-col .flip-clock-divider.days .flip-clock-label {
+    right: -115px;
+  }
+  .flip-clock-wrapper ul {
+    height: 35px;
+    margin: 2px;
+    padding-left: 0;
+  }
+  .flip-clock-wrapper ul li {
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 1216px) {
+  #mag_most {
+    width: auto;
+  }
+  #mag_most .area {
+    width: auto;
+    float: none;
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  #mag_most_hot.area {
+    margin: 0 0 10px;
+  }
 }

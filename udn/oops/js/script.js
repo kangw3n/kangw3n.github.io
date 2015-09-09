@@ -14,7 +14,7 @@ $(document).ready(function() {
   // Define date accordingly
   var currentDate = new Date();
   var currentTime = currentDate.getTime() / 1000;
-  var voteDate = 1452909600;
+  var voteDate = 1446952228;
   //1452909600
   var voteOpen = 1452909800;
   var changeTheme = 1452938400;
@@ -65,4 +65,39 @@ $(document).ready(function() {
       }, //callback
     }); //flipclock
   }
+
+  var $clock = $('.count-down');
+  var opacity = $clock.css('opacity');
+  var scrollStopped;
+
+  var fadeInCallback = function() {
+    if (typeof scrollStopped != 'undefined') {
+      clearInterval(scrollStopped);
+    }
+
+    scrollStopped = setTimeout(function() {
+      $clock.animate({
+        opacity: 1,
+      }, 'slow');
+    }, 600);
+  };
+
+  $(window).on('load scroll', function() {
+    var width = $(document).width();
+    if (width < 767) {
+      if (!$clock.is(':animated') && opacity == 1) {
+        $clock.animate({
+          opacity: 0,
+        }, 'slow', fadeInCallback);
+      } else {
+        fadeInCallback.call(this);
+      }
+    }
+  });
+
+  $('#ham').on('click', function() {
+    $(this).find('.wrapper-ham').toggleClass('checked');
+    $('body').toggleClass('in-menu');
+  });
+
 });

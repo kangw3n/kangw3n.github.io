@@ -2,1174 +2,921 @@
 <html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
 
-	<title>OOPS! 新鮮事 | 聯合新聞網 </title>
+  <title>OOPS! 新鮮事 | 聯合新聞網
+  </title>
 
+  <link href="./index_files/vote.css" rel="stylesheet" type="text/css">
+  <link href="./index_files/default.css" rel="stylesheet" type="text/css">
+  <link href="./index_files/mag.css" rel="stylesheet" type="text/css">
+  <link charset="utf-8" href="css/flipclock.css" media="screen" rel="stylesheet" title="no title">
+  <link charset="utf-8" href="css/style.css" media="screen" rel="stylesheet" title="no title">
 
+  <!-- for Facebook -->
+<meta property="og:title" content="OOPS! 新鮮事 | 聯合新聞網 "/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://oops.udn.com/oops/index"/>
+<meta property="og:image" content="http://oops.udn.com/img/UDN_BABY.png"/>
+<meta property="og:image:width" content="1000"/>
+<meta property="og:image:height" content="1000"/>
+<meta property="og:site_name" content="OOPS! 新鮮事"/>
+<meta property="og:description" content="OOPS! 為有fu、有梗世代打造的專屬網站，時時補充新鮮創意能量"/>
+<meta property="fb:admins" content="100002847892748" />
+<meta property="fb:app_id" content="803604343037126" />
 
-	<link href="./index_files/vote.css" rel="stylesheet" type="text/css">
-	<link href="./index_files/default.css" rel="stylesheet" type="text/css">
-	<link href="./index_files/mag.css" rel="stylesheet" type="text/css">
+  <script charset="utf-8" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
-	<script src="./index_files/jquery-1.11.1.min.js"></script>
-
-	<script src="./index_files/jquery.event.drag-2.2.js"></script>
-	<script src="./index_files/jquery.wookmark.min.js"></script>
-	<script src="./index_files/jquery.fitvids.js"></script>
-	<script src="./index_files/jquery.cookie.js"></script>
-	<script src="./index_files/common.js"></script>
-	<script src="./index_files/common2.js"></script>
-	<script src="js/flipclock.js" charset="utf-8"></script>
-	<link rel="stylesheet" href="css/flipclock.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-	<style media="screen">
-		#header {
-			height: auto;
-		}
-
-		#header_body_wrapper {
-			height: 98px;
-		}
-
-		#logo_mag {
-			top: 50%;
-			transform: translateY(-50%);
-			left: 0;
-		}
-
-		@media(max-width: 766px) {
-			#logo_mag {
-				display: block;
-				width: 100%;
-				margin: 10px 0 0 0;
-				background-position: center;
-				top: 0;
-				background-size: 150px;
-				position: relative;
-				left: 0;
-				height: 50px;
-				transform: none;
-			}
-			#header {
-				display: block;
-				top: -10px;
-			}
-			#header_body_wrapper {
-				height: auto;
-			}
-			.count-down {
-				display: block;
-				float: none;
-				height: auto;
-				margin: 0 auto;
-			}
-			.clock {
-				margin: 0 auto;
-			}
-			.clock-wrapper {
-				width: 280px;
-				margin: 0 auto;
-				padding: 10px;
-			}
-			.count-down.ten-col {
-				width: 100%;
-				background-color: grey;
-			}
-			.flip-clock-label {
-				font-size: 1em;
-			}
-			.flip-clock-wrapper ul li a div div.inn {
-				font-size: 25px;
-			}
-			.flip-clock-divider {
-				width: 15px;
-				height: 30px;
-			}
-			.flip-clock-divider.days .flip-clock-label,
-			.flip-clock-divider.hours .flip-clock-label,
-			.flip-clock-divider.minutes .flip-clock-label,
-			.flip-clock-divider.seconds .flip-clock-label {
-				right: -82px;
-			}
-			.ten-col .flip-clock-divider.days .flip-clock-label {
-				right: -115px;
-			}
-			.flip-clock-wrapper ul {
-				height: 35px;
-				margin: 2px;
-				padding-left: 0;
-			}
-			.flip-clock-wrapper ul li {
-				line-height: 1.3;
-			}
-		}
-
-		@media(max-width:767px) {
-			.menu {
-				overflow-x: scroll;
-				display: none;
-			}
-		}
-
-		@media (max-width: 1216px) {
-			#mag_most {
-				width: auto;
-			}
-			#mag_most .area {
-				width: auto;
-				float: none;
-				display: block;
-				margin: 0;
-			}
-			#mag_most_hot.area {
-				margin: 0 0 10px;
-			}
-		}
-	</style>
-
+  <script src="./index_files/jquery.event.drag-2.2.js"></script>
+  <script src="./index_files/jquery.wookmark.min.js"></script>
+  <script src="./index_files/jquery.fitvids.js"></script>
+  <script src="./index_files/jquery.cookie.js"></script>
+  <script src="./index_files/common.js"></script>
+  <script src="./index_files/common2.js"></script>
+  <script charset="utf-8" src="js/flipclock.js"></script>
+  <script charset="utf-8" src="js/script.js"></script>
 </head>
 
 <body class="mag">
-
-
-	<div id="loading"></div>
-	<div id="menu_mark" style="width: 788px; height: 6286px;"></div>
-	<div id="container">
-
-
-		<div id="header" class="">
-
-
-			<div id="header_body_wrapper">
-
-
-				<img src="./index_files/svg.gif" id="logo_mag" usemap="#Map">
-				<map name="Map">
-					<area shape="rect" coords="0,0,266,62" href="http://oops.udn.com/" title="回OOPS! 新鮮事首頁">
-					<area shape="rect" coords="0,0,0,0" href="http://udn.com/" title="回聯合新聞網首頁">
-				</map>
-				<aside class="count-down">
-					<!-- <section class="timer-text">距離選舉還有：</section> -->
-					<section class="clock-wrapper">
-						<div class="clock"></div>
-					</section>
-
-				</aside>
-
-
-			</div>
-			<!-- /#header_body_wrapper -->
-			<div id="menu" class="menu">
-
-				<dl>
-					<dt><a href="http://oops.udn.com/" id="mh" title="回OOPS! 新鮮事首頁"><b></b>首頁</a></dt>
-
-
-					<dt><a href="http://oops.udn.com/oops/cate/6681" rel="/menu/main_menu/1011/6681/10" id="m1">熱搜話題</a></dt>
-					<dt><a rel="/menu/main_menu/1011/6692/10" id="m1">兩性占心</a></dt>
-					<dt><a rel="/menu/main_menu/1011/6682/10" id="m1">生活樂集</a></dt>
-					<dt><a rel="/menu/main_menu/1011/6691/10" id="m1">星鮮流行</a></dt>
-					<dt><a rel="/menu/main_menu/1011/6764/10" id="m1">沃克甘苦</a></dt>
-				</dl>
-
-				<a href="javascript:void(0);" class="arrow_left"></a>
-				<a href="javascript:void(0);" class="arrow_right" style="display: inline;"></a>
-
-			</div>
-			<!-- /.menu -->
-
-			<div id="menu_sub" class="menu_sub" style="top: 131px;"></div>
-			<div id="mhome_sub" class="menu_sub" style="top: 131px;"></div>
-
-
-
-		</div>
-		<!-- /#header -->
-
-		<style type="text/css">
-			header {
-				background: none repeat scroll 0 0 #ffe634;
-				min-height: 90px;
-				margin: 0 0 10px;
-				position: relative;
-				z-index: 11;
-			}
-
-			header.active {
-				margin: 0 0 10px;
-				position: fixed;
-				_position: absolute;
-				_top: expression(eval(document.documentElement.scrollTop));
-				width: 100%;
-				top: 0;
-				-webkit-box-shadow: #666 0 3px 3px;
-				-moz-box-shadow: #666 0 3px 3px;
-				box-shadow: #666 0 3px 3px;
-			}
-
-			#header_menu {
-				position: relative;
-			}
-
-			#header_logo {
-				background: url("index_files/sprite.png") no-repeat scroll 0 -2841px rgba(0, 0, 0, 0);
-				display: block;
-				height: 50px;
-				margin: auto;
-				width: 160px;
-			}
-			/*
-#header_logo {
-  display: block;
-  margin: auto;
-  width: 160px;
-  height: 50px;
-  background: rgba(0,0,0,0) url(/img/logo.svg) no-repeat -482px -166px / 675px 900px;
-  background: url(/img/sprite.png) no-repeat 0 -2841px;
-
-  float: left;
-  margin: 0 0 0 10px;
-}
-*/
-
-			#header_menu_btn {
-				background: url("index_files/sprite.png") no-repeat -153px -2247px;
-				float: left;
-				display: block;
-				height: 50px;
-				position: relative;
-				width: 50px;
-			}
-
-			#header_menu_area {
-				background-color: #FFFFFF;
-			}
-
-			#header_tools {
-				position: absolute;
-				right: 0;
-				top: 0;
-			}
-
-			#header_member {
-				background: url("index_files/sprite.png") no-repeat scroll 0 -2300px;
-				display: block;
-				float: left;
-				height: 50px;
-				width: 50px;
-			}
-
-			.only_mobile #header_search_btn {
-				background: url("index_files/sprite.png") no-repeat scroll -50px -2300px;
-				display: block;
-				float: left;
-				height: 50px;
-				width: 50px;
-				position: relative;
-				top: auto;
-			}
-
-			#header_menu_area.active {
-				box-shadow: 3px 3px 3px #666666;
-			}
-
-			#header_menu_area a {
-				background: url("index_files/sprite.png") no-repeat 210px -2800px;
-				color: #666;
-				display: block;
-				font: bold 18px/50px "微軟正黑體", Arial, Helvetica, sans-serif;
-				letter-spacing: 1px;
-				overflow: hidden;
-				padding: 0 15px;
-			}
-
-			#header_menu_area a b {
-				background: url("/img/sprite.png") no-repeat -50px -2353px;
-				display: block;
-				float: left;
-				height: 50px;
-				overflow: hidden;
-				width: 50px;
-			}
-
-			#header_menu_area a:hover {
-				color: #333;
-				background-color: #efedee;
-			}
-
-			#header_menu_area a#m2 b {
-				background-position: -50px -2403px;
-			}
-
-			#header_menu_area a#m3 b {
-				background-position: -50px -2453px;
-			}
-
-			#header_menu_area a#m4 b {
-				background-position: -50px -2502px;
-			}
-
-			#header_menu_area a#m5 b {
-				background-position: -50px -2553px;
-			}
-
-			#header_menu_area a#m6 b {
-				background-position: -50px -2600px;
-			}
-
-			#header_menu_area a#m7 b {
-				background-position: -50px -2650px;
-			}
-
-			#header_menu_area a#m8 b {
-				background-position: -50px -2701px;
-			}
-
-			#header_menu_area a#m9 b {
-				background-position: -50px -2752px;
-			}
-
-			#header_menu_area a#m2 b {
-				background-position: -50px -2403px;
-			}
-
-			#header_menu_area a#m1:hover b {
-				background-position: 0px -2353px;
-			}
-
-			#header_menu_area a#m2:hover b {
-				background-position: 0px -2403px;
-			}
-
-			#header_menu_area a#m3:hover b {
-				background-position: 0px -2453px;
-			}
-
-			#header_menu_area a#m4:hover b {
-				background-position: 0px -2502px;
-			}
-
-			#header_menu_area a#m5:hover b {
-				background-position: 0px -2553px;
-			}
-
-			#header_menu_area a#m6:hover b {
-				background-position: 0px -2600px;
-			}
-
-			#header_menu_area a#m7:hover b {
-				background-position: 0px -2650px;
-			}
-
-			#header_menu_area a#m8:hover b {
-				background-position: 0px -2701px;
-			}
-
-			#header_menu_area a#m9:hover b {
-				background-position: 0px -2752px;
-			}
-
-			#mobile_search #search_kw {
-				width: 135px;
-			}
-
-			#mobile_search {
-				position: relative;
-				right: auto;
-				top: auto;
-				padding: 10px;
-				display: none;
-			}
-			/* 解決浮動內容，DIV區塊高度不見問題 */
-
-			#mobile_search:after {
-				content: "";
-				display: block;
-				clear: both;
-			}
-		</style>
-
-
-
-		<div id="wrapper">
-
-			<div id="mainbar">
-
-
-
-				<div id="photos_focus_area" class="area">
-
-					<h3>今日推薦</h3>
-
-					<div id="photos_focus" class="focus_area">
-
-						<div id="carousel">
-							<a href="http://oops.udn.com/oops/story/6698/1171514">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8065_img_file.PNG?20150907155042&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>細數藝人在特殊日子發的文 強國人玻璃心好難醫？</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6699/1171489">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7990_img_file.jpg?20150907150147&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>400個麵包一夜賣完超溫馨 網友：我也訂錯了…</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6699/1171315">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7976_img_file.jpg?20150907135241&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>好傻好天真 當年大人那些沒創意的騙句也騙得倒你！</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6698/1171196">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7975_img_file.png?20150907122250&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>超可怕der！那以後歷史課本也不要放大衛像了？</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6700/1166594">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7865_img_file.jpg?20150904162017&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>【一劍浣春秋】開賣四小時就完售，你買到波多野結衣的悠遊卡了嗎？</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6706/1166539">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8019_img_file.PNG?20150904161135&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>醜到要哭！強國超雷蠟像再現 范冰冰一秒變紙紮人</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6700/1166542">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7973_img_file.png?20150904160415&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>CCR大解密：滾床單時到底用哪國語言？</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6706/1166151">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8018_img_file.jpg?20150904151511&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>「單身餐廳」設局一秒變相親 網友喊：來台灣開！</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6706/1166356">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8017_img_file.PNG?20150904150911&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>那些年令女孩兒們怦然心動的少女漫畫～妳看過幾本？</h1>
-							</a>
-							<a href="http://oops.udn.com/oops/story/6700/1166161">
-								<img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7901_img_file.jpg?20150904135506&sl=W&fw=700">
-								<span class="wmark"></span>
-								<h1>X歲定終身！若X歲還是處男的話這輩子就都處男了</h1>
-							</a>
-
-						</div>
-						<!-- /#carousel -->
-
-						<a href="javascript:void(0);" id="focus_arrow_prev" title="Show focus_arrow_previous">focus_arrow_previous<b></b></a>
-						<a href="javascript:void(0);" id="focus_arrow_next" title="Show focus_arrow_next">focus_arrow_next<b></b></a>
-
-						<div id="pager"></div>
-						<!-- /#pager -->
-
-					</div>
-					<!-- /#photos_focus -->
-
-				</div>
-				<!-- /#photos_focus_area -->
-
-
-
-
-				<script src="./index_files/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
-				<script>
-					$(window).on("load resize", function(e) {
-
-						var newWindowWidth = $(document).width();
-
-						if (newWindowWidth > 749) {
-							$('#photos_focus #carousel').carouFredSel({
-								width: '100%',
-								items: {
-									visible: 3,
-									start: -1
-								},
-								scroll: {
-									items: 1,
-									duration: 1000,
-									timeoutDuration: 5000
-								},
-								prev: '#focus_arrow_prev',
-								next: '#focus_arrow_next',
-								pagination: {
-									container: '#photos_focus #pager',
-									deviation: 1
-								}
-							});
-						} else {
-							if ($('.caroufredsel_wrapper').length) {
-								$('#carousel').off();
-								$('#carousel').unwrap();
-								$('#carousel, #carousel a, #pager, #focus_arrow_prev, #focus_arrow_next').removeAttr('style');
-								$('#pager').empty();
-							}
-						}
-					});
-				</script>
-
-
-				<div id="mag_most">
-
-					<div id="mag_most_hot" class="area">
-
-						<h3>
-							<a href="http://oops.udn.com/rank/pv30/1011">火熱排行</a>
-
-
-							<a href="http://oops.udn.com/rank/pv30/1011" title="more" class="more"></a>
-						</h3>
-
-						<div id="mag_most_hot_body" class="area_body">
-							<dl>
-								<dt><a href="http://oops.udn.com/oops/story/6698/1149603-%E6%97%A5%E6%9C%AC11%E6%AD%B2%E5%B0%8F%E5%AD%B8%E7%94%9F%E8%BA%AB%E6%9D%90%E9%95%B7%E9%80%99%E6%A8%A3...%E4%B9%9F%E5%A4%AA%E4%B8%8D%E7%A7%91%E5%AD%B8%E6%83%B9%EF%BC%81">日本11歲小學生身材長這樣...也太不科學惹！<b>扁編 </b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6698/1147090-%E5%A5%B3%E7%A5%9E%E7%B5%90%E5%A9%9A%E8%83%8C%E5%BE%8C%E7%9A%84%E6%AE%98%E9%85%B7%E7%8F%BE%E5%AF%A6%EF%BC%9A%E4%BA%BA%E5%B8%A5%E7%94%B7%E5%AD%90%E6%BC%A2%EF%BC%8C%E4%BA%BA%E9%86%9C%E6%98%AF%E7%99%A1%E6%BC%A2">女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢<b>尼瑪來了</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6698/1151605-%E6%B3%A2%E5%A4%9A%E9%87%8E%E7%B5%90%E8%A1%A3%E6%98%AF%E6%93%8B%E7%AE%AD%E7%89%8C%EF%BC%9F%E5%8C%97%E5%B8%82%E5%BA%9C%E3%80%8C%E4%B8%89%E5%A4%A7%E9%99%B0%E8%AC%80%E8%AB%96%E3%80%8D%E6%9B%9D%E5%85%89">波多野結衣是擋箭牌？北市府「三大陰謀論」曝光<b>好秋小姐</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6698/1149029-%E5%B0%8F%E6%9C%8B%E5%8F%8B%E5%95%8F%E6%B3%A2%E5%A4%9A%E9%87%8E%E7%B5%90%E8%A1%A3%E6%98%AF%E8%AA%B0%EF%BC%9F%E7%B6%B2%E5%8F%8B%E4%BB%A5%E5%90%84%E8%A1%8C%E6%A5%AD%E7%A5%9E%E8%AD%AC%E5%96%BB%EF%BC%81">小朋友問波多野結衣是誰？網友以各行業神譬喻！<b>好秋小姐</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6700/1151892-%E8%B2%A0%E5%82%B5%E5%A4%A9%E8%8F%9CVS%E6%9C%89%E9%8C%A2%E9%86%9C%E7%94%B7-%E5%A5%B3%E7%94%9F%E6%9C%80%E5%BE%8C%E9%81%B8%E6%93%87%E5%AB%81%E7%B5%A6%E2%80%A6%EF%BC%9F">負債天菜VS有錢醜男 女生最後選擇嫁給…？<b>&nbsp;</b></a></dt>
-							</dl>
-						</div>
-						<!-- /#mag_most_hot_body -->
-
-					</div>
-					<!-- /#mag_most_hot -->
-
-
-
-					<div id="mag_most_new" class="area">
-
-						<h3>
-							<a href="http://oops.udn.com/rank/newest/1011">新鮮上市</a>
-
-
-							<a href="http://oops.udn.com/rank/newest/1011" title="more" class="more"></a>
-						</h3>
-
-						<div id="mag_most_new_body" class="area_body">
-							<dl>
-								<dt><a href="http://oops.udn.com/oops/story/6699/1163943-%E8%91%AC%E7%A6%AE%E8%87%AA%E6%8B%8D%E3%80%81%E8%A1%80%E5%BA%8A%E5%96%AE-%E5%93%AA%E4%BA%9B%E8%AA%87%E5%BC%B5%E6%89%93%E5%8D%A1%E8%AE%93%E4%BD%A0%E8%B6%85%E6%83%B3%E5%B0%81%E9%8E%96%EF%BC%81">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！<b>好秋小姐</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6700/1163919-%E5%A5%B3%E7%94%9F%E8%AA%AA%E3%80%8C%E4%B8%8D%E8%A6%81%E3%80%8D%E6%99%82%E5%8D%83%E8%90%AC%E4%B8%8D%E8%A6%81%E5%81%9C%EF%BD%9E%E5%A5%B3%E7%94%9F%E5%B0%B1%E6%98%AF%E6%84%9B%E8%AC%9B%E5%8F%8D%E8%A9%B1%E5%95%8A%EF%BC%81">女生說「不要」時千萬不要停～女生就是愛講反話啊！<b>扁編 </b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6700/1163844-%E7%94%B7%E7%94%9F%E8%96%AA%E6%B0%B4%E4%B8%80%E5%AE%9A%E8%A6%81%E6%AF%94%E8%BC%83%E9%AB%98%EF%BC%9F%E5%9B%A0%E7%82%BA%E7%A4%BE%E6%9C%83%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E9%BC%93%E5%8B%B5%E4%BD%A0%E7%9A%84">男生薪水一定要比較高？因為社會就是這樣鼓勵你的<b>神拉一筆</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6707/1163602-%E6%9C%89%E6%B2%92%E6%9C%89%E6%9F%93%E4%BA%86%E9%87%91%E9%AB%AE%E5%B0%B1%E6%9C%83%E8%AE%8A%E5%B8%A5%E3%80%81%E8%AE%8A%E5%9C%8B%E9%9A%9B%E5%8C%96%E7%9A%84%E5%85%AB%E5%8D%A6%EF%BC%9F">有沒有染了金髮就會變帥、變國際化的八卦？<b>&nbsp;</b></a></dt>
-								<dt><a href="http://oops.udn.com/oops/story/6698/1162005-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%AD%B0%E5%93%A1%E7%8B%82%E7%BD%B5%E3%80%8C%E6%B3%A2%E5%8D%A1%E3%80%8D%EF%BC%81%E7%B6%B2%E6%80%92%EF%BC%9A%E5%81%87%E9%81%93%E5%AD%B8%E3%80%81%E7%9C%8B%E6%B8%85%E9%A2%A8%E5%90%91%E5%A5%BD%E5%97%8E">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎<b>尼瑪來了</b></a></dt>
-							</dl>
-						</div>
-						<!-- /#mag_most_new_body -->
-
-					</div>
-					<!-- /#mag_most_new -->
-
-
-
-				</div>
-				<!-- /#mag_most-->
-				<div class="area category_box">
-
-					<h3><a href="http://oops.udn.com/oops/cate/6681">熱搜話題</a>
-						<a title="more" class="more topic" href="http://oops.udn.com/oops/cate/6681"></a>
-					</h3>
-
-					<div class="category_box_list topic">
-
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6698/1162005-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%AD%B0%E5%93%A1%E7%8B%82%E7%BD%B5%E3%80%8C%E6%B3%A2%E5%8D%A1%E3%80%8D%EF%BC%81%E7%B6%B2%E6%80%92%EF%BC%9A%E5%81%87%E9%81%93%E5%AD%B8%E3%80%81%E7%9C%8B%E6%B8%85%E9%A2%A8%E5%90%91%E5%A5%BD%E5%97%8E"
-								class="category_box_img">
-									<img src="./index_files/photo(10).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6681#sub_6698" class="category_box_ch">哈特夯聞</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+  <div id="loading"></div>
+  <div id="menu_mark" style="width: 788px; height: 6286px;"></div>
+  <div id="container">
+
+    <div class="" id="header">
+
+      <div id="header_body_wrapper">
+
+        <img id="logo_mag" src="./index_files/svg.gif" usemap="#Map">
+        <div id="ham">
+          <div class='wrapper-ham'>
+            <ul class='hamburger'>
+              <li class='first'></li>
+              <li class='second'></li>
+              <li class='third'></li>
+            </ul>
+          </div>
+          <style media="screen">
+            .wrapper-ham {
+              overflow: hidden;
+              width: 50px;
+              cursor: pointer;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+            }
+
+            .hamburger {
+              list-style: none;
+              float: left;
+              margin: 0;
+              padding: 14px 0;
+              position: relative;
+              top: 2px;
+              left: 10px;
+              -moz-transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+              -o-transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+              -webkit-transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+              transition: all 233ms cubic-bezier(0.5, 0, 0, 1);
+            }
+
+            .hamburger li {
+              width: 24px;
+              height: 4px;
+              background: #fff;
+              margin: 2px 0 0;
+              padding: 0;
+              -moz-transform: translate3d(0, 0, 0);
+              -ms-transform: translate3d(0, 0, 0);
+              -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+              -moz-transition: all 333ms cubic-bezier(0.5, 0, 0, 1);
+              -o-transition: all 333ms cubic-bezier(0.5, 0, 0, 1);
+              -webkit-transition: all 333ms cubic-bezier(0.5, 0, 0, 1);
+              transition: all 333ms cubic-bezier(0.5, 0, 0, 1);
+            }
+
+            .checked .hamburger li.first {
+              -moz-transform: rotate(-135deg) translateY(-8.5px);
+              -ms-transform: rotate(-135deg) translateY(-8.5px);
+              -webkit-transform: rotate(-135deg) translateY(-8.5px);
+              transform: rotate(-135deg) translateY(-8.5px);
+            }
+
+            .checked .hamburger li.second {
+              filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+              opacity: 0;
+            }
+
+            .checked .hamburger li.third {
+              -moz-transform: rotate(135deg) translateY(8.5px);
+              -ms-transform: rotate(135deg) translateY(8.5px);
+              -webkit-transform: rotate(135deg) translateY(8.5px);
+              transform: rotate(135deg) translateY(8.5px);
+            }
+          </style>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6698/1162005-%E6%B0%91%E9%80%B2%E9%BB%A8%E8%AD%B0%E5%93%A1%E7%8B%82%E7%BD%B5%E3%80%8C%E6%B3%A2%E5%8D%A1%E3%80%8D%EF%BC%81%E7%B6%B2%E6%80%92%EF%BC%9A%E5%81%87%E9%81%93%E5%AD%B8%E3%80%81%E7%9C%8B%E6%B8%85%E9%A2%A8%E5%90%91%E5%A5%BD%E5%97%8E"
-								class="category_box_topic">
-									<h3>民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎</h3>
-									<span>「暗黑林志玲」波多野結衣的公益悠遊卡事件，至今還未完全劃下句點，先前不少政治人物、婦女團體對此事大家撻伐，但批評言論反而引發不少民眾反彈，直言：「本來不太清楚她是誰也沒特別支持，但...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6698/1159816-%E6%97%A5%E6%9C%AC%E5%88%B6%E6%9C%8D%E7%89%B9%E8%92%90%EF%BC%81%E6%AB%BB%E8%8A%B1%E5%A6%B9%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E7%A9%BF%E6%89%8D%E8%90%8C...">日本制服特蒐！櫻花妹就是這樣穿才萌...</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6698/1159324-%E6%AD%90%E5%B7%B4%E9%A6%AC%E4%B8%8A%E8%8D%92%E9%87%8E%E6%B1%82%E7%94%9F%E5%AF%A6%E5%A2%83%E7%A7%80-%E7%B6%B2%E5%8F%8B%E5%A6%84%E6%83%B3%EF%BC%9A%E6%9C%83%E9%81%87%E5%92%8C%E7%89%9B">歐巴馬上荒野求生實境秀 網友妄想：會遇和牛</a></dt>
-								</dl>
-							</dt>
-						</dl>
 
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6699/1163943-%E8%91%AC%E7%A6%AE%E8%87%AA%E6%8B%8D%E3%80%81%E8%A1%80%E5%BA%8A%E5%96%AE-%E5%93%AA%E4%BA%9B%E8%AA%87%E5%BC%B5%E6%89%93%E5%8D%A1%E8%AE%93%E4%BD%A0%E8%B6%85%E6%83%B3%E5%B0%81%E9%8E%96%EF%BC%81" class="category_box_img">
-									<img src="./index_files/photo(11).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6681#sub_6699" class="category_box_ch">鄉民爆卦</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+        <aside class="count-down">
+          <section class="timer-text">距離選舉還有</section>
+          <section class="clock-wrapper">
+            <div class="clock"></div>
+          </section>
+
+        </aside>
+
+      </div>
+      <!-- /#header_body_wrapper -->
+      <div class="menu">
+
+        <dl>
+          <dt>
+            <a class='active' href="#" title="回OOPS! 新鮮事首頁">
+              <!-- <b></b> -->網路夯新聞
+            </a>
+          </dt>
+
+          <dt>
+            <a href="http://oops.udn.com#1" rel="/menu/main_menu/1011/6681/10">文字論選戰</a>
+          </dt>
+          <dt>
+            <a rel="/menu/main_menu/1011/6692/10">圖表解民調</a>
+          </dt>
+          <dt>
+            <a rel="/menu/main_menu/1011/6682/10">透視候選人</a>
+          </dt>
+          <dt>
+            <a rel="/menu/main_menu/1011/6691/10">回顧選舉史</a>
+          </dt>
+          <dt>
+            <a rel="/menu/main_menu/1011/6764/10">也來玩選舉</a>
+          </dt>
+        </dl>
+
+      </div>
+      <!-- /.menu -->
+
+    </div>
+    <!-- /#header -->
+
+    <section class="big-img"></section>
+
+
+    <div id="wrapper">
+
+      <div id="mainbar">
+
+        <div class="area" id="photos_focus_area">
+
+          <h3>今日推薦</h3>
+
+          <div class="focus_area" id="photos_focus">
+
+            <div id="carousel">
+              <a href="#oops/story/6698/1171514">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8065_img_file.PNG?20150907155042&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>細數藝人在特殊日子發的文 強國人玻璃心好難醫？</h1>
+              </a>
+              <a href="#oops/story/6699/1171489">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7990_img_file.jpg?20150907150147&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>400個麵包一夜賣完超溫馨 網友：我也訂錯了…</h1>
+              </a>
+              <a href="#oops/story/6699/1171315">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7976_img_file.jpg?20150907135241&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>好傻好天真 當年大人那些沒創意的騙句也騙得倒你！</h1>
+              </a>
+              <a href="#oops/story/6698/1171196">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7975_img_file.png?20150907122250&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>超可怕der！那以後歷史課本也不要放大衛像了？</h1>
+              </a>
+              <a href="#oops/story/6700/1166594">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7865_img_file.jpg?20150904162017&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>【一劍浣春秋】開賣四小時就完售，你買到波多野結衣的悠遊卡了嗎？</h1>
+              </a>
+              <a href="#oops/story/6706/1166539">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8019_img_file.PNG?20150904161135&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>醜到要哭！強國超雷蠟像再現 范冰冰一秒變紙紮人</h1>
+              </a>
+              <a href="#oops/story/6700/1166542">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7973_img_file.png?20150904160415&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>CCR大解密：滾床單時到底用哪國語言？</h1>
+              </a>
+              <a href="#oops/story/6706/1166151">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8018_img_file.jpg?20150904151511&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>「單身餐廳」設局一秒變相親 網友喊：來台灣開！</h1>
+              </a>
+              <a href="#oops/story/6706/1166356">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/8017_img_file.PNG?20150904150911&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>那些年令女孩兒們怦然心動的少女漫畫～妳看過幾本？</h1>
+              </a>
+              <a href="#">
+                <img src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/tab/photo/7901_img_file.jpg?20150904135506&sl=W&fw=700">
+                <span class="wmark"></span>
+                <h1>X歲定終身！若X歲還是處男的話這輩子就都處男了</h1>
+              </a>
+
+            </div>
+            <!-- /#carousel -->
+
+            <a href="javascript:void(0);" id="focus_arrow_prev" title="Show focus_arrow_previous">focus_arrow_previous
+                <b></b>
+              </a>
+            <a href="javascript:void(0);" id="focus_arrow_next" title="Show focus_arrow_next">focus_arrow_next
+                <b></b>
+              </a>
+
+            <div id="pager"></div>
+            <!-- /#pager -->
+
+          </div>
+          <!-- /#photos_focus -->
+
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6699/1163943-%E8%91%AC%E7%A6%AE%E8%87%AA%E6%8B%8D%E3%80%81%E8%A1%80%E5%BA%8A%E5%96%AE-%E5%93%AA%E4%BA%9B%E8%AA%87%E5%BC%B5%E6%89%93%E5%8D%A1%E8%AE%93%E4%BD%A0%E8%B6%85%E6%83%B3%E5%B0%81%E9%8E%96%EF%BC%81" class="category_box_topic">
-									<h3>葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！</h3>
-									<span>透過臉書或Line的動態來抒發心情，已經成為現代運動，不管是吃飯、出遊、購物、電影心得…任何想分（炫）享（耀）的生活瑣事，都一定要PO出來記（騙）錄（讚）。不過不是每一則動態人人都...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6699/1162240-%E8%B6%85%E5%81%87%E6%8E%B0%E8%A3%9D%E5%B0%8F%E9%B3%A5%E8%83%83-%E4%BB%96%E8%A8%AD%E5%B1%80%E6%8B%8D%E4%B8%8B%E5%A5%B3%E5%8F%8B%E5%A4%A7%E5%97%91XX%E2%80%A6">超假掰裝小鳥胃 他設局拍下女友大嗑XX…</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6699/1161997-%E3%80%8C%E5%B9%B3%E5%AE%89%E5%96%9C%E6%A8%82%E3%80%81%E6%99%9A%E9%A4%90%E6%84%89%E6%82%85%E3%80%8D%E9%95%B7%E8%BC%A9%E7%9A%84%E7%B6%B2%E8%B7%AF%E7%94%A8%E8%AA%9E%E4%B9%9F%E5%A4%AA%E6%AD%A3%E7%B6%93...">「平安喜樂、晚餐愉悅」長輩的網路用語也太正經...</a></dt>
-								</dl>
-							</dt>
-						</dl>
+        <!-- /#photos_focus_area -->
 
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6765/1121502-%E4%BB%A5%E5%89%8D%E5%A5%B3%E6%98%9F%E6%AF%94%E8%BC%83%E6%AD%A3%EF%BC%9F%E7%8F%BE%E5%9C%A8%E5%A5%B3%E6%98%9F%E9%95%B7%E7%9B%B8%E9%83%BD%E5%BE%88%E5%83%8F%EF%BC%9F" class="category_box_img">
-									<img src="./index_files/photo(12).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6681#sub_6765" class="category_box_ch">正妹男神</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+        <script src="./index_files/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+        <script>
+          $(window).on("load resize", function(e) {
+
+            var newWindowWidth = $(document).width();
+
+            if (newWindowWidth > 749) {
+              $('#photos_focus #carousel').carouFredSel({
+                width: '100%',
+                items: {
+                  visible: 3,
+                  start: -1
+                },
+                scroll: {
+                  items: 1,
+                  duration: 1000,
+                  timeoutDuration: 5000
+                },
+                prev: '#focus_arrow_prev',
+                next: '#focus_arrow_next',
+                pagination: {
+                  container: '#photos_focus #pager',
+                  deviation: 1
+                }
+              });
+            } else {
+              if ($('.caroufredsel_wrapper').length) {
+                $('#carousel').off();
+                $('#carousel').unwrap();
+                $('#carousel, #carousel a, #pager, #focus_arrow_prev, #focus_arrow_next').removeAttr('style');
+                $('#pager').empty();
+              }
+            }
+          });
+        </script>
+
+        <div id="mag_most">
+
+          <div class="area">
+
+            <h3>
+              <a href="#rank/pv30/1011">最新
+                  <span class="area-main-title">總統</span>選聞</a>
+
+              <a class="more" href="#rank/pv30/1011" title="more"></a>
+            </h3>
+
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">日本11歲小學生身材長這樣...也太不科學惹！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">波多野結衣是擋箭牌？北市府「三大陰謀論」曝光
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">小朋友問波多野結衣是誰？網友以各行業神譬喻！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">負債天菜VS有錢醜男 女生最後選擇嫁給…？
+                    </a>
+                </dt>
+              </dl>
+            </div>
+            <!-- /#mag_most_hot_body -->
+
+          </div>
+          <!-- /#mag_most_hot -->
+
+          <div class="area">
+
+            <h3>
+              <a href="#">最新
+                  <span class="area-main-title">立委</span>選聞</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+              </dl>
+            </div>
+            <!-- /#mag_most_new_body -->
+
+          </div>
+          <!-- /#mag_most_new -->
+          <div class="area">
+
+            <h3>
+              <a href="#">
+                <span class="area-main-title">北北基桃竹</span>立委選聞</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+
+              </dl>
+            </div>
+            <!-- /#mag_most_new_body -->
+
+          </div>
+          <div class="area">
+            <h3>
+              <a href="#">
+                <span class="area-main-title">苗中彰投雲</span>立委選聞</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+              </dl>
+            </div>
+            <!-- /#mag_most_new_body -->
+
+          </div>
+          <div class="area">
+            <h3>
+              <a href="#">
+                <span class="area-main-title">嘉南高屏澎</span>立委選聞</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+              </dl>
+            </div>
+            <!-- /#mag_most_new_body -->
+
+          </div>
+          <div class="area">
+            <h3>
+              <a href="#">
+                <span class="area-main-title">宜花東金馬</span>立委選聞</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body">
+              <dl>
+                <dt>
+                  <a href="#">葬禮自拍、血床單 哪些誇張打卡讓你超想封鎖！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">女生說「不要」時千萬不要停～女生就是愛講反話啊！
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">男生薪水一定要比較高？因為社會就是這樣鼓勵你的
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">有沒有染了金髮就會變帥、變國際化的八卦？
+                    </a>
+                </dt>
+                <dt>
+                  <a href="#">民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                    </a>
+                </dt>
+              </dl>
+            </div>
+            <!-- /#mag_most_new_body -->
+
+          </div>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6765/1121502-%E4%BB%A5%E5%89%8D%E5%A5%B3%E6%98%9F%E6%AF%94%E8%BC%83%E6%AD%A3%EF%BC%9F%E7%8F%BE%E5%9C%A8%E5%A5%B3%E6%98%9F%E9%95%B7%E7%9B%B8%E9%83%BD%E5%BE%88%E5%83%8F%EF%BC%9F" class="category_box_topic">
-									<h3>以前女星比較正？現在女星長相都很像？</h3>
-									<span>電視上常常會播出一些以前的電影，甚至有些還頗古早，感覺裡面的當紅主角都是些非你年代的人物…看多了還會感覺得出每個年代的流行差異，看得出明星們到底都是有怎樣的特色才會走紅。 網...
+        <!-- /#mag_most-->
 
-									</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6765/1096531-%E4%B8%AD%E5%9C%8B%E9%9B%BB%E7%8E%A9%E5%B1%95%E3%80%8C%E7%A6%81%E7%88%86%E4%B9%B3%E3%80%8D%E6%A8%A1%E7%89%B9%E5%85%92%E9%9D%A0%E9%9C%B2%EF%BC%BF%EF%BC%BF%E5%8F%8D%E6%94%BB">中國電玩展「禁爆乳」模特兒靠露＿＿反攻</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6765/1086712-SNH48%E6%B1%BA%E9%81%B8%E5%85%AC%E5%B8%83%EF%BC%81%E3%80%8C%E4%B8%AD%E5%9C%8B%E7%AC%AC%E4%B8%80%E7%BE%8E%E3%80%8D%E6%89%8D%E7%AC%AC%E4%BA%8C%EF%BC%9F%EF%BC%81">SNH48決選公布！「中國第一美」才第二？！</a></dt>
-								</dl>
-							</dt>
-						</dl>
+        <div class="area category_box">
+          <h3>
+            <a href="#1">熱搜話題</a>
+            <a class="more topic" href="#1" title="more"></a>
+          </h3>
+          <div class="category_box_list topic">
+            <dl class="max">
+              <dt class="big">
+                <a class="category_box_img" href="#">
+                  <img alt="" src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&amp;s=Y&amp;x=50&amp;y=50&amp;sw=480&amp;sh=320&amp;sl=W&amp;fw=300">
+                </a>
+                <a class="category_box_ch" href="#">哈特夯聞</a>
+                <a class="category_box_topic" href="#">
+                  <h3>出國就是不想代買！不撕破臉的「拒絕話術」這樣說</h3>
+                  <span>平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...</span>
+                </a>
+                <dl>
+                  <dt>
+                    <a href="#">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                      </a>
+                  </dt>
+                  <dt>
+                    <a href="#">超可怕der！那以後歷史課本也不要放大衛像了？</a>
+                  </dt>
+                </dl>
+              </dt>
+            </dl>
 
-						<hr>
+            <hr>
 
-					</div>
-					<!-- /.category_box_list -->
+            <dl class="max">
+              <dt class="big">
+                <a class="category_box_img" href="#">
+                  <img alt="" src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&amp;s=Y&amp;x=50&amp;y=50&amp;sw=480&amp;sh=320&amp;sl=W&amp;fw=300">
+                </a>
+                <a class="category_box_ch" href="#">哈特夯聞</a>
+                <a class="category_box_topic" href="#">
+                  <h3>出國就是不想代買！不撕破臉的「拒絕話術」這樣說</h3>
+                  <span>平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...</span>
+                </a>
+                <dl>
+                  <dt>
+                    <a href="#">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                      </a>
+                  </dt>
+                  <dt>
+                    <a href="#">超可怕der！那以後歷史課本也不要放大衛像了？</a>
+                  </dt>
+                </dl>
+              </dt>
+            </dl>
+          </div>
+          <!-- /.category_box_list -->
 
-				</div>
-				<!-- /.category_box -->
-				<div class="area category_box">
-
-					<h3><a href="http://oops.udn.com/oops/cate/6692">兩性占心</a>
-						<a title="more" class="more topic" href="http://oops.udn.com/oops/cate/6692"></a>
-					</h3>
-
-					<div class="category_box_list topic">
-
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6700/1163919-%E5%A5%B3%E7%94%9F%E8%AA%AA%E3%80%8C%E4%B8%8D%E8%A6%81%E3%80%8D%E6%99%82%E5%8D%83%E8%90%AC%E4%B8%8D%E8%A6%81%E5%81%9C%EF%BD%9E%E5%A5%B3%E7%94%9F%E5%B0%B1%E6%98%AF%E6%84%9B%E8%AC%9B%E5%8F%8D%E8%A9%B1%E5%95%8A%EF%BC%81"
-								class="category_box_img">
-									<img src="./index_files/photo(13).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6692#sub_6700" class="category_box_ch">性情男女</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6700/1163919-%E5%A5%B3%E7%94%9F%E8%AA%AA%E3%80%8C%E4%B8%8D%E8%A6%81%E3%80%8D%E6%99%82%E5%8D%83%E8%90%AC%E4%B8%8D%E8%A6%81%E5%81%9C%EF%BD%9E%E5%A5%B3%E7%94%9F%E5%B0%B1%E6%98%AF%E6%84%9B%E8%AC%9B%E5%8F%8D%E8%A9%B1%E5%95%8A%EF%BC%81"
-								class="category_box_topic">
-									<h3>女生說「不要」時千萬不要停～女生就是愛講反話啊！</h3>
-									<span>堪稱女版那些年，近期熱映的超夯國片《我的少女時代》，勾起許多人的青春回憶。其中女主角林真心說的：「女生啊是很難捉膜的~我們說沒事就是有事沒關係～就是有關係」一定講到許多女生的心坎兒...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6700/1163844-%E7%94%B7%E7%94%9F%E8%96%AA%E6%B0%B4%E4%B8%80%E5%AE%9A%E8%A6%81%E6%AF%94%E8%BC%83%E9%AB%98%EF%BC%9F%E5%9B%A0%E7%82%BA%E7%A4%BE%E6%9C%83%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E9%BC%93%E5%8B%B5%E4%BD%A0%E7%9A%84">男生薪水一定要比較高？因為社會就是這樣鼓勵你的</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6700/1161934-%E8%AB%8B%E5%81%9A%E5%80%8B%E6%9C%89%E9%81%93%E5%BE%B7%E7%9A%84%E5%88%86%E6%89%8B%E6%88%80%E4%BA%BA">請做個有道德的分手戀人</a></dt>
-								</dl>
-							</dt>
-						</dl>
 
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6701/691124-%E6%88%91%E5%80%91XX%E5%BA%A7%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E5%95%A6%EF%BD%9E%E6%98%9F%E5%BA%A7%E4%B8%8D%E6%98%AF%E8%97%89%E5%8F%A3%E5%95%8A%EF%BC%81" class="category_box_img">
-									<img src="./index_files/photo(14).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6692#sub_6701" class="category_box_ch">星座占卜</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+        <div class="area category_box">
+          <h3>
+            <a href="#1">熱搜話題</a>
+            <a class="more topic" href="#1" title="more"></a>
+          </h3>
+          <div class="category_box_list topic">
+            <dl class="max">
+              <dt class="big">
+                <a class="category_box_img" href="#">
+                  <img alt="" src="http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&amp;s=Y&amp;x=50&amp;y=50&amp;sw=480&amp;sh=320&amp;sl=W&amp;fw=300">
+                </a>
+                <a class="category_box_ch" href="#">哈特夯聞</a>
+                <a class="category_box_topic" href="#">
+                  <h3>出國就是不想代買！不撕破臉的「拒絕話術」這樣說</h3>
+                  <span>平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...</span>
+                </a>
+                <dl>
+                  <dt>
+                    <a href="#">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                      </a>
+                  </dt>
+                  <dt>
+                    <a href="#">超可怕der！那以後歷史課本也不要放大衛像了？</a>
+                  </dt>
+                </dl>
+              </dt>
+            </dl>
+
+            <dl class="max max-more">
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+              <dt class="">
+                <a href="/oops/story/6698/1171514-藝人特殊日發不發文都被轟　強國人玻璃心好難醫？　">藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                  </a>
+              </dt>
+            </dl>
+          </div>
+          <!-- /.category_box_list -->
+          <div class="showmore">
+            <a class="more" href="javascript:void(0);" id="" onclick="showmore(1011,6681,6698);" title="more">
+              <div class="bbox">
+                <b></b>看更多內容
+              </div>
+            </a>
+            <input name="moreId_6698" type="hidden" value="1">
+          </div>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6701/691124-%E6%88%91%E5%80%91XX%E5%BA%A7%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E5%95%A6%EF%BD%9E%E6%98%9F%E5%BA%A7%E4%B8%8D%E6%98%AF%E8%97%89%E5%8F%A3%E5%95%8A%EF%BC%81" class="category_box_topic">
-									<h3>我們XX座就是這樣啦～星座不是藉口啊！</h3>
-									<span>星座已經是現代人中的一種文化，不管什麼時候都可以 用星座來解釋，但這樣的朋友或愛人真的讓人很困擾呢~ 還是當個會認錯的星座最好~
 
-									</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6701/622122-%E4%BA%BA%E7%94%9F%E5%B0%B1%E6%98%AF%E4%B8%8D%E5%81%9C%E5%9C%B0%E5%90%83%E5%95%8A%E5%90%83%EF%BC%81%E7%B5%95%E4%B8%8D%E5%BF%8C%E5%8F%A3%E7%9A%84%E5%89%8D%E4%B8%89%E5%90%8D%E5%90%83%E8%B2%A8%E6%98%9F%E5%BA%A7%EF%BC%81">人生就是不停地吃啊吃！絕不忌口的前三名吃貨星座！</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6701/609206-%E6%97%85%E9%81%8A%E8%BC%95%E9%AC%86%E7%8E%A9%EF%BC%81%E6%9C%89%E4%BB%96%E5%80%91%E5%B0%B1%E6%90%9E%E5%AE%9A%E7%9A%84%E4%B8%89%E7%A8%AE%E6%98%9F%E5%BA%A7%E6%9C%8B%E5%8F%8B%EF%BD%9E">旅遊輕鬆玩！有他們就搞定的三種星座朋友～</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-
-					</div>
-					<!-- /.category_box_list -->
-
-				</div>
-				<!-- /.category_box -->
-				<div class="area category_box">
-
-					<h3><a href="http://oops.udn.com/oops/cate/6682">生活樂集</a>
-						<a title="more" class="more topic" href="http://oops.udn.com/oops/cate/6682"></a>
-					</h3>
-
-					<div class="category_box_list topic">
-
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6703/1159815-%E8%B5%B0%E9%80%B2%E6%B3%95%E5%9C%8B%E9%BA%A5%E7%95%B6%E5%8B%9E%E8%AE%93%E4%BA%BA%E7%96%91%E6%83%91%EF%BC%9A%E9%80%99%E6%98%AF%E9%80%A3%E9%8E%96%E9%A4%90%E5%BB%B3%E5%97%8E%EF%BC%9F" class="category_box_img">
-									<img src="./index_files/photo(15).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6682#sub_6703" class="category_box_ch">享樂爽玩</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+        <div id="comments" class="area">
+          <h3>
+            <span><i></i> 留言
+            </span>
+          </h3>
+          <a name="fb_comments"></a>
+          <div id="comments_head">
+            <div id="fb-root"></div>
+            <div class="fb-comments" data-href="" data-numposts="5"></div>
+          </div>
+          <!-- /#comments_head -->
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6703/1159815-%E8%B5%B0%E9%80%B2%E6%B3%95%E5%9C%8B%E9%BA%A5%E7%95%B6%E5%8B%9E%E8%AE%93%E4%BA%BA%E7%96%91%E6%83%91%EF%BC%9A%E9%80%99%E6%98%AF%E9%80%A3%E9%8E%96%E9%A4%90%E5%BB%B3%E5%97%8E%EF%BC%9F" class="category_box_topic">
-									<h3>走進法國麥當勞讓人疑惑：這是連鎖餐廳嗎？</h3>
-									<span>如果到世界各地的麥當勞，進門之後都可以看到這樣熟悉的點餐櫃台。 This photo of McDonald's is courtesy of TripAdvisor ...
 
+      </div>
+      <!-- /#mainbar -->
 
-									</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6703/1149299-%E9%80%99%E4%BA%9B%E6%AD%8C%E9%9F%B3%E7%97%B4%E4%B9%9F%E8%83%BD%E5%94%B1%EF%BC%81%E5%8E%BBKTV%E5%8F%AF%E4%BB%A5%E4%B8%8D%E7%94%A8%E7%95%B6%E5%88%86%E6%AF%8D%E5%95%A6%EF%BD%9E">這些歌音痴也能唱！去KTV可以不用當分母啦～</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6703/1147357-%E9%A6%96%E7%88%BE%E8%B6%85%E8%90%8C%E5%8D%A1%E9%80%9A%E5%92%96%E5%95%A1%E9%A4%A8-%E8%AE%93%E5%A6%B3%E5%B0%91%E5%A5%B3%E5%BF%83%E5%A4%A7%E5%99%B4%E7%99%BC">首爾超萌卡通咖啡館 讓妳少女心大噴發</a></dt>
-								</dl>
-							</dt>
-						</dl>
+      <div id="sidebar">
+        <div id="sidebar_fix" style="height: 594px;">
 
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6704/1158715-%E5%AF%B5%E7%89%A9%E4%B8%BB%E4%BA%BA%E5%85%A5%E7%A7%8B%E5%BF%85%E5%82%99%E8%A1%8C%E7%A8%8B-%E4%BD%A0%E5%AE%89%E6%8E%92%E4%BA%86%E5%97%8E%EF%BC%9F" class="category_box_img">
-									<img src="./index_files/photo(16).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6682#sub_6704" class="category_box_ch">啾咪好萌</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+          <div class="area " id="mag_topic">
+
+            <h3>
+              <a href="#author/lists/1011">投票</a>
+              <a class="more" href="#author/lists/1011" title="more"></a>
+            </h3>
+            <div class="area_body" id="mag_topic_body">
+              <dl>
+                <dt>
+                  <a href="#" target="_blank">喪彪‧柳飄飄 : 直言說愛、文風辛辣</a>
+                </dt>
+                <dt>
+                  <a href="#author/articles/1130" target="_blank">Iku老師 : 日本女婿的台灣生活</a>
+                </dt>
+                <dt>
+                  <a href="#author/articles/635" target="_blank">搬家慢 : 專職爸爸、兼職文編</a>
+                </dt>
+                <dt>
+                  <a href="#" target="_blank">隔壁老王 : 我來自你的生活瑣事</a>
+                </dt>
+                <dt>
+                  <a href="#" target="_blank">大小點 : 畫出生活中大大小小每個點</a>
+                </dt>
+
+              </dl>
+            </div>
+          </div>
+          <!-- /#mag_topic -->
+          <div id="ad_mag">
+            <dl>
+              <dt>
+                <iframe frameborder="0" height="250" scrolling="no" src="index_files/ads.html" width="300"></iframe>
+              </dt>
+            </dl>
+          </div>
+          <div class="area " id="mag_topic">
+
+            <h3>
+              <a href="#">找有才的你！</a>
+              <a class="more" href="#" title="more"></a>
+            </h3>
+            <div class="area_body" id="mag_topic_body">
+              <dl>
+                <dt>沒網路活不了、一天不上PTT就全身發癢</dt>
+                <dt>隨時隨地精準掌握線上熱點的網路成癮者</dt>
+                <dt>文字可搞笑幽默，也可精準傳達觀點論點</dt>
+                <dt>不怕有創意的幽默怪咖，只怕害羞悶葫蘆</dt>
+                <dt>符合以上條件，趕快放馬過來。</dt>
+              </dl>
+            </div>
+          </div>
+          <!-- /#mag_topic -->
+          <div class="area " id="mag_topic">
+
+            <h3>
+              <a href="https://www.facebook.com/Oops.udn?fref=nf">udn粉絲團</a>
+              <a class="more" href="https://www.facebook.com/Oops.udn?fref=nf" title="more"></a>
+
+            </h3>
+            <div class="fb-like-box" data-href="https://www.facebook.com/Oops.udn" data-width="300" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+          </div>
+          <!-- /#mag_topic -->
+          <div class="area " id="mag_topic" style="position: absolute; left: 394px; top: 330px;">
+
+            <h3>
+              udn 社群
+            </h3>
+            <div class="area_body" id="sidebar_attention_body">
+              <dl>
+
+                <dt class="udn_facebook">
+                  <a href="https://www.facebook.com/Oops.udn" target="_blank">
+                    <b></b>Oops！新鮮事 Facebook</a>
+                </dt>
+                <dt class="udn_google">
+                  <a href="https://plus.google.com/108747619576943140510/posts" target="_blank">
+                    <b></b>Oops！新鮮事 google +</a>
+                </dt>
+                <dt class="udn_twitter">
+                  <a href="https://twitter.com/Oopsudn" target="_blank">
+                    <b></b>Oops！新鮮事 Twitter</a>
+                </dt>
+
+              </dl>
+            </div>
+            <!-- /#sidebar_attention_body -->
+          </div>
+          <!-- /#mag_topic -->
+
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6704/1158715-%E5%AF%B5%E7%89%A9%E4%B8%BB%E4%BA%BA%E5%85%A5%E7%A7%8B%E5%BF%85%E5%82%99%E8%A1%8C%E7%A8%8B-%E4%BD%A0%E5%AE%89%E6%8E%92%E4%BA%86%E5%97%8E%EF%BC%9F" class="category_box_topic">
-									<h3>寵物主人入秋必備行程 你安排了嗎？</h3>
-									<span>即將要入秋了 寵物寶寶們的健康也不能忽視 趕快帶他們到信任的獸醫師那裏做健檢 啊既然我人也都來了 就順便一下嘛醫師 (坐 「Oops！新鮮事」所有內容皆由編輯整理...
+        <!-- /#sidebar_fix -->
+      </div>
+      <!-- /#sidebar -->
 
+    </div>
+    <!-- /#wrapper -->
 
-									</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6704/1152180-%E9%80%99%E9%9A%BB%E8%82%A5%E8%B2%93%E5%A5%BD%E7%99%82%E7%99%92%EF%BD%9E%E6%8E%A2%E6%9C%9B%E7%97%85%E4%BA%BA%E6%92%AB%E6%85%B0%E5%BF%83%E9%9D%88">這隻肥貓好療癒～探望病人撫慰心靈</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6704/1151410-%E5%9C%8B%E5%85%A7%E5%A4%96%E6%A0%A1%E8%B2%93%E6%A0%A1%E7%8B%97%E5%A4%A7%E9%9B%86%E5%90%88-%E9%A1%A7%E5%AD%B8%E6%A0%A1%E9%82%84%E5%85%BC%E4%B8%8A%E8%AA%B2%E6%9C%89%E5%A4%A0%E5%BF%99">國內外校貓校狗大集合 顧學校還兼上課有夠忙</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6706/1161501-%E4%B8%80%E5%A4%9C%E6%83%85%E5%BE%8C%E4%B8%AD%E7%8D%8E%E6%89%BE%E5%AD%A9%E5%AD%90%E7%88%B8-PO%E6%96%87%E3%80%81%E5%BD%B1%E7%89%87%E3%80%81%E7%B4%A0%E6%8F%8F%E6%8B%9B%E6%95%B8%E7%9B%A1%E5%87%BA" class="category_box_img">
-									<img src="./index_files/photo(17).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6682#sub_6706" class="category_box_ch">驚奇特蒐</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+    <div id="footer">
+      <div id="footer_wrapper">
+        <div class="only_web" id="footer_wrapper_links">
+          <a href="http://event.udn.com/AD/" target="_blank">刊登網站廣告</a> ︱
+          <a href="http://udn.com/page/topic/496" target="_blank">網站總覽</a> ︱
+          <a href="http://udn.com/page/topic/184" target="_blank">
+              FAQ</a>‧
+          <a href="http://www.udngroup.com/2c/cservice/index2.jsp?qfile=dotcom" target="_blank">客服</a> ︱
+          <a href="http://udndata.com/udnauthority.html" target="_blank">新聞授權</a> ︱
+          <a href="http://udn.com/page/topic/185" target="_blank">服務條款</a>‧
+          <a href="http://udn.com/page/topic/495" target="_blank">著作權</a>‧
+          <a href="http://www.udngroup.com/2c/private.jsp" target="_blank">隱私權聲明</a> ︱
+          <a href="http://www.udngroup.com/2c/cservice/index.jsp" target="_blank">
+              聯合報系</a> ︱
+          <a href="http://www.udngroup.com/2c/promote/orderall.jsp" target="_blank">
+              訂報紙</a> ︱
+          <a href="http://co.udn.com/" target="_blank">關於我們</a> ︱
+          <a href="http://co.udn.com/CORP/job.html" target="_blank">
+              招募夥伴</a>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6706/1161501-%E4%B8%80%E5%A4%9C%E6%83%85%E5%BE%8C%E4%B8%AD%E7%8D%8E%E6%89%BE%E5%AD%A9%E5%AD%90%E7%88%B8-PO%E6%96%87%E3%80%81%E5%BD%B1%E7%89%87%E3%80%81%E7%B4%A0%E6%8F%8F%E6%8B%9B%E6%95%B8%E7%9B%A1%E5%87%BA" class="category_box_topic">
-									<h3>一夜情後中獎找孩子爸 PO文、影片、素描招數盡出</h3>
-									<span>現在的人其實想法也是挺有趣的…一夜情就算了，還中獎惹；中獎就算了，還不知道跟誰睡惹；不知道跟誰睡就算了，還動員網友上新聞來找人來惹…可不管怎樣大家找孩子爹的方式都超有梗，不愧是網路...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6706/1161463-%E5%8B%95%E6%BC%AB%E6%8A%B1%E6%9E%95%E5%86%8D%E9%80%B2%E5%8C%96%EF%BC%81%E7%AB%9F%E6%9C%83%E7%99%BC%E5%87%BA%E5%AC%8C%E5%96%98%E8%81%B2~%E7%B0%A1%E7%9B%B4%E5%AE%85%E5%AE%85%E7%A6%8F%E9%9F%B3">動漫抱枕再進化！竟會發出嬌喘聲~簡直宅宅福音</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6706/1159333-%E9%80%A3%E5%BC%B5%E6%84%9B%E7%8E%B2%E4%B9%9F%E6%84%9B%E8%81%9E%EF%BC%81%E4%BD%86%E9%80%99%E5%80%8B%E5%A4%A7%E5%AE%B6%E5%96%9C%E6%AD%A1%E8%81%9E%E7%9A%84%E6%80%AA%E5%91%B3%E9%81%93%E5%85%B6%E5%AF%A6%E2%80%A6">連張愛玲也愛聞！但這個大家喜歡聞的怪味道其實…</a></dt>
-								</dl>
-							</dt>
-						</dl>
+        <!-- /#footer_wrapper_links -->
+        <b>聯合線上公司 著作權所有 © udn.com All Rights Reserved.</b>
+      </div>
+      <!-- /#footer_wrapper -->
+    </div>
+    <!-- /#footer -->
+    <a href="/#top" id="gotop" style="display: none;">Top</a>
+    <!-- /#gotop -->
 
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6705/1136644-%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%BC%B73%E8%90%AC%E9%A1%86%E3%80%8C%E8%B8%A9%E5%9C%B0%E9%9B%B7%E3%80%8D-%E9%9A%A8%E4%BE%BF%E9%BB%9E%E9%83%BD%E7%88%86%E7%82%B8%E5%90%A7%EF%BC%9F" class="category_box_img">
-									<img src="./index_files/photo(18).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6682#sub_6705" class="category_box_ch">3C好上手</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
+    <script>
+      showmore = function(channel_id, cate_id, sub_id) {
+
+        if (sub_id != '') {
+          var moreSub = $("#showmore_" + sub_id);
+          var moreId = $("#moreId_" + sub_id).attr("value");
+          moreId = parseInt(moreId) + parseInt(1);
+          var url = '/oops/get_article/' + moreId + '/' + channel_id + '/' + cate_id + '/' + sub_id;
+        } else {
+          var moreSub = $("#showmore_" + cate_id);
+          var moreId = $("#moreId_" + cate_id).attr("value");
+          moreId = parseInt(moreId) + parseInt(1);
+          var url = '/oops/get_article/' + moreId + '/' + channel_id + '/' + cate_id;
+        }
+
+        if (channel_id == 1010 && sub_id == '') {
+          var pagelink = $('.pagelink');
+
+          $.ajax({
+            url: url,
+            cache: false,
+            success: function(response) {
+              var sub_res = response.substr(0, 8);
+              pagelink.before(response);
+              $("#moreId_" + sub_id).attr("value", moreId);
+
+              if (sub_res == '<!--N-->') {
+                moreSub.css('display', 'none');
+                pagelink.css('display', 'block');
+              }
+            }
+          });
+        } else {
+
+          var subDiv = moreSub.parent().find("div.category_box_list > dl");
+          var subDivBody = subDiv.html();
+
+          $.ajax({
+            url: url,
+            cache: false,
+            success: function(response) {
+              var sub_res = response.substr(0, 8);
+              subDiv.html(subDivBody + response);
+              $("#moreId_" + sub_id).attr("value", moreId);
+
+              if (sub_res == '<!--N-->') {
+                moreSub.css('display', 'none');
+              }
+            }
+          });
+
+        }
+      }
+    </script>
+
+    <div id="show_box" style="display: none;"></div>
+    <!-- /#show_box -->
+  </div>
+
+  <!-- /#container -->
+
+  <!--0.8055-->
+
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1">
+    <div id="cboxWrapper">
+      <div>
+        <div id="cboxTopLeft" style="float: left;"></div>
+        <div id="cboxTopCenter" style="float: left;"></div>
+        <div id="cboxTopRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxMiddleLeft" style="float: left;"></div>
+        <div id="cboxContent" style="float: left;">
+          <div id="cboxTitle" style="float: left;"></div>
+          <div id="cboxCurrent" style="float: left;"></div>
+          <button id="cboxPrevious" type="button"></button>
+          <button id="cboxNext" type="button"></button>
+          <button id="cboxSlideshow"></button>
+          <div id="cboxLoadingOverlay" style="float: left;"></div>
+          <div id="cboxLoadingGraphic" style="float: left;"></div>
         </div>
--->
-								<a href="http://oops.udn.com/oops/story/6705/1136644-%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%BC%B73%E8%90%AC%E9%A1%86%E3%80%8C%E8%B8%A9%E5%9C%B0%E9%9B%B7%E3%80%8D-%E9%9A%A8%E4%BE%BF%E9%BB%9E%E9%83%BD%E7%88%86%E7%82%B8%E5%90%A7%EF%BC%9F" class="category_box_topic">
-									<h3>地表最強3萬顆「踩地雷」 隨便點都爆炸吧？</h3>
-									<span>那一年我的少女時代，記得電腦剛蔚為流行潮物時，不管是老人小孩，就算不會用電腦打字，也不會撥接上網，但一定要會玩踩地雷啊！遊戲開始時打開一堆方塊，小心翼翼的計算數字旁邊的地雷在哪裡，...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6705/1136396-%E6%8E%80%E8%93%8B%E5%BC%8F%E9%9B%99%E8%9E%A2%E5%B9%95iPhone%EF%BC%9F--%E5%BE%A9%E5%8F%A4%E6%BD%AE%E6%B5%81%E5%86%8D%E7%8F%BE">掀蓋式雙螢幕iPhone？  復古潮流再現</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6705/1131394-%E3%80%8C%E5%8F%A4%E8%A3%9D%E9%96%83%E5%85%89%E8%B2%BC%E5%9C%96%E3%80%8D%E6%AD%A3%E5%A4%AF%EF%BC%81%E6%83%85%E4%BA%BA%E7%AF%80%E5%B0%B1%E4%BE%86%E4%B8%89%E5%85%AB%E6%89%AE%E5%99%81%E5%BA%B7">「古裝閃光貼圖」正夯！情人節就來三八扮噁康</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-
-					</div>
-					<!-- /.category_box_list -->
-
-				</div>
-				<!-- /.category_box -->
-				<div class="area category_box">
-
-					<h3><a href="http://oops.udn.com/oops/cate/6691">星鮮流行</a>
-						<a title="more" class="more topic" href="http://oops.udn.com/oops/cate/6691"></a>
-					</h3>
-
-					<div class="category_box_list topic">
-
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6707/1163602-%E6%9C%89%E6%B2%92%E6%9C%89%E6%9F%93%E4%BA%86%E9%87%91%E9%AB%AE%E5%B0%B1%E6%9C%83%E8%AE%8A%E5%B8%A5%E3%80%81%E8%AE%8A%E5%9C%8B%E9%9A%9B%E5%8C%96%E7%9A%84%E5%85%AB%E5%8D%A6%EF%BC%9F" class="category_box_img">
-									<img src="./index_files/photo(19).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6691#sub_6707" class="category_box_ch">娛樂圈不圈</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
-        </div>
--->
-								<a href="http://oops.udn.com/oops/story/6707/1163602-%E6%9C%89%E6%B2%92%E6%9C%89%E6%9F%93%E4%BA%86%E9%87%91%E9%AB%AE%E5%B0%B1%E6%9C%83%E8%AE%8A%E5%B8%A5%E3%80%81%E8%AE%8A%E5%9C%8B%E9%9A%9B%E5%8C%96%E7%9A%84%E5%85%AB%E5%8D%A6%EF%BC%9F" class="category_box_topic">
-									<h3>有沒有染了金髮就會變帥、變國際化的八卦？</h3>
-									<span>編編小時候超羨慕金髮碧眼的歪國人，可是美妝雜誌或造型老師都會再三告誡我們，因為東方人輪廓比較平的關係，千萬不要染金髮，很容易就會出現俗氣的台味，可是，為什麼韓國偶像每個染了金髮，不...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6707/1154753-%E7%9C%9F%E4%BA%BA%E7%89%88%E5%A8%9C%E7%BE%8E%E3%80%8C%E5%A4%A7%E9%A6%AC%E9%9B%AA%E8%8A%99%E3%80%8D%E5%87%BA%E8%BC%AF-%E9%AD%AF%E5%AE%85%E5%80%91%E8%A6%81%E7%88%86%E5%8B%95%E5%95%A6%EF%BC%81">真人版娜美「大馬雪芙」出輯 魯宅們要爆動啦！</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6707/1144959-AKB48%E6%BC%94%E5%94%B1%E5%A0%B4%E5%90%88%E4%B8%8A-%E7%AB%9F%E7%84%B6%E5%87%BA%E7%8F%BE%E5%AE%85%E5%AE%85%E5%A4%96%E7%9A%84%E5%8F%A6%E4%B8%80%E8%82%A1%E5%8B%A2%E5%8A%9B%EF%BC%81">AKB48演唱場合上 竟然出現宅宅外的另一股勢力！</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6708/1151516-%E5%B9%B4%E8%BC%95%E4%BA%BA%E6%99%82%E5%B0%9AOut%EF%BC%81%E9%80%99%E4%BA%9B%E8%B6%85%E7%86%9F%E5%9E%8B%E7%94%B7%E5%91%8A%E8%A8%B4%E4%BD%A0%E8%A1%A3%E6%9C%8D%E8%A6%81%E9%80%99%E9%BA%BC%E7%A9%BF" class="category_box_img">
-									<img src="./index_files/photo(20).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6691#sub_6708" class="category_box_ch">流行潮不潮</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
-        </div>
--->
-								<a href="http://oops.udn.com/oops/story/6708/1151516-%E5%B9%B4%E8%BC%95%E4%BA%BA%E6%99%82%E5%B0%9AOut%EF%BC%81%E9%80%99%E4%BA%9B%E8%B6%85%E7%86%9F%E5%9E%8B%E7%94%B7%E5%91%8A%E8%A8%B4%E4%BD%A0%E8%A1%A3%E6%9C%8D%E8%A6%81%E9%80%99%E9%BA%BC%E7%A9%BF" class="category_box_topic">
-									<h3>年輕人時尚Out！這些超熟型男告訴你衣服要這麼穿</h3>
-									<span>『時尚不是年輕人的專利』，這句話用在這些老爺爺身上，絕對是有過之而無不及。今天小編要來介紹幾位在穿搭功力上，一點都不輸給年輕小伙子的老爺爺，看完了這篇，肯定會顛覆以往你對老人的想像...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6708/1151328-%E6%97%A5%E6%9C%AC%E6%9B%B8%E5%8C%85%E5%A4%A7%E4%BA%BA%E8%83%8C%EF%BC%9F%E5%BC%B7%E5%9C%8B%E4%BA%BA%E6%B4%8B%E4%BA%BA%E9%83%BD%E6%84%9B%E8%83%8C%EF%BD%9E">日本書包大人背？強國人洋人都愛背～</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6708/1133452-%E5%B0%8F%E5%AD%B8%E7%94%9F%E5%8C%96%E5%A6%9D%E4%B8%96%E7%95%8C%E9%8C%A6%E6%A8%99%E8%B3%BD-%E9%80%99%E4%B8%96%E7%95%8C%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%E4%BA%8B%E6%83%B9%EF%BC%81">小學生化妝世界錦標賽 這世界發生什麼事惹！</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-
-					</div>
-					<!-- /.category_box_list -->
-
-				</div>
-				<!-- /.category_box -->
-				<div class="area category_box">
-
-					<h3><a href="http://oops.udn.com/oops/cate/6764">沃克甘苦</a>
-						<a title="more" class="more topic" href="http://oops.udn.com/oops/cate/6764"></a>
-					</h3>
-
-					<div class="category_box_list topic">
-
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6766/1121581-%E5%85%AC%E5%8F%B8%E6%96%87%E5%8C%96%E6%9C%83%E5%8F%8D%E6%98%A0%E5%9C%A8%E5%93%A1%E5%B7%A5%E9%A4%90%E5%BB%B3%E4%B8%8A%EF%BC%9F%E5%A5%BD%E5%83%8F%E7%9C%9F%E6%9C%89%E9%80%99%E9%BA%BC%E4%B8%80%E5%9B%9E%E4%BA%8B%E2%80%A6"
-								class="category_box_img">
-									<img src="./index_files/photo(21).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6764#sub_6766" class="category_box_ch">職場</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
-        </div>
--->
-								<a href="http://oops.udn.com/oops/story/6766/1121581-%E5%85%AC%E5%8F%B8%E6%96%87%E5%8C%96%E6%9C%83%E5%8F%8D%E6%98%A0%E5%9C%A8%E5%93%A1%E5%B7%A5%E9%A4%90%E5%BB%B3%E4%B8%8A%EF%BC%9F%E5%A5%BD%E5%83%8F%E7%9C%9F%E6%9C%89%E9%80%99%E9%BA%BC%E4%B8%80%E5%9B%9E%E4%BA%8B%E2%80%A6"
-								class="category_box_topic">
-									<h3>公司文化會反映在員工餐廳上？好像真有這麼一回事…</h3>
-									<span>現在大公司要想留住員工除了薪水之外，大概就是福利制度了，薪水是死的，要調薪還得看考績看年資，一個景氣不好薪水不調降就要偷笑了，尤其公司最愛拿共體時艱來堵住員工想調薪的心思，這時候如...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6766/1116307-%E7%A9%BA%E5%A7%90%E6%98%AF%E5%A4%A2%E5%B9%BB%E5%B7%A5%E4%BD%9C%EF%BC%9F%E7%8F%BE%E5%BD%B9%E7%A9%BA%E5%A7%90%E5%85%AC%E9%96%8B%E7%A9%BA%E4%B8%AD%E5%A5%A7%E5%AE%A2%E5%AF%A6%E9%8C%84">空姐是夢幻工作？現役空姐公開空中奧客實錄</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6766/1103821-%E6%97%A5%E6%9C%AC%E9%86%AB%E9%99%A2%E6%8B%9B%E8%80%83%E5%AF%A6%E7%BF%92%E7%94%9F-%E6%8B%BF%E6%89%8B%E8%A1%93%E5%88%80%E5%81%9A%E8%BF%B7%E4%BD%A0%E5%A3%BD%E5%8F%B8%EF%BC%9F%EF%BC%81">日本醫院招考實習生 拿手術刀做迷你壽司？！</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-						<dl class="max">
-							<dt class="big">
-								<a href="http://oops.udn.com/oops/story/6767/996791-%E6%83%B3%E5%87%BA%E5%9C%8B%E6%89%93%E5%B7%A5%EF%BC%9F%E7%B6%B2%E5%8F%8B%E7%A5%9E%E8%A7%A3%EF%BC%9A%E9%81%A9%E5%90%88%E5%8E%BB%E6%BE%B3%E6%B4%B2%E7%9A%84%E4%BA%BA%E6%98%AF___" class="category_box_img">
-									<img src="./index_files/photo(22).php">
-								</a>
-								<a href="http://oops.udn.com/oops/cate/6764#sub_6767" class="category_box_ch">打工</a>
-								<!--
-        <div class="afunc">
-        <a href="javascript:void(0);" class="track on"><b></b>追蹤</a>
-        </div>
--->
-								<a href="http://oops.udn.com/oops/story/6767/996791-%E6%83%B3%E5%87%BA%E5%9C%8B%E6%89%93%E5%B7%A5%EF%BC%9F%E7%B6%B2%E5%8F%8B%E7%A5%9E%E8%A7%A3%EF%BC%9A%E9%81%A9%E5%90%88%E5%8E%BB%E6%BE%B3%E6%B4%B2%E7%9A%84%E4%BA%BA%E6%98%AF___" class="category_box_topic">
-									<h3>想出國打工？網友神解：適合去澳洲的人是___</h3>
-									<span>出國打工度假這件事已經行之有年，但是最近幾年特別流行，到了一種只要聽到別人說：「我要去澳洲。」就絕對會被問N次：「是要去打工度假嗎？」的程度惹…好像去澳洲打工度假已經變成什麼成人夏...</span>
-								</a>
-								<dl>
-									<dt><a href="http://oops.udn.com/oops/story/6767/919282-%E5%A4%A7%E5%A4%9C%E8%BE%9B%E9%85%B8%E8%AA%B0%E4%BA%BA%E7%9F%A5%EF%BC%81-%E8%B6%85%E5%95%86%E5%BA%97%E5%93%A1%E5%BF%85%E5%82%99%E6%8A%80%E8%83%BD%E5%A4%A7%E5%85%AC%E9%96%8B">大夜辛酸誰人知！ 超商店員必備技能大公開</a></dt>
-									<dt><a href="http://oops.udn.com/oops/story/6767/843495-%E6%9C%80%E4%BB%A4%E4%BA%BA%E7%BE%A8%E6%85%95%E7%9A%84%E5%B7%A5%E4%BD%9C-%E6%AF%8F%E5%A4%A9%E5%9D%90%E5%9C%A8%E5%AE%B6%E8%A3%A1%E5%90%83%E5%90%83%E5%90%83%EF%BC%81">最令人羨慕的工作 每天坐在家裡吃吃吃！</a></dt>
-								</dl>
-							</dt>
-						</dl>
-
-						<hr>
-
-					</div>
-					<!-- /.category_box_list -->
-
-				</div>
-				<!-- /.category_box -->
-
-			</div>
-			<!-- /#mainbar -->
-
-			<div id="sidebar">
-				<div id="sidebar_fix" style="height: 594px;">
-
-					<div id="mag_topic" class="area " style="position: absolute; left: 54px; top: 16px;">
-
-						<h3>
-							<a href="http://oops.udn.com/author/lists/1011">這裡的作家</a>
-							<a href="http://oops.udn.com/author/lists/1011" title="more" class="more"></a>
-						</h3>
-						<div id="mag_topic_body" class="area_body">
-							<dl>
-								<dt><a href="http://oops.udn.com/author/articles/618" target="_blank">喪彪‧柳飄飄 : 直言說愛、文風辛辣</a></dt>
-								<dt><a href="http://oops.udn.com/author/articles/1130" target="_blank">Iku老師 : 日本女婿的台灣生活</a></dt>
-								<dt><a href="http://oops.udn.com/author/articles/635" target="_blank">搬家慢 : 專職爸爸、兼職文編</a></dt>
-								<dt><a href="http://oops.udn.com/author/articles/1095" target="_blank">隔壁老王 : 我來自你的生活瑣事</a></dt>
-								<dt><a href="http://oops.udn.com/author/articles/626" target="_blank">大小點 : 畫出生活中大大小小每個點</a></dt>
-
-							</dl>
-						</div>
-					</div>
-					<!-- /#mag_topic -->
-					<div id="ad_mag" style="position: absolute; left: 394px; top: 16px;">
-						<dl>
-							<dt>
-							</dt>
-						</dl>
-					</div>
-					<div id="mag_topic" class="area " style="position: absolute; left: 54px; top: 250px;">
-
-						<h3>
-							<a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=6674462a6260435a35363e675a683a1c94864472b38704325252525673d552a29745j54&jobsource=n104bank1">找有才的你！</a>
-							<a href="http://www.104.com.tw/jobbank/custjob/index.php?r=job&j=6674462a6260435a35363e675a683a1c94864472b38704325252525673d552a29745j54&jobsource=n104bank1" title="more" class="more"></a>
-						</h3>
-						<div id="mag_topic_body" class="area_body">
-							<dl>
-								<dt>沒網路活不了、一天不上PTT就全身發癢</dt>
-								<dt>隨時隨地精準掌握線上熱點的網路成癮者</dt>
-								<dt>文字可搞笑幽默，也可精準傳達觀點論點</dt>
-								<dt>不怕有創意的幽默怪咖，只怕害羞悶葫蘆</dt>
-								<dt>符合以上條件，趕快放馬過來。</dt>
-							</dl>
-						</div>
-					</div>
-					<!-- /#mag_topic -->
-					<div id="mag_topic" class="area " style="position: absolute; left: 394px; top: 276px;">
-
-						<h3>
-							<a href="https://www.facebook.com/Oops.udn?fref=nf">Oops粉絲團</a>
-							<a href="https://www.facebook.com/Oops.udn?fref=nf" title="more" class="more"></a>
-						</h3>
-
-					</div>
-					<!-- /#mag_topic -->
-					<div id="mag_topic" class="area " style="position: absolute; left: 394px; top: 330px;">
-
-						<h3>
-							Oops 社群 </h3>
-						<div id="sidebar_attention_body" class="area_body">
-							<dl>
-
-								<dt class="udn_facebook"><a href="https://www.facebook.com/Oops.udn" target="_blank"><b></b>Oops！新鮮事 Facebook</a></dt>
-								<dt class="udn_google"><a href="https://plus.google.com/108747619576943140510/posts" target="_blank"><b></b>Oops！新鮮事 google +</a></dt>
-								<dt class="udn_twitter"><a href="https://twitter.com/Oopsudn" target="_blank"><b></b>Oops！新鮮事 Twitter</a></dt>
-
-							</dl>
-						</div>
-						<!-- /#sidebar_attention_body -->
-					</div>
-					<!-- /#mag_topic -->
-
-				</div>
-				<!-- /#sidebar_fix -->
-			</div>
-			<!-- /#sidebar -->
-
-		</div>
-		<!-- /#wrapper -->
-
-		<div id="footer">
-			<div id="footer_wrapper">
-				<div id="footer_wrapper_links" class="only_web"> <a href="http://event.udn.com/AD/" target="_blank">刊登網站廣告</a> ︱
-					<a href="http://udn.com/page/topic/496" target="_blank">網站總覽</a> ︱ <a href="http://udn.com/page/topic/184" target="_blank">
-      FAQ</a>‧<a href="http://www.udngroup.com/2c/cservice/index2.jsp?qfile=dotcom" target="_blank">客服</a> ︱ <a href="http://udndata.com/udnauthority.html" target="_blank">新聞授權</a> ︱
-					<a href="http://udn.com/page/topic/185" target="_blank">服務條款</a>‧<a href="http://udn.com/page/topic/495" target="_blank">著作權</a>‧<a href="http://www.udngroup.com/2c/private.jsp" target="_blank">隱私權聲明</a> ︱ <a href="http://www.udngroup.com/2c/cservice/index.jsp"
-					target="_blank">
-      聯合報系</a> ︱ <a href="http://www.udngroup.com/2c/promote/orderall.jsp" target="_blank">
-      訂報紙</a> ︱ <a href="http://co.udn.com/" target="_blank">關於我們</a> ︱ <a href="http://co.udn.com/CORP/job.html" target="_blank">
-      招募夥伴</a> </div>
-				<!-- /#footer_wrapper_links --><b>聯合線上公司 著作權所有 © udn.com All Rights Reserved.</b> </div>
-			<!-- /#footer_wrapper -->
-		</div>
-		<!-- /#footer --><a id="gotop" href="http://oops.udn.com/#top" style="display: none;">Top</a>
-		<!-- /#gotop -->
-
-		<script>
-			/*
-																					showmore = function(sub_id) {
-																						var moreId = $("#moreId_"+sub_id).attr("value");
-																						moreId = parseInt(moreId)+parseInt(1);
-																						$(".more"+moreId+"_"+sub_id).each(function() {
-																							$(this).css("display","block");
-																						});
-																						//$("#more_"+sub_id).attr("href","#m"+moreId+"_"+sub_id);
-																						$("#moreId_"+sub_id).attr("value",moreId);
-																						var next_moreId = parseInt(moreId)+parseInt(1);
-																						if ($(".more"+next_moreId+"_"+sub_id).length == 0) $("#showmore_"+sub_id).css("display","none");
-																					}
-																					*/
-
-
-			showmore = function(channel_id, cate_id, sub_id) {
-
-				if (sub_id != '') {
-					var moreSub = $("#showmore_" + sub_id);
-					var moreId = $("#moreId_" + sub_id).attr("value");
-					moreId = parseInt(moreId) + parseInt(1);
-					var url = '/oops/get_article/' + moreId + '/' + channel_id + '/' + cate_id + '/' + sub_id;
-				} else {
-					var moreSub = $("#showmore_" + cate_id);
-					var moreId = $("#moreId_" + cate_id).attr("value");
-					moreId = parseInt(moreId) + parseInt(1);
-					var url = '/oops/get_article/' + moreId + '/' + channel_id + '/' + cate_id;
-				}
-
-				if (channel_id == 1010 && sub_id == '') {
-					var pagelink = $('.pagelink');
-
-					$.ajax({
-						url: url,
-						cache: false,
-						success: function(response) {
-							var sub_res = response.substr(0, 8);
-							pagelink.before(response);
-							$("#moreId_" + sub_id).attr("value", moreId);
-
-							if (sub_res == '<!--N-->') {
-								moreSub.css('display', 'none');
-								pagelink.css('display', 'block');
-							}
-						}
-					});
-				} else {
-
-					var subDiv = moreSub.parent().find("div.category_box_list > dl");
-					var subDivBody = subDiv.html();
-
-					$.ajax({
-						url: url,
-						cache: false,
-						success: function(response) {
-							var sub_res = response.substr(0, 8);
-							subDiv.html(subDivBody + response);
-							$("#moreId_" + sub_id).attr("value", moreId);
-
-							if (sub_res == '<!--N-->') {
-								moreSub.css('display', 'none');
-							}
-						}
-					});
-
-				}
-			}
-		</script>
-
-
-		<div id="show_box" style="display: none;"></div>
-		<!-- /#show_box -->
-	</div>
-
-	<!-- /#container -->
-
-
-	<!--0.8055-->
-
-
-	<div id="cboxOverlay" style="display: none;"></div>
-	<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
-		<div id="cboxWrapper">
-			<div>
-				<div id="cboxTopLeft" style="float: left;"></div>
-				<div id="cboxTopCenter" style="float: left;"></div>
-				<div id="cboxTopRight" style="float: left;"></div>
-			</div>
-			<div style="clear: left;">
-				<div id="cboxMiddleLeft" style="float: left;"></div>
-				<div id="cboxContent" style="float: left;">
-					<div id="cboxTitle" style="float: left;"></div>
-					<div id="cboxCurrent" style="float: left;"></div>
-					<button type="button" id="cboxPrevious"></button>
-					<button type="button" id="cboxNext"></button>
-					<button id="cboxSlideshow"></button>
-					<div id="cboxLoadingOverlay" style="float: left;"></div>
-					<div id="cboxLoadingGraphic" style="float: left;"></div>
-				</div>
-				<div id="cboxMiddleRight" style="float: left;"></div>
-			</div>
-			<div style="clear: left;">
-				<div id="cboxBottomLeft" style="float: left;"></div>
-				<div id="cboxBottomCenter" style="float: left;"></div>
-				<div id="cboxBottomRight" style="float: left;"></div>
-			</div>
-		</div>
-		<div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
-	</div>
-	<div id="fb-root" class=" fb_reset">
-		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-			<div></div>
-		</div>
-		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-			<div>
-
-			</div>
-		</div>
-	</div>
-	<script src="js/script.js" charset="utf-8"></script>
+        <div id="cboxMiddleRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxBottomLeft" style="float: left;"></div>
+        <div id="cboxBottomCenter" style="float: left;"></div>
+        <div id="cboxBottomRight" style="float: left;"></div>
+      </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+  <div class=" fb_reset" id="fb-root">
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+      <div></div>
+    </div>
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+      <div></div>
+    </div>
+  </div>
 
 </body>
 
