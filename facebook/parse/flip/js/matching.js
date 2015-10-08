@@ -5,6 +5,7 @@ $(function() {
   // Initialize Parse
   Parse.initialize("2ZQN4pMiLQyGL0p8A8bdvIeSxfJ7Xi2fbbYct18H", "rgqRUivIUBfvsagS5XIMgJC0VJmciNyGAuBzmQC4");
   var loginTrue = false;
+  var userName;
 
   window.fbAsyncInit = function() {
     Parse.FacebookUtils.init({ // this line replaces FB.init({
@@ -23,6 +24,10 @@ $(function() {
         console.log(uid);
         $('#facebookLogin').hide();
         loginTrue = true;
+        FB.api('/me?fields=name', function(response) {
+          console.log(response);
+          userName = response
+        });
         // check play status!
         // if not finish ..welcome back with name
         // if finish hide all playable item;
@@ -278,7 +283,7 @@ $(function() {
     });
 
     $('#facebookLogin').on('click', function() {
-      if(loginTrue) return false;
+      if (loginTrue) return false;
       parseLogin();
     });
   };
