@@ -16,18 +16,40 @@ $(function() {
 
 
     //do login check
-    Parse.FacebookUtils.logIn(null, {
-      success: function(user) {
-        if (!user.existed()) {
-          alert("User signed up and logged in through Facebook!");
-        } else {
-          alert("User logged in through Facebook!");
-        }
-      },
-      error: function(user, error) {
-        alert("User cancelled the Facebook login or did not fully authorize.");
+    FB.getLoginStatus(function(response) {
+      if (response.status === 'connected') {
+        // the user is logged in and has authenticated your
+        // app, and response.authResponse supplies
+        // the user's ID, a valid access token, a signed
+        // request, and the time the access token
+        // and signed request each expire
+        var uid = response.authResponse.userID;
+        var accessToken = response.authResponse.accessToken;
+        console.log('connected');
+      } else if (response.status === 'not_authorized') {
+        // the user is logged in to Facebook,
+        // but has not authenticated your app
+        console.log('not_authorized');
+      } else {
+        // the user isn't logged in to Facebook.
+        console.log('not login');
       }
     });
+
+    function parseLogin() {
+      Parse.FacebookUtils.logIn(null, {
+        success: function(user) {
+          if (!user.existed()) {
+            alert("User signed up and logged in through Facebook!");
+          } else {
+            alert("User logged in through Facebook!");
+          }
+        },
+        error: function(user, error) {
+          alert("User cancelled the Facebook login or did not fully authorize.");
+        }
+      });
+    }
 
 
     // Run code after the Facebook SDK is loaded.
@@ -242,6 +264,7 @@ $(function() {
     });
 
     $('#startGameButton').on('click', function() { // start instruction for game rules
+      parseLogin(); // login 1st
       doRandomRules(); // rule randomize
       var attr = $('#board').attr('style');
       if (typeof attr !== typeof undefined && attr !== false) { // fadeout if board have used before
