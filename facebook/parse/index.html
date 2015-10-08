@@ -25,8 +25,10 @@
         <ul class="nav navbar-nav">
           <li id="loginButton"><a href="#login/">Login</a></li>
           <li id="addButton"><a href="#addItem/">Insert Data</a></li>
-          <li id="allDataButton"><a href="#">All Record</a></li>
+          <li id="allDataButton"><a href="#">Invoice Records</a></li>
+          <li id="gameDataButton"><a href="#gameData/">Games Records</a></li>
           <li id="logout-btn"><a href="#">Logout</a></li>
+          <li><a href="flip/">Flip Game</a></li>
         </ul>
       </div>
       <!--/.navbar-collapse -->
@@ -59,15 +61,55 @@
           <label for="userName">使用者名稱： </label>
           <input id="userName" class="form-control" name="userName" value="" required title="名字" aria-required="true" aria-describedby="name-format">
         </div>
+        <div class="form-group input-group"  >
+          <label for="userAge">年齡： </label>
+          <select id="userAge" class="form-control" required title="年齡" aria-required="true" >
+            <option value="11-20">11-20歲</option>
+            <option value="21-30">21-30歲</option>
+            <option value="31-40">31-40歲</option>
+            <option value="41-50">41-50歲</option>
+            <option value="51up">51以上</option>
+          </select>
+        </div>
         <div class="form-group input-group">
           <label for="userEmail">Email:</label>
           <input type="email" class="form-control" id="userEmail" name="userEmail" title="電子郵件" value="" required aria-required="true">
         </div>
+
+        <div class="form-group input-group">
+          <label for="userAdd">地址: </label>
+          <input type="text" class="form-control" id="userAdd" name="userAdd" title="地址" value="">
+        </div>
+
+        <div class="form-group input-group"  >
+          <label for="purchaseChain">購買通路： </label>
+          <select id="purchaseChain" class="form-control" required title="購買通路" aria-required="true">
+            <option value="屈臣氏">屈臣氏</option>
+            <option value="康是美">康是美</option>
+            <option value="寶雅">寶雅</option>
+            <option value="日藥">日藥</option>
+            <option value="百貨通路">百貨通路</option>
+          </select>
+        </div>
+
+        <div class="form-group input-group"  >
+          <label for="purchaseArea">購買區域： </label>
+          <select id="purchaseArea" class="form-control" required title="購買區域" aria-required="true">
+            <option value="北部">北部</option>
+            <option value="中部">中部</option>
+            <option value="南部">南部</option>
+            <option value="東部">東部</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+
         <div class="form-group input-group">
           <label for="userInvoice">發票:</label>
           <input type="text" class="form-control" id="userInvoice" pattern="^[A-Za-z]{2}[0-9]{8}$" title="發票編號" name="userInvoice" value="" required>
           <span style="float: left;">例如： FW02174554</span>
+          <button type="button" name="button" id="invoiceCheck">檢查發票是否已上傳</button>
         </div>
+
         <div class="form-group input-group">
           <label for="userNumber">手機:</label>
           <input type="tel" class="form-control" id="userNumber" pattern="^[0-9]{10}$" title="手機號碼" name="userNumber" value="" required>
@@ -98,8 +140,8 @@
 
   <script type="text/x-dot-template" id="allDataTemplate">
     <div class="data-field">
-      <h2>Basic Table from Parse</h2>
-      <p>Simple Data Retriving</p>
+      <h2>Invoice Data</h2>
+      <p>Simple Parse Data Retriving</p>
       <table class="table">
         <thead>
           <tr id="tableHead">
@@ -162,9 +204,58 @@
     </div>
   </script>
 
+  <script type="text/x-dot-template" id="gameDataTemplate">
+    <div class="data-field">
+      <h2>Game Data</h2>
+      <p>Simple Game Data Retriving</p>
+      <table class="table">
+        <thead>
+          <tr id="gameTableHead">
+            <th>照片</th>
+            <th><a href="#" id="playerSort">名稱</a></th>
+            <th><a href="#" id="playerEmailSort">Email</a></th>
+            <th><a href="#" id="playerTimeSort">時間</a></th>
+            <th>Facebook</th>
+          </tr>
+        </thead>
+        <tbody id="insertData">
+          {{~it :p:index}}
+          <tr id="{{=p.objectId}}">
+            <td>
+              <img class="thumb-pic" src="{{=p.playerPic}}" alt="" />
+            </td>
+            <td>{{=p.playerName}}</td>
+            <td>{{=p.playerEmail}}</td>
+            <td>{{=p.timeUsed}}</td>
+            <td><a href="http:///www.facebook.com/{{=p.playerId}}" target="_blank">Facebook連接</a></td>
+            {{~}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center">
+      <div class="total-count">
+        <select class="" name="">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        rows/pages.
+        <br> There are total of:
+        <span class="total-size"></span> items.</div>
+      <div id='gamePagination'></div>
+    </div>
+  </script>
+
   <script id="paginationTemplate" type="text/x-dot-template">
     <a class="btn btn-info" href='#page/1/'>&lt;&lt</a> <a class="btn btn-warning" href='#page/{{=it.previous}}/'>&lt;</a> | {{=it.current}} / {{=it.last}} |
     <a class="btn btn-warning" href='#page/{{=it.next}}/'>&gt;</a> <a class="btn btn-info" href='#page/{{=it.last}}/'>&gt;&gt;</a>
+  </script>
+
+  <script id="paginationGameTemplate" type="text/x-dot-template">
+    <a class="btn btn-info" href='#userpage/1/'>&lt;&lt</a> <a class="btn btn-warning" href='#userpage/{{=it.previous}}/'>&lt;</a> | {{=it.current}} / {{=it.last}} |
+    <a class="btn btn-warning" href='#userpage/{{=it.next}}/'>&gt;</a> <a class="btn btn-info" href='#userpage/{{=it.last}}/'>&gt;&gt;</a>
   </script>
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

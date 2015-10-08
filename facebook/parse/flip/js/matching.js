@@ -3,9 +3,13 @@ var tiles = []; // all created tiles constructor
 $(function() {
   'use strict';
   // Initialize Parse
-  Parse.initialize("2ZQN4pMiLQyGL0p8A8bdvIeSxfJ7Xi2fbbYct18H", "rgqRUivIUBfvsagS5XIMgJC0VJmciNyGAuBzmQC4");
+  Parse.initialize('2ZQN4pMiLQyGL0p8A8bdvIeSxfJ7Xi2fbbYct18H', 'rgqRUivIUBfvsagS5XIMgJC0VJmciNyGAuBzmQC4');
   var loginTrue = false;
+  var userID;
   var userName;
+  var userPic;
+  var email;
+  var queryRes = false; // check if user has pass the game or not
 
   window.fbAsyncInit = function() {
     Parse.FacebookUtils.init({ // this line replaces FB.init({
@@ -20,40 +24,109 @@ $(function() {
       if (response.status === 'connected') {
         var uid = response.authResponse.userID;
         var accessToken = response.authResponse.accessToken;
-        console.log('connected');
-        console.log(uid);
+        $('#facebookLogout').show();
         $('#facebookLogin').hide();
         loginTrue = true;
-        FB.api('/me?fields=name', function(response) {
-          console.log(response);
-          userName = response
+        FB.api('/me?fields=picture{url}, id, name, email', function(response) {
+          userID = response.id;
+          userName = response.name;
+          userPic = response.picture.data.url;
+          email = response.email;
+          $('.user').text('Welcome! ' + response.name);
+          $('#facebookPic').attr('src', response.picture.data.url);
+          parseCheck(response.id);
         });
-        // check play status!
-        // if not finish ..welcome back with name
-        // if finish hide all playable item;
+
       } else if (response.status === 'not_authorized') {
-        console.log('not_authorized');
-        // popup login clicker
-        //status text
-        $('.status-text').text('請先登入並連接Facebook帳號！');
+        $('.user').text('請連接Facebook帳號！');
       } else {
-        console.log('not login');
+        $('.user').text('請先登入並連接Facebook帳號！');
       }
     });
 
+    parseCount();
+    //parseCount
+    function parseCount() {
+      var PassedGame = Parse.Object.extend('passedGame'); // data table
+      var query = new Parse.Query(PassedGame); // query var
+      query.count({
+        success: function(count) {
+          $('.count').text(count);
+        },
+        error: function(err) {}
+      });
+    }
+
+    //logout
+    function parseLogout() {
+      console.log('obj');
+      FB.logout(function(response) {
+        location.reload();
+      });
+    }
+
+    $('#facebookLogout').on('click', function(e) {
+      e.preventDefault();
+      parseLogout();
+    });
+
+    // playerCheck
+    function parseCheck(id) {
+      var PassedGame = Parse.Object.extend('passedGame'); // data table
+      var query = new Parse.Query(PassedGame); // query var
+      query.equalTo('playerId', id);
+      query.first({
+        success: function(results) {
+          if (results !== undefined) {
+            $('.status-text').text('你已經過關了，請把機會留給其他人！');
+            queryRes = true;
+          } else {
+            $('#startGameButton').show();
+          }
+        },
+        error: function(error) {
+          alert('Error: ' + error.code + ' ' + error.message);
+        }
+      });
+    }
+
+    // gameEnd push
+    function pushWinId() {
+      if (queryRes) return false;
+      var PassedGame = Parse.Object.extend('passedGame'); // data table
+      var passedGame = new PassedGame();
+      passedGame.set('playerId', userID);
+      passedGame.set('playerName', userName);
+      passedGame.set('playerPic', userPic);
+      passedGame.set('timeUsed', (15 - count));
+      passedGame.set('playerEmail', email);
+      passedGame.save(null, {
+        success: function(passedGame) {
+          // Execute any logic that should take place after the object is saved.
+          console.log('New object created with objectId: ' + passedGame.id);
+          $('.display-msg').append(' 資料已存取，請按下一步！');
+        },
+        error: function(passedGame, error) {
+          // Execute any logic that should take place if the save fails.
+          // error is a Parse.Error with an error code and message.
+          alert('Failed to create new object, with error code: ' + error.message);
+        }
+      });
+    }
+
     //login handler
     function parseLogin() {
-      Parse.FacebookUtils.logIn(null, {
+      Parse.FacebookUtils.logIn("public_profile, user_friends, email", {
         success: function(user) {
           if (!user.existed()) {
-            alert("User signed up and logged in through Facebook!");
+            alert('User signed up and logged in through Facebook!');
           } else {
-            alert("User logged in through Facebook!");
+            alert('User logged in through Facebook!');
           }
           location.reload();
         },
         error: function(user, error) {
-          alert("User cancelled the Facebook login or did not fully authorize.");
+          alert('User cancelled the Facebook login or did not fully authorize.');
         }
       });
     }
@@ -76,8 +149,8 @@ $(function() {
     var correctStep = 0; // clicked corrected flip count
     var count = 15; //countdown timer seconds
 
-
-    Array.prototype.contains = function(k) { // create an array prototype fn for checking contains
+    // create an array prototype fn for checking contains
+    Array.prototype.contains = function(k) {
       for (var i = 0; i < this.length; i++) {
         if (this[i] === k) {
           return true;
@@ -87,13 +160,11 @@ $(function() {
     };
 
     function createTile(iCounter) {
-      // var spot = fullArrayAllocation[iCounter] !== 0 ? " spot" + fullArrayAllocation[iCounter] : "" ;
-      var curTile = new Tile("tile" + iCounter); // tile constructor create
-      curTile.setFrontColor("tileColor" + Math.floor((Math.random() * 5) + 1)); // set different class for differ color
+      var curTile = new Tile('tile' + iCounter); // tile constructor create
+      curTile.setFrontColor('tileColor' + Math.floor((Math.random() * 5) + 1)); // set different class for differ color
       curTile.setStartAt(500 * Math.floor((Math.random() * 5) + 1));
       curTile.setFlipMethod(flips[Math.floor((Math.random() * 3) + 1)]); // flip method
-
-      curTile.setBackContentImage("images/" + fullArrayAllocation[iCounter] + ".jpg");
+      curTile.setBackContentImage('images/' + fullArrayAllocation[iCounter] + '.jpg');
 
       return curTile; //return each made tile constructor to loop
     }
@@ -133,6 +204,10 @@ $(function() {
     //click handler
     function checkMatch() {
       if (iFlippedTile === null) { // 1st click
+        if (tiles[iTileBeingFlippedId].getBackContentImage() === 'images/0.jpg') { // 1st click is logo then return false
+          setTimeout('tiles[' + iTileBeingFlippedId + '].revertFlip()', 2000); // revertflip
+          return false;
+        }
         if (tiles[iTileBeingFlippedId].getBackContentImage() === 'images/' + currentRules[correctStep] + '.jpg') {
           correctStep++; // correct ans for the 1st time, take not for the step count, in this case added 1.
           $('#timer').text('請繼續..');
@@ -143,12 +218,13 @@ $(function() {
       } else { // 2nd click and above
         if (tiles[iTileBeingFlippedId].getBackContentImage() !== 'images/' + currentRules[correctStep] + '.jpg') { // not the correct order
           $('#timer').text('錯了錯了！！再找找！');
-          setTimeout("tiles[" + iTileBeingFlippedId + "].revertFlip()", 2000); // revertflip
+          setTimeout('tiles[' + iTileBeingFlippedId + '].revertFlip()', 2000); // revertflip
 
         } else { // correct order
           correctStep++;
           if (correctStep === 3) {
             finished('win');
+            pushWinId();
           } else {
             $('#timer').text('還差一張！！');
           }
@@ -168,7 +244,7 @@ $(function() {
 
       $('#timer').text('開始！');
       $('div.tile').on('click', function() { // click event handler
-        iTileBeingFlippedId = this.id.substring("tile".length); //tile id
+        iTileBeingFlippedId = this.id.substring('tile'.length); //tile id
         if (tiles[iTileBeingFlippedId].getFlipped() === false) { // if not flipped
           tiles[iTileBeingFlippedId].addFlipCompleteCallback(function() {
             checkMatch();
@@ -206,6 +282,7 @@ $(function() {
       currentRules = []; // re-set rules
       fullArrayAllocation = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // re-set array
       iFlippedTile = null;
+      count = 15;
       randomArrayIndex = [];
       iTileBeingFlippedId = null;
       while (tiles.length > 0) {
@@ -270,8 +347,7 @@ $(function() {
     });
 
     $('#startGameButton').on('click', function() { // start instruction for game rules
-      if (!loginTrue) return false;
-      parseLogin(); // login 1st
+      if (!loginTrue || queryRes) return false;
       doRandomRules(); // rule randomize
       var attr = $('#board').attr('style');
       if (typeof attr !== typeof undefined && attr !== false) { // fadeout if board have used before
@@ -297,6 +373,6 @@ $(function() {
   }
   js = d.createElement(s);
   js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js";
+  js.src = '//connect.facebook.net/en_US/sdk.js';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));

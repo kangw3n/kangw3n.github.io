@@ -11,10 +11,9 @@
 	<script src="./js/tile.js"></script>
 	<script src="./js/jquery.flip.js"></script>
 	<script src="./js/matching.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<div class="status-text"></div>
 	<article id="game">
 		<header>
 			<div>翻翻樂</div>
@@ -27,8 +26,13 @@
 				<h2 class="display-msg"></h2>
 			</div>
 		</section>
+		<div class="status-text"></div>
 		<a href='#' id="startGameButton">New Game</a>
 		<a href='#' id="facebookLogin">Facebook Login</a>
+		<a href="#" id="facebookLogout">Facebook Logout</a>
+		<div>目前已有<span class="count"></span>位玩家成功完成遊戲！</div>
+		<div class="user"></div>
+		<img src="" alt="" id="facebookPic"/>
 	</article>
 </body>
 </html>

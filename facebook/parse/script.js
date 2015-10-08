@@ -9,8 +9,12 @@
   var deleteArray = []; //storing user selected for delete array
   var selectAll = false;
 
+  var gameCurrentSort = 'createdAt';
+  var gameDescending = false;
+  var gameQueryLimit = 10;
 
-  ['loginTemplate', 'addItemTemplate', 'allDataTemplate', 'paginationTemplate'].forEach(function(e) {
+
+  ['loginTemplate', 'addItemTemplate', 'allDataTemplate', 'paginationTemplate', 'paginationGameTemplate', 'gameDataTemplate'].forEach(function(e) {
     var tpl = document.getElementById(e).text;
     templates[e] = doT.template(tpl);
   });
@@ -31,6 +35,7 @@
     loginDone: function() {
       document.getElementById('logout-btn').style.display = 'block';
       document.getElementById('allDataButton').style.display = 'block';
+      document.getElementById('gameDataButton').style.display = 'block';
       document.getElementById('addButton').style.display = 'block';
       document.getElementById('loginButton').style.display = 'none';
     },
@@ -38,6 +43,7 @@
       document.getElementById('logout-btn').style.display = 'none';
       document.getElementById('allDataButton').style.display = 'none';
       document.getElementById('addButton').style.display = 'none';
+      document.getElementById('gameDataButton').style.display = 'none';
       document.getElementById('loginButton').style.display = 'block';
     },
   };
@@ -102,6 +108,11 @@
 
       var ParseUser = Parse.Object.extend("ParseUser"); // data table
       var fileType;
+      var invoiceCheck = false;
+
+      $('#userAge').prop('selectedIndex', -1);
+      $('#purchaseChain').prop('selectedIndex', -1);
+      $('#purchaseArea').prop('selectedIndex', -1);
 
       // Set an event listener on the Choose File field for reg test
       $('#fileselect').bind("change", function(e) {
@@ -117,12 +128,45 @@
         }
       });
 
+      //check invoice button LOGIC RETHINK!
+      $('#invoiceCheck').on('click', function() {
+        if ($('#userInvoice').val() === null || $('#userInvoice').val() === undefined || $('#userInvoice').val() === '' ) {
+          $('#userInvoice').focus();
+          return false;
+        } else {
+          if ((/^[A-Za-z]{2}[0-9]{8}$/).test($('#userInvoice').val())) {
+            var ParseUser = Parse.Object.extend("ParseUser"); // data table
+            var query = new Parse.Query(ParseUser); // query var
+            query.equalTo('userInvoice', $('#userInvoice').val());
+            query.first({
+              success: function(results) {
+                if (results !== undefined) {
+                  $('.error-msg').text('此發票號已重覆登錄，請確認是否正確輸入！');
+                } else {
+                  invoiceCheck = true;
+                  $('.error-msg').text('');
+                  // give ok status
+                  $('#userInvoice').prop('disabled', true);
+                  $('#invoiceCheck').hide();
+                }
+              },
+              error: function(error) {
+                alert('Error: ' + error.code + ' ' + error.message);
+              }
+            });
+          } else {
+            $('.error-msg').text('發票格式錯誤！');
+          }
+
+        }
+      });
+
       // submit button for add data
       $('#dataForm').submit(function(e) {
         e.preventDefault();
 
         //return false if filetype is false
-        if (!fileType) return false;
+        if (!fileType || !invoiceCheck) return false;
 
         // This function is called when the user clicks on Upload to Parse. It will create the REST API request to upload this image to Parse.
         var parseUser = new ParseUser();
@@ -143,6 +187,9 @@
               userNumber: parseInt($('#userNumber').val()),
               userEmail: $('#userEmail').val(),
               isChecked: $('#userRemember').is(':checked'),
+              userAge: $('#userAge option:selected').val(),
+              purchaseChain: $('#purchaseChain option:selected').val(),
+              purchaseArea: $('#purchaseArea option:selected').val(),
               imgUrl: parseFile,
             };
 
@@ -183,7 +230,7 @@
       }
 
       console.log('database');
-      document.getElementById('content').innerHTML = templates.allDataTemplate();
+      // document.getElementById('content').innerHTML = templates.allDataTemplate();
 
       var ParseUser = Parse.Object.extend("ParseUser"); // data table
       var query = new Parse.Query(ParseUser); // query var
@@ -449,6 +496,101 @@
         });
       });
     },
+    game: function(e) {
+      var currentUser = Parse.User.current(); // parse admin user in this case
+      if (!currentUser) {
+        $.notify('Please Login!', 'info');
+        window.location.hash = 'login/';
+        return false;
+      }
+
+      console.log('game');
+
+      var PassedGame = Parse.Object.extend('passedGame'); // data table
+      var queryGame = new Parse.Query(PassedGame); // query var
+
+      var gameTotalCount;
+
+      var gameQueryAll = function(page) {
+        page = (page === undefined) ? 1 : page;
+        var skip = (page - 1) * gameQueryLimit;
+        queryGame.limit(gameQueryLimit);
+        queryGame.skip(skip);
+        $('.spinner-container').show();
+
+        if (gameDescending) {
+          queryGame.descending(gameCurrentSort);
+        } else {
+          queryGame.ascending(gameCurrentSort);
+        }
+
+        queryGame.find({
+          success: function(results) {
+            var objList = results.map(function(e) {
+              return e.toJSON();
+            });
+            document.getElementById('content').innerHTML = templates.gameDataTemplate(objList);
+            $('.total-count option[value=' + gameQueryLimit + ']').attr('selected', 'selected');
+            queryGame.limit(0);
+            queryGame.skip(0);
+            var option = {};
+            // To support pagination.
+            queryGame.count({
+              success: function(count) {
+                var totalPage = Math.ceil(count / gameQueryLimit);
+                var currentPage = parseInt(page);
+                $('.total-size').text(count);
+                gameTotalCount = count;
+                $('.spinner-container').hide();
+                option = {
+                  // Watch out the limit.
+                  'previous': (currentPage === 1) ? 1 : currentPage - 1,
+                  'next': (currentPage === totalPage) ? currentPage : currentPage + 1,
+                  'current': currentPage,
+                  'last': totalPage,
+                };
+                document.getElementById('gamePagination').innerHTML = templates.paginationGameTemplate(option);
+              },
+              error: function(err) {
+                $.notify(err, 'error');
+              }
+            });
+          }
+        });
+      };
+
+      gameQueryAll(e);
+
+      // select querylimit change
+      $('#content').on('change', '.total-count select', function(e) {
+        gameQueryLimit = parseInt($(this).val());
+        gameQueryAll(1); //reset to 1
+      });
+
+      // sort item
+      $('#content').on('click', '#gameTableHead a', function(e) {
+        e.preventDefault();
+        gameDescending = gameDescending ? false : true;
+        // console.log('Descending:' + descending);
+        var current = this.id;
+
+        switch (current) {
+          case 'playerSort':
+            gameCurrentSort = 'playerName';
+            break;
+          case 'playerEmailSort':
+            gameCurrentSort = 'playerEmail';
+            break;
+          case 'playerTimeSort':
+            gameCurrentSort = 'timeUsed';
+            break;
+          default:
+            gameCurrentSort = "updatedAt";
+        }
+        gameQueryAll(1);
+      });
+
+    },
   };
 
 
@@ -458,19 +600,20 @@
       '': 'index',
       'addItem/': 'add',
       'page/:page/': 'database',
-      // 'allData': 'database',
+      'gameData/': 'gameData',
+      'userpage/:page/': 'gameData',
       'login/*redirect': 'login',
     },
     index: function() {
       return handlers.database(1);
     },
     add: handlers.add,
+    gameData: handlers.game,
     database: handlers.database,
     login: handlers.login,
   });
 
   // Initialize the App
-  console.log(this);
   var Router = new App();
   Parse.history.start();
   handlers.navbar();
