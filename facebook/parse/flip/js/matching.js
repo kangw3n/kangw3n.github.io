@@ -14,6 +14,23 @@ $(function() {
       version: 'v2.5'
     });
 
+
+    //do login check
+    Parse.FacebookUtils.logIn(null, {
+      success: function(user) {
+        if (!user.existed()) {
+          alert("User signed up and logged in through Facebook!");
+        } else {
+          alert("User logged in through Facebook!");
+        }
+      },
+      error: function(user, error) {
+        alert("User cancelled the Facebook login or did not fully authorize.");
+      }
+    });
+
+
+    // Run code after the Facebook SDK is loaded.
     var flips = ['tb', 'bt', 'lr', 'rl']; //flip type
     var iInterval = 500; // init flip timer
     var iPeekTime = 2000;
