@@ -4,38 +4,39 @@ $(function() {
   'use strict';
   // Initialize Parse
   Parse.initialize("2ZQN4pMiLQyGL0p8A8bdvIeSxfJ7Xi2fbbYct18H", "rgqRUivIUBfvsagS5XIMgJC0VJmciNyGAuBzmQC4");
+  var loginTrue = false;
 
   window.fbAsyncInit = function() {
     Parse.FacebookUtils.init({ // this line replaces FB.init({
       appId: '905566212864343',
-      status: true, // check Facebook Login status
       cookie: true, // enable cookies to allow Parse to access the session
       xfbml: true,
       version: 'v2.5'
     });
 
-
-    //do login check
+    //do login check at first
     FB.getLoginStatus(function(response) {
       if (response.status === 'connected') {
-        // the user is logged in and has authenticated your
-        // app, and response.authResponse supplies
-        // the user's ID, a valid access token, a signed
-        // request, and the time the access token
-        // and signed request each expire
         var uid = response.authResponse.userID;
         var accessToken = response.authResponse.accessToken;
         console.log('connected');
+        console.log(uid);
+        $('#facebookLogin').hide();
+        loginTrue = true;
+        // check play status!
+        // if not finish ..welcome back with name
+        // if finish hide all playable item;
       } else if (response.status === 'not_authorized') {
-        // the user is logged in to Facebook,
-        // but has not authenticated your app
         console.log('not_authorized');
+        // popup login clicker
+        //status text
+        $('.status-text').text('請先登入並連接Facebook帳號！');
       } else {
-        // the user isn't logged in to Facebook.
         console.log('not login');
       }
     });
 
+    //login handler
     function parseLogin() {
       Parse.FacebookUtils.logIn(null, {
         success: function(user) {
@@ -44,13 +45,13 @@ $(function() {
           } else {
             alert("User logged in through Facebook!");
           }
+          location.reload();
         },
         error: function(user, error) {
           alert("User cancelled the Facebook login or did not fully authorize.");
         }
       });
     }
-
 
     // Run code after the Facebook SDK is loaded.
     var flips = ['tb', 'bt', 'lr', 'rl']; //flip type
@@ -264,6 +265,7 @@ $(function() {
     });
 
     $('#startGameButton').on('click', function() { // start instruction for game rules
+      if (!loginTrue) return false;
       parseLogin(); // login 1st
       doRandomRules(); // rule randomize
       var attr = $('#board').attr('style');
@@ -274,12 +276,13 @@ $(function() {
       }
       $(this).hide();
     });
+
+    $('#facebookLogin').on('click', function() {
+      if(loginTrue) return false;
+      parseLogin();
+    });
   };
 });
-
-
-
-
 
 
 (function(d, s, id) {
