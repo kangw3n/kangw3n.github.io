@@ -1,0 +1,79 @@
+extends ../layout
+
+append config
+  - var thisPageTitle = '圖表解民調'
+  - var title = thisPageTitle.concat(' | ' + title)
+  - var poll = true;
+  
+block extScript
+  script(src="http://code.highcharts.com/highcharts.js")
+  script(src="http://code.highcharts.com/modules/exporting.js")
+  script(src="./js/poll-data.js")
+
+block voteScript
+  script(src="http://j.udn.com.tw/func/js/accept_var_min.js")
+  script(src="http://j.udn.com.tw/func/js/voteinit_min.js")
+
+block content
+  #wrapper
+    #highchart-vote.area
+      h3 媒體民調
+      .section-choose
+        a.active( href="#" rel='taipei') 台北市
+        a( href="#" rel='newtaipei') 新北市
+        a( href="#" rel='taoyuan') 桃園市
+        a( href="#" rel='taichung') 台中市
+        a( href="#" rel='tainan') 台南市
+        a( href="#" rel='kaohsiung') 高雄市
+      .highchart-container(style='width: 100%; margin: 0 auto')
+    
+    #highchart-googleTrend.area
+      h3 從Google Trends 看候選人搜尋熱度變化
+      .section-choose
+        a.active( href="#" rel='taipei') 台北市
+        a( href="#" rel='newtaipei') 新北市
+        a( href="#" rel='taoyuan') 桃園市
+        a( href="#" rel='taichung') 台中市
+        a( href="#" rel='tainan') 台南市
+        a( href="#" rel='kaohsiung') 高雄市
+      .highchart-container(style='width: 100%; margin: 0 auto')
+    #mainbar
+      #pictureChart.area
+        h3 圖表看選舉
+        .chart-wrapper
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/01.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜市場名
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/02.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜ss市場名
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/03.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜市場名
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/04.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜市場名
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/05.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜市場名
+          .thumbnail
+            a(target='_blank', href='http://www.udn.com/2014/11/25/NEWS/NATIONAL/NATS4/9088728.shtml')
+              img(src='http://udn.com/vote2014/photo/topic/06.jpg')
+              .topic_title 17個「永昌」…選舉大軍的菜市場名
+      #campaignDailyView.area
+        h3 Dailyview 網路溫度計
+        .campaign-view
+          iframe(src='./tempfolder/dailyview.html',  frameborder='0', scrolling='no')
+          p.ps-info ※ 本內容由DailyView 網路溫度計提供
+      //- #udn-Tv.area
+      //-   h3 影音觀大選
+      //-   .udn-video-container
+      //-     iframe(width="100%" height="100%" src="http://video.udn.com/play/news/372210" frameborder="0" allowfullscreen)
+        
+        
+    include ../template/sidebar

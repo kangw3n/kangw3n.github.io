@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Parse Route and template engine</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Parse Data Retrive</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li id="loginButton"><a href="#login/">Login</a></li>
+          <li id="addButton"><a href="#addItem/">Insert Data</a></li>
+          <li id="allDataButton"><a href="#">All Record</a></li>
+          <li id="logout-btn"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <main class="container" id="content"></main>
+  <div class="spinner-container">
+    <div class="loading-spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+
+  <script type="text/x-dot-template" id="loginTemplate">
+    <form role="form" class="form-signin" id="login-field">
+      <h3 class="form-signin-heading">Please sign in</h3>
+      <input type="text" required id="user" placeholder="Username" class="form-control">
+      <input type="password" required id="password" placeholder="Password" class="form-control">
+      <button type="submit" class="btn btn-lg btn-success btn-block" id="login-btn">Sign in</button>
+    </form>
+  </script>
+
+  <script type="text/x-dot-template" id="addItemTemplate">
+    <h2>Insert Data</h2>
+    <form action="" method="post" id="dataForm">
+      <fieldset>
+        <legend>Parse RESTful</legend>
+        <div class="form-group input-group">
+          <label for="userName">使用者名稱： </label>
+          <input id="userName" class="form-control" name="userName" value="" required title="名字" aria-required="true" aria-describedby="name-format">
+        </div>
+        <div class="form-group input-group">
+          <label for="userEmail">Email:</label>
+          <input type="email" class="form-control" id="userEmail" name="userEmail" title="電子郵件" value="" required aria-required="true">
+        </div>
+        <div class="form-group input-group">
+          <label for="userInvoice">發票:</label>
+          <input type="text" class="form-control" id="userInvoice" pattern="^[A-Za-z]{2}[0-9]{8}$" title="發票編號" name="userInvoice" value="" required>
+          <span style="float: left;">例如： FW02174554</span>
+        </div>
+        <div class="form-group input-group">
+          <label for="userNumber">手機:</label>
+          <input type="tel" class="form-control" id="userNumber" pattern="^[0-9]{10}$" title="手機號碼" name="userNumber" value="" required>
+          <span style="float: left;">例如： 0950123456</span>
+        </div>
+
+        <div class="form-group input-group">
+          <label for="fileselect">上傳發票</label>
+          <input type="file" name="fileselect" id="fileselect" required></input>
+          <span style="float: left;">格式為：JPG，PNG，GIF, 大小10MB內。
+            <br>註記： 請以
+            <strong>數字或英文</strong>字元命名圖片，如 123.jpg / photo.gif</span>
+        </div>
+
+        <div class="error-msg"></div>
+
+        <div class="checkbox text-center">
+          <label for="userRemember">
+            <input type="checkbox" id="userRemember" value="remember" required>我已閱讀XXX
+          </label>
+        </div>
+        <div class="form-group text-right">
+          <input type="submit" value="Upload" class="btn btn-default block-all">
+        </div>
+      </fieldset>
+    </form>
+  </script>
+
+  <script type="text/x-dot-template" id="allDataTemplate">
+    <div class="data-field">
+      <h2>Basic Table from Parse</h2>
+      <p>Simple Data Retriving</p>
+      <table class="table">
+        <thead>
+          <tr id="tableHead">
+            <th></th>
+            <th><a href="#" id="userSort">名稱</a></th>
+            <th><a href="#" id="emailSort">Email</a></th>
+            <th><a href="#" id="invoiceSort">發票</a></th>
+            <th><a href="#" id="phoneSort">手機</a></th>
+            <th>上傳圖片</th>
+            <th><a href="#" id="checkMark">檢查</a></th>
+            <th>刪除
+              <input type="checkbox" id="selectAll">
+            </th>
+          </tr>
+        </thead>
+        <tbody id="insertData">
+          {{~it :p:index}}
+          <tr id="{{=p.objectId}}">
+            <td>
+              <button id="editableSave" class="btn btn-default">修改存檔</button>
+            </td>
+            <td class="data-user content-editable" contentEditable="true">{{=p.userName}}</td>
+            <td class="data-email content-editable" contentEditable="true">{{=p.userEmail}}</td>
+            <td class="data-invoice content-editable" contentEditable="true">{{=p.userInvoice}}</td>
+            <td class="data-number content-editable" contentEditable="true">{{=p.userNumber}}</td>
+            <td><a href="{{=p.imgUrl.url}}" target="_blank">發票圖片</a></td>
+            {{? p.getChecked === true}}
+            <td>
+              <input type="checkbox" name="checked" class="checked" checked value="checked">
+            </td>
+            {{??}}
+            <td>
+              <input type="checkbox" name="checked" class="checked" value="checked">
+            </td>
+            {{?}}
+            <td>
+              <input type="checkbox" class="deleteData" value="delete" name="deleteMe">
+            </td>
+          </tr>
+          {{~}}
+        </tbody>
+      </table>
+      <button class="btn btn-default" id='deleteSelected'> Delete Selected Raw Data </button>
+      <button class="btn btn-info sorting" id='sortUpdate'> Sortby Update time </button>
+      <button class="btn btn-info sorting" id='sortCreate'> Sortby Create time </button>
+    </div>
+
+    <div class="text-center">
+      <div class="total-count">
+        <select class="" name="">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select>
+        rows/pages.
+        <br> There are total of:
+        <span class="total-size"></span> items.</div>
+      <div id='pagination'></div>
+    </div>
+  </script>
+
+  <script id="paginationTemplate" type="text/x-dot-template">
+    <a class="btn btn-info" href='#page/1/'>&lt;&lt</a> <a class="btn btn-warning" href='#page/{{=it.previous}}/'>&lt;</a> | {{=it.current}} / {{=it.last}} |
+    <a class="btn btn-warning" href='#page/{{=it.next}}/'>&gt;</a> <a class="btn btn-info" href='#page/{{=it.last}}/'>&gt;&gt;</a>
+  </script>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src='https://www.parsecdn.com/js/parse-1.2.18.min.js'></script>
+  <script src='doT.min.js'></script>
+  <script src="notify.min.js"></script>
+  <script src='script.js'></script>
+</body>
+
+</html>

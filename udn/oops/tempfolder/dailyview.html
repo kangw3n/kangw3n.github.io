@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style media="screen">
+    html,
+    body {
+      font-family: '微軟正黑體', 'Microsoft JhengHei', 'LiHei Pro';
+    }
+
+    .jumbotron {
+      padding: 20px 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container theme-showcase" role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1>這是iframe內容</h1>
+      <p>DailyView內容，需要注意RWD問題，如果內容並非RWD，頁面將會跑版，需要固定寬高來設定iframe大小, 此頁面最大寬度為888px。 目前寬度為: <span class="area" style="color: #428bca; font-weight:bolder;" ></span></p>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">標題廢話</h3>
+          </div>
+          <div class="panel-body">
+            廢話內容
+          </div>
+        </div>
+      </div>
+      <!-- /.col-sm-4 -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      $(window).on('resize load', function() {
+        var width = $(window).width();
+
+        $('.area').html(width);
+      });
+
+
+    }())
+  </script>
+</body>
+
+</html>

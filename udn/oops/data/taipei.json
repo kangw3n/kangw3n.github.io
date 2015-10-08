@@ -1,0 +1,29 @@
+[{
+  "divNo": 1,
+  "divName": "北投區、士林區13里",
+  "candidate": [{
+    "no": 1,
+    "name": "王文玉",
+    "classname": "thumb-gmd",
+    "party": "中國國民黨"
+  }, {
+    "no": 2,
+    "name": "王玉文",
+    "classname": "thumb-no",
+    "party": "民主行動黨民主行動黨"
+  }]
+}, {
+  "divNo": 2,
+  "divName": "北投區、士林區14里",
+  "candidate": [{
+    "no": 1,
+    "name": "文玉王",
+    "classname": "thumb-gmd",
+    "party": "中國國民黨"
+  }, {
+    "no": 2,
+    "name": "玉王文",
+    "classname": "thumb-mjd",
+    "party": "民主行動黨"
+  }]
+}]

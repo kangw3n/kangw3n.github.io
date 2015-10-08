@@ -1,0 +1,46 @@
+#sidebar
+  #sidebar_fix
+    .poll-area_right.area
+      #poll_at_page_right_1_v40.poll_at_page_right
+        script.
+          var channelId=3000; 
+          var actArea="poll_at_page_right_1_v40";
+          var actCode="v40";
+          document.write('<div id="' + actArea + '" class="poll_at_page_right"></div>');
+          document.write('<script src="./js/actIndex.jsp?actCode=' +  actCode + '&channelId=' + channelId + '"> <\/script>');
+        script.
+          piepkg();
+        script.
+          loadTemplateJs(d1.actTemplate);
+        script.
+          eval(d1.actTemplate+'view("' + '#' + actArea + '");');
+    // /#mag_topic
+    #ad_mag
+      dl
+        dt
+          iframe(frameborder='0', height='250', scrolling='no', src='./tempfolder/ads.html', width='300')
+    .fb-page.area
+      h3
+        a(href='https://www.facebook.com/myudn') udn粉絲團
+      .fb-like-box(data-href='https://www.facebook.com/myudn', data-width='300', data-height='300', data-colorscheme='light', data-show-faces='true', data-header='false', data-stream='true', data-show-border='false')
+    // /#mag_topic
+    .fb-page-udn.area
+      h3 udn 社群
+      #sidebar_attention_body.area_body
+        dl
+          dt.udn_facebook
+            a(href='https://www.facebook.com/myudn', target='_blank')
+              b 
+              | udn Facebook
+          dt.udn_google
+            a(href='https://plus.google.com/105298219321543859712/posts', target='_blank')
+              b 
+              | udn google +
+          dt.udn_line
+            img(src="http://opinion.udn.com/img/u.png", alt="udn line")
+            a(href='https://twitter.com/Oopsudn', target='_blank')
+              | 掃描加入
+      // /#sidebar_attention_body
+    // /#mag_topic
+  // /#sidebar_fix
+// /#sidebar

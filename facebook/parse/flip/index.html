@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+	<script src="./js/tile.js"></script>
+	<script src="./js/jquery.flip.js"></script>
+	<script src="./js/matching.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<div class="text"></div>
+	<article id="game">
+		<header>
+			<div>翻翻樂</div>
+			<progress class="count-down" max="15" value="15" style="width: 100%;"></progress>
+			<div id="timer"></div>
+		</header>
+		<section id="gameContainer">
+			<section id="board"></section>
+			<div class="overlay" style="display: none">
+				<h2 class="display-msg"></h2>
+			</div>
+		</section>
+		<a href='#' id="startGameButton">New Game</a>
+	</article>
+</body>
+</html>

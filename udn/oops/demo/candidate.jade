@@ -1,0 +1,320 @@
+doctype html
+html
+  head
+    meta(content='text/html; charset=UTF-8', http-equiv='Content-Type')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=5.0', name='viewport')
+    title 2016 選舉特別報導 | 聯合新聞網
+    link(href='./index_files/vote.css', rel='stylesheet')
+    link(href='./index_files/default.css', rel='stylesheet')
+    //- link(href='./index_files/mag.css', rel='stylesheet')
+    link(href='css/flipclock.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
+    link(rel="stylesheet", href="css/trackpad-scroll-emulator.css")
+    <!--[if IE 9]>
+    link(href='css/ie9.css', rel='stylesheet')
+    <![endif]-->
+    // for Facebook
+    meta(property='og:title', content='2016 選舉特別報導 | 聯合新聞網 ')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='http://vote2016.udn.com/vote2016/index')
+    meta(property='og:image', content='http://vote2016.udn.com/vote2016//UDN_BABY.png')
+    meta(property='og:image:width', content='1000')
+    meta(property='og:image:height', content='1000')
+    meta(property='og:site_name', content='2016 選舉特別報導')
+    meta(property='og:description', content='2016 選舉特別報導')
+    meta(property='fb:admins', content='100002847892748')
+    meta(property='fb:app_id', content='803604343037126')
+    script(src='https://code.jquery.com/jquery-2.1.4.js')
+    script(src='./index_files/jquery.event.drag-2.2.js')
+    script(src='./index_files/jquery.wookmark.min.js')
+    script(src='./index_files/jquery.fitvids.js')
+    script(src='./index_files/jquery.cookie.js')
+    script(src='./index_files/common.js')
+    script(src='./index_files/common2.js')
+    script(src='./index_files/jquery.carouFredSel-6.2.1-packed.js')
+
+    script(src="js/jquery.trackpad-scroll-emulator.js")
+    script(src="http://code.highcharts.com/highcharts.js")
+    script(src="http://code.highcharts.com/modules/exporting.js")
+      
+    script(src='js/flipclock.js')
+    script(src='js/script.js')
+    script(src="http://j.udn.com.tw/func/js/accept_var_min.js")
+    script(src="http://j.udn.com.tw/func/js/voteinit_min.js")
+  body.mag
+    #loading
+    #menu_mark
+    #container
+      #header
+        #header_body_wrapper
+          a(href="http://udn.com", target="_blank" class="logo logo-backudn")
+          a(href="http://vote.udn.com", target="_blank" class="logo logo-voteudn")
+          a(href="http://", target="_blank" class="fb-udn") 
+            .fb-sharepage.animated
+          aside.count-down
+            section.timer-text 距離選舉還有
+            section.clock-wrapper
+              .clock
+        // /#header_body_wrapper
+        .menu
+          dl
+            dt
+              a(href='#', rel='#', title='網路夯新聞') 網路夯新聞
+            dt
+              a(href='#', rel='#', title='文字論選戰') 文字論選戰
+            dt
+              a(href='#', rel='#', title='圖表解民調') 圖表解民調
+            dt
+              a.active(href='#', rel='#', title='透視候選人') 透視候選人
+            dt
+              a(href='#', rel='#', title='回顧選舉史') 回顧選舉史
+            dt
+              a(href='#', rel='#', title='也來玩選舉') 也來玩選舉
+            a(href="http://", target="_blank" class="fb-udn") 
+              .fb-sharepage.animated
+        // /.menu
+      // /#header
+      #wrapper
+        .level-choose
+          a(href="#", target="_blank").candidate-active 總統候選人
+          a(href="#", target="_blank") 立委候選人
+        .candidate-container
+          section.candidate-section.area
+            h3.candidate-name 1號：#[span.area-main-title 紅袖主]
+            img(src="http://lorempixel.com/350/200/", alt="").candidate-pic
+            table.candidate-info 
+              tbody
+                tr
+                  td.table-title 黨籍
+                  td.table-flag #[span.thumb.thumb-mjd]
+                  td 年齡
+                  td 44歲
+                tr
+                  td.table-title 學歷
+                  td(colspan="3") 美國格倫畢業大學
+                tr
+                  td.table-title 經歷
+                  td(colspan="3") 悠遊卡公司凍死張
+                tr
+                  td.table-title 家族
+                  td(colspan="3") 布拉布拉布拉
+                tr
+                  td.table-title 特質
+                  td(colspan="3") 布魯不利
+                tr
+                  td.table-title 特殊經歷
+                  td(colspan="3") 精神力撒
+            ul.tabs
+              li
+                input#tab1(type='radio', name='tabs1', checked='')
+                label(for='tab1') 相關新聞
+                #tab-content1.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+              li
+                input#tab2(type='radio', name='tabs1')
+                label(for='tab2') 政見
+                #tab-content2.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+            br(style="clear:both;")
+            h3.candidate-fb-info #[span.area-main-title 紅袖主]臉書上週最熱帖文
+            article.facebook-embed
+              .fb-post(data-href='https://www.facebook.com/ChuChuPepper/posts/880457468710220:0', data-width='500')
+                .fb-xfbml-parse-ignore
+                  blockquote(cite='https://www.facebook.com/ChuChuPepper/posts/880457468710220:0')
+                    p 我真的不知道他們做錯什麼？我們的社會怎麼可容許支持甲就不准支持乙，還用這種霸凌的手法對付他們。　謝謝這幾位女孩，真誠地面對一切，我們一起加油！
+                    | Posted
+                    |       by 
+                    a(href='https://www.facebook.com/ChuChuPepper') 洪秀柱
+                    |  on 
+                    a(href='https://www.facebook.com/ChuChuPepper/posts/880457468710220:0') Monday, September 14, 2015
+          
+          section.candidate-section.area
+            h3.candidate-name 1號：#[span.area-main-title 紅袖主]
+            img(src="http://lorempixel.com/350/200/", alt="").candidate-pic
+            table.candidate-info 
+              tbody
+                tr
+                  td.table-title 黨籍
+                  td #[span.thumb.thumb-gmd]
+                  td 年齡
+                  td 44歲
+                tr
+                  td.table-title 學歷
+                  td(colspan="3") 美國格倫畢業大學
+                tr
+                  td.table-title 經歷
+                  td(colspan="3") 悠遊卡公司凍死張
+                tr
+                  td.table-title 家族
+                  td(colspan="3") 布拉布拉布拉
+                tr
+                  td.table-title 特質
+                  td(colspan="3") 布魯不利
+                tr
+                  td.table-title 特殊經歷
+                  td(colspan="3") 精神力撒
+            ul.tabs
+              li
+                input#tab3(type='radio', name='tabs2', checked='')
+                label(for='tab3') 相關新聞
+                #tab-content3.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+              li
+                input#tab4(type='radio', name='tabs2')
+                label(for='tab4') 政見
+                #tab-content4.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+            br(style="clear:both;")
+            h3.candidate-fb-info #[span.area-main-title 紅袖主]臉書上週最熱帖文
+            article.facebook-embed
+              .fb-post(data-href='https://www.facebook.com/tsaiingwen/posts/10152924587866065:0', data-width='500')
+                .fb-xfbml-parse-ignore
+                  blockquote(cite='https://www.facebook.com/tsaiingwen/posts/10152924587866065:0')
+                    p
+                      | [蔡英文競選辦公室]歡迎加入蔡英文官方LINE@生活圈！無論身在何處，透過行動裝置第一時間接收最新政策、活動直播、募款小物等相關消息。【請用手機／平板點入以下連結：http://line.me/ti/p/%40iing或在LINE中搜尋帳號：@iing】
+                    | Posted
+                    |       by 
+                    a(href='https://www.facebook.com/tsaiingwen') 蔡英文 Tsai Ing-wen
+                    |  on 
+                    a(href='https://www.facebook.com/tsaiingwen/posts/10152924587866065:0') Tuesday, September 15, 2015
+
+
+          section.candidate-section.area
+            h3.candidate-name 1號：#[span.area-main-title 紅袖主]
+            img(src="http://lorempixel.com/350/200/", alt="").candidate-pic
+            table.candidate-info 
+              tbody
+                tr
+                  td.table-title 黨籍
+                  td #[span.thumb.thumb-gmd]
+                  td 年齡
+                  td 44歲
+                tr
+                  td.table-title 學歷
+                  td(colspan="3") 美國格倫畢業大學
+                tr
+                  td.table-title 經歷
+                  td(colspan="3") 悠遊卡公司凍死張
+                tr
+                  td.table-title 家族
+                  td(colspan="3") 布拉布拉布拉
+                tr
+                  td.table-title 特質
+                  td(colspan="3") 布魯不利
+                tr
+                  td.table-title 特殊經歷
+                  td(colspan="3") 精神力撒
+            ul.tabs
+              li
+                input#tab5(type='radio', name='tabs3', checked='')
+                label(for='tab5') 相關新聞
+                #tab-content5.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+              li
+                input#tab6(type='radio', name='tabs3')
+                label(for='tab6') 政見
+                #tab-content6.tab-content
+                  ul
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+                    li #[a(href="http://", target="_blank") 國名當議員狂罵「波卡」！網怒：假道學、看清風向好嗎]
+            br(style="clear:both;")
+            h3.candidate-fb-info #[span.area-main-title 紅袖主]臉書上週最熱帖文
+            article.facebook-embed
+              .fb-post(data-href='https://www.facebook.com/love4tw/posts/960937210633157:0', data-width='500')
+                .fb-xfbml-parse-ignore
+                  blockquote(cite='https://www.facebook.com/love4tw/posts/960937210633157:0')
+                    p
+                      | 【讓苦拼實做的企業廠更有力量向前進】　彰化縣鹿港鎮頂番婆地區有800多家工廠，全世界有半數水龍頭來自這個聚落　小宋今（9/15）下午來到了鹿港鎮銓偉五金工業公司與彰化縣五金產業發展協會成員座談，討論「台灣水五金產業的現狀與未來」　大家的反映我們聽，小宋主席承諾--當選後會檢討土地使用相關規則、增進當地學校與產業界連結、對於技術研發優惠給予支持。
+                    | Posted
+                    |       by 
+                    a(href='https://www.facebook.com/love4tw') 宋楚瑜
+                    |  on 
+                    a(href='https://www.facebook.com/love4tw/posts/960937210633157:0') Tuesday, September 15, 2015
+
+
+                  
+
+          
+      // /#wrapper
+      #footer
+        #footer_wrapper
+          #footer_wrapper_links.only_web
+            a(href='http://event.udn.com/AD/', target='_blank') 刊登網站廣告 ︱
+            a(href='http://udn.com/page/topic/496', target='_blank') 網站總覽 ︱
+            a(href='http://udn.com/page/topic/184', target='_blank') FAQ ︱
+            a(href='http://www.udngroup.com/2c/cservice/index2.jsp?qfile=dotcom', target='_blank') 客服 ︱
+            a(href='http://udndata.com/udnauthority.html', target='_blank') 新聞授權 ︱
+            a(href='http://udn.com/page/topic/185', target='_blank') 服務條款 ︱
+            a(href='http://udn.com/page/topic/495', target='_blank') 著作權 ︱
+            a(href='http://www.udngroup.com/2c/private.jsp', target='_blank') 隱私權聲明 ︱
+            a(href='http://www.udngroup.com/2c/cservice/index.jsp', target='_blank') 聯合報系 ︱
+            a(href='http://www.udngroup.com/2c/promote/orderall.jsp', target='_blank') 訂報紙 ︱
+            a(href='http://co.udn.com/', target='_blank') 關於我們 ︱
+            a(href='http://co.udn.com/CORP/job.html', target='_blank') 招募夥伴 
+          // /#footer_wrapper_links
+          b 聯合線上公司 著作權所有 © udn.com All Rights Reserved.
+        // /#footer_wrapper
+      // /#footer
+      a#gotop(class="gt-top") Top
+      // /#gotop
+      #show_box(style='display: none;')
+      // /#show_box
+    // /#container

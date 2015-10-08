@@ -1,0 +1,134 @@
+block config
+  include variables
+doctype
+html(lang="zh-tw")
+  head
+    meta(charset="utf-8")
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1', name='viewport')
+    title #{title}
+    
+    meta(property="og:title", content="#{title}")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="")
+    meta(property="og:image", content="http://vote2016.udn.com/vote2016/UDN_BABY.png")
+    meta(property="og:image:width", content="1000")
+    meta(property="og:image:height", content="1000")
+    meta(property="og:site_name", content="2016 選舉特別報導")
+    meta(property="og:description", content="2016 選舉特別報導")
+    meta(property="fb:admins", content="")
+    meta(property="fb:app_id", content="")
+    
+    meta(name="description", content="2016 選舉特別報導")
+    meta(name="author", content="udn")
+    meta(name="copyright", content="udn")
+    meta(name="application-name", content="2016 選舉特別報導")
+    meta(name="URL", content="")
+    meta(name="date", content="")
+
+    meta(name="date.available", content="")
+
+    meta(name="channel_id", content="3000")
+    meta(name="cate_id", content="")
+    link(rel="canonical", href="")
+      
+    link(rel='shortcut icon', type='image/x-icon', href='/favicon.ico')
+    link(href='/favicon.ico', rel='icon', type='image/x-icon')
+    
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css", rel="stylesheet")
+    link(href="./css/vote.css", rel="stylesheet")
+    link(href="./css/default.css", rel="stylesheet")
+    link(href="./css/flipclock.css", rel="stylesheet")
+    link(href="./css/trackpad-scroll-emulator.css", rel="stylesheet")
+    link(href="./css/colorbox.css", rel="stylesheet")
+    link(href="./css/style2.css", rel="stylesheet")
+    <!--[if IE 9]>
+    link(href="./css/ie9.css", rel="stylesheet")
+    <![endif]-->
+
+    script(src="https://code.jquery.com/jquery-2.1.4.js")
+    script(src="./js/jquery.touchSwipe.min.js")
+    script(src="./js/jquery.event.drag-2.2.js")
+    script(src="./js/jquery.wookmark.min.js")
+    script(src="./js/jquery.fitvids.js")
+    script(src="./js/jquery.cookie.js")
+    script(src="./js/jquery.simplemodal-1.4.4.js")
+    script(src="./js/control.colorbox.js")
+    script(src="./js/jquery.colorbox-1.10.2.min.js")
+    script(src="./js/common.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+    
+    block extScript
+      
+    script(src="./js/flipclock.js")
+    script(src="./js/script.js")
+    
+    block voteScript
+
+  body.mag
+    #loading
+    #menu_mark
+    #container
+      #header
+        #header_body_wrapper
+          a(href="http://udn.com", target="_blank" class="logo logo-backudn")
+          a(href="./index.html" class="logo logo-voteudn")
+          a(href="#", class="fb-udn") 
+            .fb-sharepage.animated
+          aside.count-down
+            section.timer-text 距離選舉還有
+            section.clock-wrapper
+              .clock
+
+        .menu
+          dl
+            dt 
+              a(href="./index.html", class="mobile-homepage") 首頁
+            dt
+              a(class=typeof hot === "undefined" ? "" : "active", href="./hotissues.html", rel="#", title="網路夯新聞") 網路夯新聞
+            dt
+              a(class=typeof topic === "undefined" ? "" : "active", href="./topic.html", rel="#", title="文字論選戰") 文字論選戰
+            dt
+              a(class=typeof poll === "undefined" ? "" : "active", href="./poll.html", rel="#", title="圖表解民調") 圖表解民調
+            dt
+              a(class=typeof president === "undefined" ? "" : "active", href="./candidate_president.html", rel="#", title="透視候選人") 透視候選人
+            //- dt
+            //-   a(class=typeof histories === "undefined" ? "" : "active", href='#', rel='#', title='回顧選舉史') 回顧選舉史
+            //- dt
+            //-   a(class=typeof game === "undefined" ? "" : "active", href='#', rel='#', title='也來玩選舉') 也來玩選舉
+            a(href="#", class="fb-udn") 
+              .fb-sharepage.animated
+
+      block content
+
+      #footer
+        #footer_wrapper
+          #footer_wrapper_links.only_web
+            a(href="http://event.udn.com/AD/", target="_blank") 刊登網站廣告 
+            |  ︱ 
+            a(href="http://udn.com/page/topic/496", target="_blank") 網站總覽 
+            |  ︱ 
+            a(href="http://udn.com/page/topic/184", target="_blank") FAQ 
+            |  ‧ 
+            a(href="http://www.udngroup.com/2c/cservice/index2.jsp?qfile=dotcom", target="_blank") 客服 
+            |  ︱ 
+            a(href="http://udndata.com/udnauthority.html", target="_blank") 新聞授權 
+            |  ︱ 
+            a(href="http://udn.com/page/topic/185", target="_blank") 服務條款 
+            |  ‧ 
+            a(href="http://udn.com/page/topic/495", target="_blank") 著作權 
+            |  ‧  
+            a(href="http://www.udngroup.com/2c/private.jsp", target="_blank") 隱私權聲明 
+            |  ︱ 
+            a(href="http://www.udngroup.com/2c/cservice/index.jsp", target="_blank") 聯合報系 
+            |  ︱ 
+            a(href="http://www.udngroup.com/2c/promote/orderall.jsp", target="_blank") 訂報紙 
+            |  ︱ 
+            a(href="http://co.udn.com/", target="_blank") 關於我們 
+            |  ︱ 
+            a(href="http://co.udn.com/CORP/job.html", target="_blank") 招募夥伴 
+
+          b 聯合線上公司 著作權所有 © udn.com All Rights Reserved.
+
+      a#gotop(class="gt-top") Top
+      // /#gotop
+      #show_box

@@ -1,0 +1,111 @@
+extends ../layout
+
+append config
+  - var thisPageTitle = '網路夯新聞'
+  - var title = thisPageTitle.concat(' | ' + title)
+  - var hot = true;
+
+block extScript
+  script(src='./js/jquery.carouFredSel-6.2.1.js')
+
+block voteScript
+  script(src="http://j.udn.com.tw/func/js/accept_var_min.js")
+  script(src="http://j.udn.com.tw/func/js/voteinit_min.js")
+
+block content
+  #wrapper
+    #mainbar
+      include ../template/slideshow.jade
+        
+      .area.category_box
+        h3
+          a(href='#1') 熱門話題
+          a.more.topic(href='#1', title='more')
+        .category_box_list.topic
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 抬摃選總統
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+          hr
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 品頭論立委
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+          hr
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 品頭論立委
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+        
+        
+      .area.category_box
+        h3
+          a(href='#1') 熱門話題
+          a.more.topic(href='#1', title='more')
+        .category_box_list.topic
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 抬摃選總統
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+          hr
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 品頭論立委
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+      
+      
+      #comments.area
+        h3
+          span 留言
+        a(name='fb_comments')
+        #comments_head
+          #fb-root
+          .fb-comments(data-href='', data-numposts='5')
+      
+      
+    include ../template/sidebar

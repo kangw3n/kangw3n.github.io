@@ -1,0 +1,203 @@
+extends ../layout
+
+append config
+  - var thisPageTitle = '首頁'
+  - var title = thisPageTitle.concat(' | ' + title)
+  
+  
+block extScript
+  script(src='./js/jquery.carouFredSel-6.2.1.js')
+  script(src="./js/jquery.trackpad-scroll-emulator.min.js")
+  script(src="./js/chatbox.js")
+
+block voteScript
+  script(src="http://j.udn.com.tw/func/js/accept_var_min.js")
+  script(src="http://j.udn.com.tw/func/js/voteinit_min.js")
+
+
+block content
+  section.big-img
+  #ad_1.only_web(style='max-height:110px')
+    iframe(src='./tempfolder/ads2.html',  frameborder='0', scrolling='no')
+  #wrapper
+    #video_live.area
+      //- h3 影音直播
+      .video-tube
+        iframe(width='100%', height='100%', src='https://www.youtube.com/embed/uSjmL9m7hkg', frameborder='0', allowfullscreen='')
+      .video-chat
+        .chat-box.tse-scrollable 
+          .tse-content
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+            li.message-line.chat-line
+              span.from andy7577272
+              span.chatbox-timestamp (10:54)
+              span.colon :
+              span.message 這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息這是訊息
+        .nickname-box
+          .nickname-placeholer
+            | 歡迎 #[span.nickname-name 宏休逐] ！
+            span.not-name 
+              span.nickname-name 我是假人
+              a 不是你嗎?
+          input(type="text", placeholder="請輸入您的暱稱", maxlength="10")
+        .chat-textbox
+          textarea(placeholder="請輸入文字")
+        .chat-send 送出訊息
+          //- <div class="bbox"><b></b>我要投票</div>
+    #mainbar
+      include ../template/slideshow.jade
+      #mag_most
+        .area
+          h3
+            span.area-main-title 總統
+            | 選聞火熱排行
+          .area_body.area_number
+            ol
+              li
+                a(href='#') 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+                span.pg-view 24242
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 2422
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 2
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 241
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢
+                span.pg-view 24
+              li
+                a(href='#') 波多野結衣是擋箭牌？北市府「三大陰謀論」曝光
+                span.pg-view 24
+              li
+                a(href='#') 小朋友問波多野結衣是誰？網友以各行業神譬喻！
+                span.pg-view 24
+              li
+                a(href='#') 負債天菜VS有錢醜男 女生最後選擇嫁給…？
+                span.pg-view 24
+        .area
+          h3
+            span.area-main-title 立委
+            | 選聞火熱排行
+          .area_body.area_number
+            ol
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+                span.pg-view 24
+              li
+                a(href='#') 女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢
+                span.pg-view 24
+              li
+                a(href='#') 波多野結衣是擋箭牌？北市府「三大陰謀論」曝光
+                span.pg-view 24
+              li
+                a(href='#') 小朋友問波多野結衣是誰？網友以各行業神譬喻！
+                span.pg-view 24
+              li
+                a(href='#') 負債天菜VS有錢醜男 女生最後選擇嫁給…？
+                span.pg-view 24
+
+      .area.category_box
+        h3
+          a(href='#1') 網路夯話題
+          a.more.topic(href='#1', title='more')
+        .category_box_list.topic
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 抬摃選總統
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+          hr
+          dl.max
+            dt.big
+              a.category_box_img(href='#')
+                img(alt='', src='http://pgw.udn.com.tw/gw/photo.php?u=http://uc.udn.com.tw/photo/2015/09/08/1/1289677.jpg&s=Y&x=50&y=50&sw=480&sh=320&sl=W&fw=300')
+              a.category_box_ch(href='#') 品頭論立委
+              a.category_box_topic(href='#')
+                h3 出國就是不想代買！不撕破臉的「拒絕話術」這樣說
+                span 平常從不噓寒問暖的點頭之交，還是那些出生後見過次數10根手指都數得出來的親戚，突然就會冒出來問你說「ㄟ～聽說你要出國唷～可不可以幫我買ＸＸＸ啊？」如果態度有禮也不指定，可能還會讓你...
+              dl
+                dt
+                  a(href='#') 藝人特殊日發不發文都被轟 強國人玻璃心好難醫？
+                dt
+                  a(href='#') 超可怕der！那以後歷史課本也不要放大衛像了？
+
+      #comments.area
+        h3
+          span 留言
+        a(name='fb_comments')
+        #comments_head
+          #fb-root
+          .fb-comments(data-href='', data-numposts='5')
+
+      .poll-area_left.area
+        #poll_at_page_right_0_v40.poll_at_page_right
+          script.
+            var channelId=3000; 
+            var actArea="poll_at_page_right_0_v40";
+            var actCode="v40";document.write('<div id="' + actArea + '" class="poll_at_page_right"></div>');
+            document.write('<script src="./js/actIndex.jsp?actCode=' +  actCode + '&channelId=' + channelId + '"> <\/script>');
+          script.
+            piepkg();
+          script.
+            loadTemplateJs(d1.actTemplate);
+          script.
+            eval(d1.actTemplate+'view("' + '#' + actArea + '");');
+    // /#mainbar
+    
+    include ../template/sidebar

@@ -1,0 +1,324 @@
+extends ../layout
+
+append config
+  - var thisPageTitle = '透視候選人-立委'
+  - var title = thisPageTitle.concat(' | ' + title)
+  - var president = true;
+
+block content 
+  #wrapper
+    .level-choose
+      a(href="./candidate_president.html") 總統候選人
+      a(href="./candidate_legislator.html").candidate-active 立委候選人
+    .state-container.area.only_web
+      a(href="#", rel="taipei").state-name.active 臺北市
+      a(href="#", rel="new-taipei").state-name 新北市
+      a(href="#", rel="taoyuan").state-name 桃園市
+      a(href="#", rel="taichung").state-name 臺中市
+      a(href="#", rel="tainan").state-name 臺南市
+      a(href="#", rel="kaohsiung").state-name 高雄市
+      a(href="#", rel="keelung").state-name 基隆市
+      a(href="#", rel="hsinchu").state-name 新竹市
+      a(href="#", rel="chiayi").state-name 嘉義市
+      a(href="#", rel="hsinchu-county").state-name 新竹縣
+      a(href="#", rel="miaoli").state-name 苗栗縣
+      a(href="#", rel="changhua").state-name 彰化縣
+      a(href="#", rel="nantou").state-name 南投縣
+      a(href="#", rel="yunlin").state-name 雲林縣
+      a(href="#", rel="chiayi-county").state-name 嘉義縣
+      a(href="#", rel="pingtung").state-name 屏東縣
+      a(href="#", rel="yilan").state-name 宜蘭縣
+      a(href="#", rel="hualien").state-name 花蓮縣
+      a(href="#", rel="taitung").state-name 臺東縣
+      a(href="#", rel="penghu").state-name 澎湖縣
+      a(href="#", rel="kinmen").state-name 金門縣
+      a(href="#", rel="lienchiang").state-name 連江縣
+    .state-container-mobile.area.only_mobile
+      select
+        option(value="taipei").state-name 臺北市
+        option(value="new-taipei").state-name 新北市
+        option(value="taoyuan").state-name 桃園市
+        option(value="taichung").state-name 臺中市
+        option(value="tainan").state-name 臺南市
+        option(value="kaohsiung").state-name 高雄市
+        option(value="keelung").state-name 基隆市
+        option(value="hsinchu").state-name 新竹市
+        option(value="chiayi").state-name 嘉義市
+        option(value="hsinchu-county").state-name 新竹縣
+        option(value="miaoli").state-name 苗栗縣
+        option(value="changhua").state-name 彰化縣
+        option(value="nantou").state-name 南投縣
+        option(value="yunlin").state-name 雲林縣
+        option(value="chiayi-county").state-name 嘉義縣
+        option(value="pingtung").state-name 屏東縣
+        option(value="yilan").state-name 宜蘭縣
+        option(value="hualien").state-name 花蓮縣
+        option(value="taitung").state-name 臺東縣
+        option(value="penghu").state-name 澎湖縣
+        option(value="kinmen").state-name 金門縣
+        option(value="lienchiang").state-name 連江縣
+    
+    .legislator-division.area
+      .spinner-container
+        .loading-spinner
+          .dot1
+          .dot2
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+      section.division-state
+        h3 第#[span.division-no 1]選區 （#[span.division-name 北投區、士林區13里]）
+        table.division-list
+          thead
+            tr 
+              th 號碼
+              th 姓名
+              th 黨籍
+          tbody
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-mjd] #[span.candidate-party 中國國民黨]
+            tr
+              td 1
+              td 王文玉
+              td.table-flag #[span.thumb.thumb-gmd] #[span.candidate-party 中國國民黨]
+    .legislator-news
+      .area
+        h3
+          a(href='#')
+            | 最新立委選聞
+        .area_body
+          dl
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢
+            dt
+              a(href='#') 波多野結衣是擋箭牌？北市府「三大陰謀論」曝光
+            dt
+              a(href='#') 小朋友問波多野結衣是誰？網友以各行業神譬喻！
+            dt
+              a(href='#') 負債天菜VS有錢醜男 女生最後選擇嫁給…？
+        // /legislator-news
+      .area
+        h3
+          a(href='#')
+            | 最熱立委選聞
+        .area_body
+          dl
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 民進黨議員狂罵「波卡」！網怒：假道學、看清風向好嗎
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 日本11歲小學生身材長這樣...也太不科學惹！
+            dt
+              a(href='#') 女神結婚背後的殘酷現實：人帥男子漢，人醜是癡漢
+            dt
+              a(href='#') 波多野結衣是擋箭牌？北市府「三大陰謀論」曝光
+            dt
+              a(href='#') 小朋友問波多野結衣是誰？網友以各行業神譬喻！
+            dt
+              a(href='#') 負債天菜VS有錢醜男 女生最後選擇嫁給…？
+        // /legislator-news
+
+
+      
+  // /#wrapper

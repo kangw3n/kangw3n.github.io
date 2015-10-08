@@ -1,0 +1,23 @@
+.candidate-section {
+  float: left;
+  width: 33.33333%;
+}
+
+@media (max-width: 1216px) {
+  .candidate-section {
+      width: 48%;
+      margin: 1%;
+  }
+}
+
+@media (max-width: 1016px) {
+  .division-state {
+    width: 49.779%;
+  }
+}
+
+@media (max-width: 767px) {
+  .candidate-section {
+      width: 98%;
+  }
+}
