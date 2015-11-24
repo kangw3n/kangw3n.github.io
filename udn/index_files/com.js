@@ -6761,7 +6761,7 @@ window.fbAsyncInit = function() {
   if (d.getElementById(id)) return;
   js = d.createElement(s);
   js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.3&appId=350231215126101";
+  js.src = "//connect.facebook.net/zh_TW/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 $(function() {
