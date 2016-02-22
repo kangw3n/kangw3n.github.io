@@ -1,5 +1,6 @@
 ! function(a) {
   "use strict";
+  var a;
   a.matchMedia = a.matchMedia || function(a) {
     var b, c = a.documentElement,
       d = c.firstElementChild || c.firstChild,
