@@ -1,221 +1,454 @@
-<!doctype html>
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>kangw3n Porfolio</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body id="top">
 
-<head>
-  <meta charset="utf-8">
-  <title>Demo 1</title>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width">
-  <script src="https://dl.dropboxusercontent.com/s/jgbx1icn4t7hach/jquery.colorbox-min.js"></script>
-  <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/cmmxfayqnsezoor/teach.css" />
-  <style media="screen">
-    .fb-comments.fb_iframe_widget,
-    .fb-comments.fb_iframe_widget span,
-    .fb-comments.fb_iframe_widget span iframe[style] {
-      min-width: 100% !important;
-      width: 100% !important;
-    }
-  </style>
-</head>
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img src="images/10670054_10152480875098853_4945383457323330150_n.jpg" alt="" /></a>
+				<h1><strong>I am kangw3n</strong>, <br>graduated from National ChengChi University, <br />
+				currently pursuing F2E Development in Taiwan.<br />
+				Interested in Coding as well as Creative Industy.</h1>
+			</header>
 
-<body>
-  <?php phpinfo(); ?>
-  <div id="fb-root"></div>
-  <script>
-    //Facebook SDK
-    window.fbAsyncInit = function() { // http://hayageek.com/facebook-javascript-sdk/
-      FB.init({
-        appId: '615789688470381',
-        status: true, // check login status
-        frictionlessRequests: true,
-        xfbml: true // parse XFBML
-      });
+		<!-- Main -->
+			<div id="main">
 
-      FB.Event.subscribe('auth.authResponseChange', function(response) {
-        if (response.status === 'connected') {
-          var UserID = response.authResponse.userID;
-          var AccessToken = response.authResponse.accessToken;
-          var logging = "Your user ID is : " + UserID + "\nAnd your access token is :" + AccessToken;
-          console.log(logging);
-          //console.log( "Connected to Facebook");//SUCCESS
-          getUserInfo();
-        } else if (response.status === 'not_authorized') {
-          console.log("Failed to Connect"); //FAILED
-          FB.login();
-        } else {
-          console.log("Logged Out"); //UNKNOWN ERROR
-        }
-      });
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Coding and Stage Designing <br />
+							</h2>
+						</header>
+						<p>I've finish my Master's degree by creating an experimental concert which combines with imagination, narration, and interaction elements. This music concert intents to subvert the form of traditional performances by Chinese orchestra through the foundation of “Instrumental Theater” and “Interactive Technology”. Besides on stage designing field, F2E development has become my secondary specialty which I've devoted much time and effort in JavaScript, HTML5, CSS3 coding skills, which may consider as expert.  </p>
 
-      // In your onload handler :edge.create , edge.remove ,xfbml.render , auth.authResponseChange , auth.statusChange , auth.login , auth.logout , comment.create , comment.remove , message.send.
-      FB.Event.subscribe('edge.create', page_like_or_unlike_callback);
-      FB.Event.subscribe('edge.remove', page_like_or_unlike_callback);
-      FB.Event.subscribe('auth.authResponseChange', auth_response_change_callback);
-      FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
-    };
+						<p>Over 2 years experience in web development and 2 years in design development (in University). A self-starter with an entrepreneurial spirit while being a team player. Possess ability to learn quickly and rapidly add value to projects. Worked in full lifecycle of design, development, testing, QA, deployment, and maintanence on multiple projects </p>
+						<ul class="actions">
+							<li><a href="https://www.youtube.com/playlist?list=PLLeZpyfbzeAtILzbcnANfLCZuW_dhuUmD" class="button special">Music Concert's YouTube</a></li>
+						</ul>
+					</section>
 
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&appId=615789688470381";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+				<!-- Two -->
+					<section id="two">
+						<h2>Recent Work</h2>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/comm.PNG" class="image fit thumb"><img src="images/comm.PNG" alt="" /></a>
+								<h3><a href="http://comm.nccu.edu.tw/">NCCU College of Communication</a></h3>
+								<p>Configuring, Maintaining, Redesigning college's website since 2012, by rethinking UI/UX, resketching the homepages, changing the CSS for better viewing experiences and inserting a Javascript Framework for better interaction.</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/reimagine.PNG" class="image fit thumb"><img src="images/reimagine.PNG" alt="" /></a>
+                                <h3><a href="http://140.119.169.233:3000/">&lt Reimagine the Music &gt </a></h3>
+								<p>A part of my master thesis creation. Bringing a new experience for audience which allow them to use smartphone while in the concert. By using nodeJs and SocketIO integration, audience able to play a music along with the performer in realtime. </p>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/marco.PNG" class="image fit thumb"><img src="images/marco.PNG" alt="" /></a>
+                                <h3><a href="http://140.119.189.154/101462001/maRco/home/">marCo FACEDE STUDIO</a></h3>
+								<p>Developing a brand pages for a architecture company. Using bootstraps and common use framework to build a RWD website for the company. Still in developement</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/choconet.PNG" class="image fit thumb"><img src="images/choconet.PNG" alt="" /></a>
+								<h3>Ms. Choconet</h3>
+								<p>Designed in 2012 as part of my graduation project. With a specified marketing goal, we helped Taichung Women's Prison to build a online campaign for the product that's been produce by the prisoner. Webpages created by a static webpage with basic functionality for product showcasing.</p>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/facebookap.jpg" class="image fit thumb"><img src="images/facebookap.jpg" alt="" /></a>
+								<h3>Ms. Choconet Facebook Campaign</h3>
+								<p>As part of the marketing plan, we build a Flash webpages which integrating the Facebook API, allowing users to connect with friends in social network.</p>
+							</article>
 
-    //function start
-    function login() {
-      FB.login(function(response) {
-        //AFTER LOGIN?
-      }, {
-        scope: 'email,user_photos,user_videos'
-      });
-    };
+						</div>
+						<ul class="actions">
+							<li><a href="http://b2bypinkezz.wix.com/portfolio" class="button">Wix.com Portfolio</a></li>
+						</ul>
+					</section>
 
-    function getUserInfo() {
-      FB.api('/me', function(response) {
-        var str = "<strong>Name</strong> : " + response.name + "<br>";
-        str += "<strong>Link: </strong>" + response.link + "<br>";
-        str += "<strong>Username:</strong> " + response.username + "<br>";
-        str += "<strong>id: </strong>" + response.id + "<br>";
-        str += "<strong>Email:</strong> " + response.email + "<br>";
-        str += "<input type='button' id='photo' value='Get Photo' onclick='getPhoto();'>";
-        str += "<input type='button' value='Logout' onclick='logout();'>";
-        document.getElementById("status").innerHTML = str;
-      });
-    };
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Please do leave me a message for further or some deep conversation. Might some interview perhaps? </p>
+						<div class="row">
 
-    function getPhoto() {
-      FB.api('/me/videos', function(response) {
+							<div class="4u$ 12u$(small)">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">Address</span></h3>
+										Alley 2, Lane 82, <br />
+										Jinghua St, Wenshan District<br />
+										Taipei City, Taiwan 116
+									</li>
+									<li>
+										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+										0953-074-848
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="#">Weitochearyeah@hotmail.com</a>
+									</li>
+									<li>
+										<h3 class="icon fa-facebook"><span class="label">Facebook</span></h3>
+										<a href="http://www.facebook.com/kangw3n">kangw3n</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
 
-      });
-      FB.api('/me/picture?type=normal', function(response) { // http://api-portal.anypoint.mulesoft.com/facebook/api/facebook-graph-api/docs/reference/pictures
-        var str = "<img src=" + response.data.url + ">";
-        $('#picture').html(str);
-        $('input')[0].setAttribute('disabled', 'disabled');
-        $('#photo').hide();
-      });
-    }
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
 
-    function logout() {
-      FB.logout();
-    };
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
 
-    var auth_response_change_callback = function(response) {
-      if (response.status === "unknown") {
-        //window.location.reload();
-      }
-      console.log(response);
-    }
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
 
-    var auth_status_change_callback = function(response) {
-      //console.log("auth_status_change_callback: " + response.status);
-      console.log(response);
-    }
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
 
-    var page_like_or_unlike_callback = function(url, html_element) {
-      console.log("page_like_or_unlike_callback");
-      console.log(url);
-      console.log(html_element);
-    }
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="6u 12u$(xsmall)">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button special">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button special small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
 
-    function picker() {
-      FB.ui({
-        method: 'apprequests',
-        message: 'My Great Request'
-      }, console.log("sucessfully"));
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 
-      FB.ui({
-        method: 'send',
-        link: 'http://www.nytimes.com/2011/06/15/arts/people-argue-just-to-win-scholars-assert.html',
-      });
-    }
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
 
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button special">Special</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button big">Big</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button special fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button special fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button special icon fa-download">Icon</a></li>
+								<li><a href="#" class="button icon fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button special disabled">Special</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
 
-  </script>
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="demo-category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u(small)">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="6u 12u$(small)">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
 
-  <div class="container">
-    <article id="status">
-      <input type="button" value="Click to login" disabled onclick="login()">
-    </article>
-    <figure id="picture"></figure>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolore porro veritatis eligendi consectetur aliquam minima consequuntur similique sint cupiditate illum, quia nulla. Mollitia necessitatibus, molestiae veritatis in, aspernatur suscipit?</p>
-    <p><a class="youtube" href="https://www.youtube.com/embed/kdWQaecFyyo?rel=0&amp;wmode=transparent">Youtube Videos</a></p>
-    <input type="button" value="Friend Picker" onclick="picker()">
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
 
-  </div>
+					</section>
+				-->
 
+			</div>
 
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.facebook.com/kangw3n" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="mailto:weitochearyeah@hotmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>2015 &copy; kangw3n</li><!--<li>Templete Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+				</ul>
+			</footer>
 
-  <aside class="fbwidget">
-    <div>
-      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E5%259C%258B%25E7%25AB%258B%25E6%2594%25BF%25E6%25B2%25BB%25E5%25A4%25A7%25E5%25AD%25B8%25E5%2582%25B3%25E6%2592%25AD%25E5%25AD%25B8%25E9%2599%25A2-College-of-Communication-National-Chengchi-University%2F497804236899418&amp;width=245&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=615789688470381"
-      scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:245px; height:258px;" allowTransparency="true"></iframe>
-    </div>
-  </aside>
-
-  <style media="screen">
-    @media (max-width: 1216px) {
-      .facebook {
-        width: 100%;
-      }
-    }
-  </style>
-
-
-  <section class="facebook">
-    <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" data-width="100%"></div>
-  </section>
-
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $.colorbox({
-        height: "290px",
-        html: "<iframe src='//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2F%25E5%259C%258B%25E7%25AB%258B%25E6%2594%25BF%25E6%25B2%25BB%25E5%25A4%25A7%25E5%25AD%25B8%25E5%2582%25B3%25E6%2592%25AD%25E5%25AD%25B8%25E9%2599%25A2-College-of-Communication-National-Chengchi-University%2F497804236899418&amp;width=245&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=615789688470381' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:400px; height:258px;' allowTransparency='true'></iframe>"
-      });
-      $(".youtube").colorbox({
-        iframe: true,
-        innerWidth: 720,
-        innerHeight: 480
-      });
-      $(".fbwidget").hover(function() {
-        $(this).stop().animate({
-          right: "0"
-        }, "medium");
-      }, function() {
-        $(this).stop().animate({
-          right: "-250"
-        }, "medium");
-      }, 500);
-
-
-      if (Request.UserAgent.IndexOf("FBAN") > -1) {
-        console.log('YES!');
-        if (Request.UserAgent.Contains("iPhone OS 8_0_2")) {
-          alert(' This is IOS Facebook');
-          $( "p" ).prepend( "<p style='color:red;'> This is IOS Facebook</p>" );
-        }
-
-        if (Request.UserAgent.Contains("Chrome")) {
-          alert('This is andriod facebook');
-          $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
-        }
-      } else {
-        console.log('no!!');
-        $( "p" ).prepend( "<p style='color:red;'> This is andriod facebook</p>" );
-      }
-
-    });
-  </script>
-
-
-
-
-  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
-
-</body>
-
+	</body>
 </html>
